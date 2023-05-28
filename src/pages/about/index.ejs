@@ -1,0 +1,38 @@
+<%
+const data = {
+    version: Config.version,
+    baseUrl: Config.baseUrl,
+    section: 'about',
+    pageTitle: 'About | Nightwatch.js',
+    pageDescription: 'How to get in touch with the team, and where to submit bugs and feature requests.',
+    pageImage: '/img/banners/nightwatch.jpg'
+};
+%>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include('header', data) %>
+    <link rel="canonical" href="<%- data.baseUrl + page.url %>"/>
+</head>
+
+<body>
+<%- include('navbar', data) %>
+
+<section id="index-container"></section>
+
+<section id="guide-container" class="secondary"></section>
+<section id="apimethod-container" class="secondary"></section>
+<section id="api-container" class="secondary"></section>
+
+<section id="about-container" class="secondary">
+  <%- include("sections/about", data) %>
+</section>
+
+<section id="releases-container" class="secondary"></section>
+<section id="blog-container" class="secondary"></section>
+
+<%- include("footer", data) %>
+<%- include("scripts") %>
+</body>
+</html>

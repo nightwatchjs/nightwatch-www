@@ -1,0 +1,36 @@
+<%
+const data = {
+  version: Config.version,
+  baseUrl: Config.baseUrl,
+  section: 'index',
+  pageTitle: 'Nightwatch.js | Node.js powered End-to-End testing framework',
+  pageDescription: 'Write efficient end-to-end tests in Node.js and run them against W3C WebDriver.',
+  pageImage: '/img/banners/nightwatch.jpg'
+};
+%>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("header", data) %>
+    <link rel="canonical" href="<%- data.baseUrl + page.url %>"/>
+    <!-- new fonts and style -->
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+</head>
+
+<body>
+<%- include("navbar", data) %>
+
+<section id="index-container" style="display: flex; flex-direction: column;" data-page-uri="/">
+    <%- include("sections/index", data) %>
+</section>
+
+<%- include("footer", data) %>
+<%- include("scripts") %>
+
+<!-- slick carousel -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</body>
+</html>

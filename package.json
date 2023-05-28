@@ -1,0 +1,28 @@
+{
+  "name": "nightwatchjs.org",
+  "version": "0.0.1",
+  "description": "Nightwatch.js website - https://nightwatchjs.org",
+  "scripts": {
+    "test": "postdoc test -- test/src -o tests_output --headless",
+    "start": "postdoc run",
+    "build": "postdoc build",
+    "eslint": "eslint src test --quiet"
+  },
+  "author": "Andrei Rusu <andrei@pineview.io>",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "isomorphic-fetch": "^3.0.0",
+    "marked": "^4.3.0"
+  },
+  "devDependencies": {
+    "serve": "^14.2.0",
+    "@halo-lab/stream": "Halo-Lab/stream",
+    "eslint": "^8.32.0",
+    "geckodriver": "^3.2.0",
+    "nightwatch": "nightwatchjs/nightwatch",
+    "nightwatch-docs": "nightwatchjs/nightwatch-docs#versions/3.0",
+    "nightwatch-examples": "nightwatchjs-community/nightwatch-examples",
+    "postdoc": "0.1.3"
+  }
+}

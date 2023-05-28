@@ -1,0 +1,42 @@
+<%
+const {generateApiPages} = require('./generate-api-pages.js');
+
+const data = {
+    version: Config.version,
+    baseUrl: Config.baseUrl,
+    section: 'api',
+    pageContent: page.content,
+    pageTitle: page.title || 'API Reference | Nightwatch.js',
+    pageDescription: page.description || 'Complete reference of the Nightwatch commands and assertions.',
+    pageImage: page.image || '/img/banners/nightwatch.jpg'
+};
+const apiData = await api;
+
+generateApiPages(apiData, Config);
+%>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("header", data) %>
+    <link rel="canonical" href="<%- data.baseUrl + page.url %>"/>
+</head>
+
+<body>
+<%- include("navbar", data) %>
+
+<section id="api-container" class="secondary">
+  <%-  include("sections/api", data) %>
+</section>
+
+<section id="index-container"></section>
+<section id="guide-container" class="secondary"></section>
+<section id="apimethod-container" class="secondary"></section>
+<section id="about-container" class="secondary"></section>
+<section id="blog-container" class="secondary"></section>
+<section id="releases-container" class="secondary"></section>
+
+<%- include("footer", data) %>
+<%- include("scripts") %>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<%
+  function activeLink(urlPart) {
+    return page.url.includes(urlPart) ? 'active' : '';
+  }
+%>
+
+<!-- navbar -->
+<header class="navigation1 navbar-expand-lg">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="position:absolute; top:24px; left:24px;">
+      <img loading="eager" src="/images/images1/navbar-toggler.svg" alt="" style="width: 24px; height: 24px;">
+    </button>
+    <div class="navigation-content">
+      <a href="/">
+        <div class="nightwatch-logo">
+          <img loading="eager" src="/images/images1/mini_logo.svg" alt="Nightwatch.js"> <span class="nightwatch-title">Nightwatch.js</span>
+        </div>
+      </a>
+      <div class="navigation-links collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="nav-links-left">
+          <div class="nav-item">
+            <a class="regular16px neutral-white-color header-links <%= activeLink('/guide') %>" href="/guide/overview/what-is-nightwatch.html">
+              &nbsp;&nbsp;Guide&nbsp;&nbsp;
+            </a>
+          </div>
+          <div class="nav-item">
+            <a class="regular16px neutral-white-color header-links <%= activeLink('/api') %>" href="/api/">
+              <span>
+                &nbsp;&nbsp;API&nbsp;&nbsp;
+              </span>
+            </a>
+          </div>
+          <div class="nav-item">
+            <a class="regular16px neutral-white-color header-links <%= activeLink('/about') %>" href="/about/community/">
+              Community
+            </a>
+          </div>
+          <div class="nav-item">
+            <a class="regular16px neutral-white-color header-links <%= activeLink('/blog') %>" href="/blog/">
+              &nbsp;&nbsp;Blog&nbsp;&nbsp;
+            </a>
+          </div>
+        </div>
+
+
+        <div class="nav-links-right">
+          <div class="search-container"><div id="docsearch"></div></div>
+
+          <a aria-label="Nightwatch on discord" href="https://discord.com/invite/SN8Da2X" rel="noopener" title="Chat with us on Discord" target="_blank">
+            <img loading="eager" src="/images/images1/nav-github.svg" style="width: 31px; height: 24px;" alt="Chat with us on Discord">
+          </a>
+          <a href="https://github.com/nightwatchjs/nightwatch" aria-label="Nightwatch on Github" target="_blank">
+            <img loading="eager"  src="/images/images1/nav-stars.svg" style="width: 112px; height: 36px;" alt="Nightwatch on Github">
+          </a>
+
+          <div class="nav-item dropdown neutral-white-color" style="margin-top: -10px;">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="regular16px neutral-white-color"><%= version %></span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item semibold14px" style="color: #914618;" href="/">Latest <%= version %></a></li>
+              <li><a class="dropdown-item regular14px" href="https://v17.nightwatchjs.org/">Version 1.7</a></li>
+              <li><a class="dropdown-item regular14px" href="https://v09.nightwatchjs.org/">Version 0.9</a></li>
+              <li><a class="dropdown-item regular14px" href="/guide/overview/whats-new.html">All Versions</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

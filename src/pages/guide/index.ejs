@@ -1,0 +1,71 @@
+<%
+const {getReleases, getRightSidebarContent} = require('../../../public/js/app/app-cjs.js');
+
+const pageContent = page.url === "/guide/overview/whats-new.html"
+        ? await include("sections/releases", {releases: await getReleases(Config)})
+        : page.content;
+
+const defaultPageHeaders = {
+    'overview': 'Nightwatch Overview',
+    'quickstarts': 'Quickstarts',
+    'ci-integrations': 'CI Integrations',
+    'nightwatch-cli': 'Nightwatch CLI Runner',
+    'reference': 'Configuration Reference',
+    'concepts': 'Concepts',
+    'browser-drivers': 'Browser Drivers',
+    'contributing': 'Contributing',
+    'how-to-guides': 'How-to Guides',
+    'writing-tests': 'Writing Tests',
+    'running-tests': 'Running Tests',
+    'debugging-tests': 'Debugging Tests',
+    'mobile-web-testing': 'Mobile Web Testing',
+    'network-requests': 'Network Requests',
+    'configuration': 'Configuration',
+    'using-nightwatch': 'Using Nightwatch',
+    'mobile-app-testing': 'Mobile App Testing',
+    'third-party-test-runners': 'Configuration',
+    'using-page-objects': 'Using Page Objects',
+    'component-testing': 'Component Testing',
+    'reporters': 'Using Reporters',
+    'extending-nightwatch': 'Extending Nightwatch',
+    'migrating-to-nightwatch': 'Migrating to Nightwatch',
+    'resources': 'Reference'
+};
+
+const data = {
+    version: Config.version,
+    baseUrl: Config.baseUrl,
+    section: 'guide',
+    rightSidebarContent: getRightSidebarContent(pageContent),
+    pageContent,
+    pageTitle: `${page.title || defaultPageHeaders[page.url.split('/')[2]]} | Developer Guide | Nightwatch.js`,
+    pageDescription: page.description || 'In depth guides on how to use Nightwatch to write and execute tests.',
+    pageImage: page.image || '/img/banners/nightwatch.jpg'
+};
+%>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("header", data) %>
+    <link rel="canonical" href="<%- data.baseUrl + page.url %>"/>
+</head>
+
+<body>
+<%- include("navbar", data) %>
+
+<section id="guide-container" class="secondary background">
+    <%- include("sections/guide", data) %>
+</section>
+
+<section id="index-container"></section>
+<section id="apimethod-container" class="secondary"></section>
+<section id="api-container" class="secondary"></section>
+<section id="about-container" class="secondary"></section>
+<section id="releases-container" class="secondary"></section>
+<section id="blog-container" class="secondary"></section>
+
+<%- include("footer", data) %>
+<%- include("scripts") %>
+</body>
+</html>

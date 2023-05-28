@@ -1,0 +1,34 @@
+{
+  "src_folders": ["test/src"],
+  "page_objects_path" : "test/lib/pages",
+  "globals_path": "test/lib/globals.js",
+
+  "webdriver": {
+    "start_process": true,
+    "server_path": "",
+    "cli_args": []
+  },
+
+  "test_settings": {
+    "default": {
+      "launch_url": "http://127.0.0.1:5173",
+
+      "desiredCapabilities" : {
+        "browserName" : "firefox",
+        "alwaysMatch": {
+          "acceptInsecureCerts": true
+        }
+      }
+    },
+
+    "safari": {
+      "desiredCapabilities" : {
+        "browserName" : "safari"
+      },
+      "webdriver": {
+        "start_process": true,
+        "server_path": ""
+      }
+    }
+  }
+}

@@ -1,0 +1,116 @@
+<%
+const {getDataForExpect} = require('../generate-api-pages.js');
+const {mdFolder} = Config;
+const {element} = getDataForExpect(await api, Config);
+
+const data = {
+    version: Config.version,
+    baseUrl: Config.baseUrl,
+    section: 'api',
+    pageContent: page.content,
+    pageTitle: page.title || 'API Reference | Nightwatch.js',
+    pageDescription: page.description || 'Complete reference of the Nightwatch commands and assertions.',
+    pageImage: page.image || '/img/banners/nightwatch.jpg'
+};
+%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("header", data) %>
+    <link rel="canonical" href="<%- data.baseUrl + page.url %>"/>
+</head>
+
+<body>
+<%- include("navbar", data) %>
+
+<section id="api-container" class="secondary">
+    <div class="doc-container full-width top-border background">
+    <div class="clearfix">
+        <div class="row flex-xl-nowrap no-gutters">
+
+        <div class="col-md-3 col-xl-2 doc-sidebar bs-sidebar hidden-print" role="complementary">
+            <%- include('api-sidebar') %>
+        </div>
+
+        <div class="col-md-9 col-xl-9 doc-main-body" role="main">
+            <div class="docs-section" data-page-uri="<%- page.url %>">
+                <div class="page-content">
+
+    <%- include(`${mdFolder}/api/expect/_overview.md`) %>
+
+    <div class="commands">
+    <%- include(`${mdFolder}/api/expect/_cookie.md`) %>
+    <%- include(`${mdFolder}/api/expect/_element.md`) %>
+
+    <%
+    for (const {method, editLink} of element) {
+    %>
+        <div class="apimethod">
+            <h3 id="expect-<%= method.name %>">
+                <%
+                    const afterName = method.parameters.length
+                            ? `(${method.parameters.map(({name, optional}) => optional ? `[${name}]` : name).join(', ')})`
+                            : ''
+                %>
+                .<%= method.name %><%= afterName %>
+                <a title="Suggest edits" class="edit-source" href="<%- editLink %>">Suggest edits</a>
+            </h3>
+            <p><%- method.description %></p>
+            <% if (method.parameters.length) { %>
+                <h5>Parameters:</h5>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                        <tr>
+                            <th style="width: 100px;">Name</th>
+                            <th style="width: 100px;">Type</th>
+                            <th>description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <%
+                        for (let j = 0; j < method.parameters.length; j++) {
+                            const param = method.parameters[j];
+                        %>
+                        <tr>
+                            <td><code><%- param.name %></code><% if (param.optional) { %><br><span class="optional">Optional</span><% } %></td>
+                            <td><%- param.types %></td>
+                            <td><%- param.description %></td>
+                        </tr>
+                        <% } %>
+                        </tbody>
+                    </table>
+                </div>
+            <% } %>
+            <% if (method.example) { %>
+                <h5>Usage:</h5>
+                <div class="sample-test">
+                    <pre class="line-numbers" data-language="javascript"><code class="language-javascript"><%- method.example %></code></pre>
+                </div>
+            <% } %>
+        </div>  <!-- end .apimethod -->
+    <% } %>
+
+    <%- include(`${mdFolder}/api/expect/_elements.md`) %>
+    <%- include(`${mdFolder}/api/expect/_title.md`) %>
+    <%- include(`${mdFolder}/api/expect./_url.md`) %>
+    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+<section id="index-container"></section>
+<section id="guide-container" class="secondary"></section>
+<section id="apimethod-container" class="secondary"></section>
+<section id="about-container" class="secondary"></section>
+<section id="blog-container" class="secondary"></section>
+<section id="releases-container" class="secondary"></section>
+
+<%- include("footer", data) %>
+<%- include("scripts") %>
+</body>
+</html>
