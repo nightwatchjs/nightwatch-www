@@ -297,7 +297,7 @@
 }
 
 .navigation-content .nav-links-left a:hover {
-  border-bottom: 2px solid #D88712;
+  border-bottom: 2px solid var(--color-orange);
   padding-bottom: 22px;
 }
 
@@ -629,7 +629,7 @@ button[role="button"] {
 
 .navigation-links a.active {
   font-weight: 600;
-  border-bottom: 2px solid #D88712;
+  border-bottom: 2px solid var(--color-orange);
   padding-bottom: 22px;
 }
 

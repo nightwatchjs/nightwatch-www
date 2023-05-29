@@ -152,6 +152,8 @@ const createSidebarFilterHandler = (sidebarFilter, filterList) => (event) => {
   removeFilterListChildren(filterList);
   filterList.append(...clonedLinks);
   filterList.classList.add('d-block');
+  //set filterList width
+  $(filterList).width( $(sidebarFilter).width());
 };
 
 const focusFilterListItem = (index) => {
