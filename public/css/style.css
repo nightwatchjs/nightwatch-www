@@ -1072,7 +1072,7 @@ section[data-page-uri] {
 }
 
 a {
-  color: var(--color-orange);
+  color: var(--color-muted-blue);
 }
 
 /* Nav Section */

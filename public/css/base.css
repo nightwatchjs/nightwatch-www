@@ -18,6 +18,7 @@
   --color-light-brown: hsla(23, 9%, 36%, 1);
   --color-muted-brown: hsla(32, 11%, 40%, 1);
   --color-blue: hsla(230, 96%, 55%, 1);
+  --color-muted-blue: hsl(217, 74%, 43%, 1);  
 
 
   /* Font Size */
@@ -56,9 +57,11 @@
   --line-height-30: calc(30 / 20);
   --line-height-27: calc(27 / 21);
   --line-height-28: calc(28 / 18);
+  --line-height-25: calc(25 / 14);
   --line-height-24: calc(24 / 18);
   --line-height-23: calc(23 / 16);
   --line-height-22: calc(22 / 18);
+  --line-height-21: calc(21 / 18);
 
   /* Font family */
   --font-family-mono: 'IBM Plex Mono', sans-serif;
