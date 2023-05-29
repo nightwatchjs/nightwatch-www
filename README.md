@@ -1,5 +1,7 @@
 # nightwatchjs.org website
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a6732c16-83fb-40cb-83e9-da1873f89298/deploy-status)](https://app.netlify.com/sites/zesty-starlight-195300/deploys)
+
 ## Development
 
 ### Run the website locally
