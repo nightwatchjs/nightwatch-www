@@ -1769,8 +1769,8 @@ a {
 
 a:focus,
 a:hover {
-  color: #286090;
-  text-decoration: none;
+  color: var(--color-muted-blue);
+  text-decoration: underline;
 }
 
 .navbar-toggle {}
