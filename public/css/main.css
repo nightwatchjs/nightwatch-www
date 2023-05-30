@@ -737,7 +737,7 @@ ul.features {
 }
 
 .sample-test .toolbar .toolbar-item button span {
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .sample-test i {
@@ -870,7 +870,7 @@ p.secondary-text {
   font-size: .95em !important;
   padding-left: 25px;
   margin-top: 20px;
-  border-left: 8px solid #ccc;
+  border-left: 8px solid var(--color-muted-brown);
 }
 
 .page-header span.since {
@@ -1648,6 +1648,7 @@ code {
   color: #f2f2f2;
   background-color: #2E2826;
   border: none;
+  border-radius: 10px;
 }
 
 .secondary pre.language-javascript,
@@ -1769,8 +1770,8 @@ a {
 
 a:focus,
 a:hover {
-  color: #286090;
-  text-decoration: none;
+  color: var(--color-muted-blue);
+  text-decoration: underline;
 }
 
 .navbar-toggle {}

@@ -23,19 +23,6 @@ const stripHtmlExtension = (url) => url.includes('.html') ? clearUrl(url) : url;
 
 
 
-// Sidebar Utils
-const createScrollSidebar = () => {
-  window.addEventListener('scroll', function() {
-    const scrollPos = window.scrollY;
-
-    if (scrollPos >= 15) {
-      document.body.classList.add('navbar-visible');
-    } else {
-      document.body.classList.remove('navbar-visible');
-    }
-  });
-};
-
 const updateActiveDropdownIds = (activeDropdownIdsSet, button) => {
   const dropdownId = button.getAttribute('data-bs-target').replace(/(#|-collapse)/g, '');
 
@@ -152,6 +139,8 @@ const createSidebarFilterHandler = (sidebarFilter, filterList) => (event) => {
   removeFilterListChildren(filterList);
   filterList.append(...clonedLinks);
   filterList.classList.add('d-block');
+  //set filterList width
+  $(filterList).width( $(sidebarFilter).width());
 };
 
 const focusFilterListItem = (index) => {
@@ -312,8 +301,6 @@ onRender((url) => {
   sidebarTabsClickEvent(appSidebarState[currentPage]);
 
   findSelectedTabs(getShortUrl(url), appSidebarState[currentPage]);
-
-  createScrollSidebar();
 
   renderCodeTabs();
 
