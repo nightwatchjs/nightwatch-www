@@ -5,16 +5,6 @@
   width: 100%;
 }
 
-.nightwatch-logo {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  gap: 15px;
-  margin-right: 20px;
-}
-
 .hero-section {
   width: 100%;
   background: #1B1B1B;
@@ -293,12 +283,6 @@
 
 .footer-copyright a {
   color: var(--neutral-white-color);
-
-}
-
-.navigation-content .nav-links-left a:hover {
-  border-bottom: 2px solid var(--color-orange);
-  padding-bottom: 22px;
 }
 
 .footer-copyright a:hover {
@@ -438,11 +422,11 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 40px;
+  padding: 30px 40px;
   width: 100%;
   left: 0px;
   top: 0px;
-  background: #1B1B1B;
+  background: var(--color-dark-brown);
   box-shadow: 1px 1px 11px #0C0A0A;
   position: sticky;
   z-index: 1071;
@@ -476,7 +460,31 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 40px;
+  gap: 36px;
+}
+
+a#navbarDropdown {
+  margin-top: 11px;
+  color: var(--color-orange);
+  font-weight: bold;
+  transition: none;
+}
+
+a#navbarDropdown:hover {
+  color: white;
+  text-decoration: none;
+  padding: 0;
+  border: 0;
+}
+
+a#navbarDropdown::after {
+  color: var(--color-orange);
+  margin-left: 2px;
+  transition: none;
+}
+
+a#navbarDropdown:hover::after {
+  color: white;
 }
 
 .integrations-section {
@@ -627,10 +635,20 @@ button[role="button"] {
   display: none;
 }
 
+.navigation-links a {
+  color: white;
+  padding-bottom: 34px;
+}
+
 .navigation-links a.active {
-  font-weight: 600;
-  border-bottom: 2px solid var(--color-orange);
-  padding-bottom: 22px;
+  border-bottom: 5px solid var(--color-orange);
+  padding-bottom: 34px;
+}
+
+.navigation-content .nav-links-right a:hover {
+  text-decoration: none;
+  border-bottom: 5px solid var(--color-orange);
+  padding-bottom: 34px;
 }
 
 [data-uri^="/guide"] pre.language-bash {
@@ -830,9 +848,6 @@ button[role="button"] {
   height: 28px;
 }
 
-.nightwatch-logo img {
-  height: 50px;
-}
 
 .community-github-info img {
   width: 106px;

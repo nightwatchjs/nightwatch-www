@@ -19,7 +19,7 @@
   --color-muted-brown: hsla(32, 11%, 40%, 1);
   --color-blue: hsla(230, 96%, 55%, 1);
   --color-muted-blue: hsl(217, 74%, 43%, 1);  
-
+  --color-dark-brown: hsl(0, 0%, 20%, 1);
 
   /* Font Size */
   --font-size-68: calc(68 / 16 * 1rem);
