@@ -18,8 +18,8 @@
   --color-light-brown: hsla(23, 9%, 36%, 1);
   --color-muted-brown: hsla(32, 11%, 40%, 1);
   --color-blue: hsla(230, 96%, 55%, 1);
-  --color-muted-blue: hsl(217, 74%, 43%, 1);  
-  --color-dark-brown: hsl(0, 0%, 20%, 1);
+  --color-muted-blue: hsla(217, 74%, 43%, 1);
+  --color-dark-brown: hsla(0, 0%, 20%, 1);
 
   /* Font Size */
   --font-size-68: calc(68 / 16 * 1rem);
@@ -62,6 +62,7 @@
   --line-height-23: calc(23 / 16);
   --line-height-22: calc(22 / 18);
   --line-height-21: calc(21 / 18);
+  --line-height-19: calc(19 / 16);
 
   /* Font family */
   --font-family-mono: 'IBM Plex Mono', sans-serif;

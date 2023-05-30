@@ -56,12 +56,12 @@
   height: 100%;
 }
 
-/* #docsearch > svg {
+#docsearch > svg {
   width: 24px;
   height: 24px;
-} */
+}
 
-/* #docsearch .DocSearch-Button-Placeholder {
+#docsearch .DocSearch-Button-Placeholder {
   display: none;
 }
 
@@ -88,7 +88,7 @@
 
 #docsearch > button:hover {
   box-shadow: unset;
-} */
+}
 
 .navigation-list:last-child {
   gap: 30px;
@@ -1279,7 +1279,7 @@
 /* Call to action section end */
 
 /* Footer section start */
-.footer-landing {
+.footer {
   background: var(--color-light-yellow);
   border-radius: 30px;
   margin: 0 20px 20px 20px;
