@@ -2020,10 +2020,7 @@ img.github-embed {
 #doc-sidebar-nav,
 .bs-sidebar .nav {
   background-color: var(--background-color-lightgrey);
-  border-radius: 16px;
   padding: 15px;
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 
 
@@ -2129,6 +2126,7 @@ ul.nav .btn-toggle-nav li a.active {
   overflow-x: hidden;
   overflow-y: auto;
   border-radius: 30px;
+  max-height: calc(100vh - 120px);
 }
 
 section.secondary h2,
