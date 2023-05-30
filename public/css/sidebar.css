@@ -388,15 +388,13 @@ ul.nav .btn-toggle-nav li a.active:hover {
   text-decoration: none;
 }
 
-body.navbar-visible .bs-sidebar {
+.bs-sidebar {
   position: sticky;
-  top: 5rem;
-  height: 600px;
-  overflow-y: auto;
+  top: 110px;
 }
 
 @media only screen and (max-width: 767px) {
-  body.navbar-visible .bs-sidebar {
+  .bs-sidebar {
     top: 102px;
   }
 }

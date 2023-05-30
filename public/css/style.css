@@ -2116,7 +2116,7 @@ ul.nav .btn-toggle-nav li a.active {
 .doc-container.top-border .doc-sidebar {
   padding-top: 10px;
   overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-y: auto;
   border-radius: 30px;
 }
 
