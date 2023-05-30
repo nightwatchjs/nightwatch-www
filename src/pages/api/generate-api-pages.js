@@ -1,5 +1,4 @@
 const fs = require('node:fs');
-const {cwd} = require('node:process');
 const {join, dirname, basename, extname} = require('node:path');
 const path = require('path');
 const ejs = require('ejs');
@@ -286,6 +285,7 @@ module.exports.generateApiPages = (apiData, config) => {
         'elementPresent',
         'hasClass',
         'hasAttribute',
+        'hasDescendants',
         'enabled',
         'selected',
         'textContains',
@@ -303,50 +303,11 @@ module.exports.generateApiPages = (apiData, config) => {
       ]
     });
 
-    globalThis.generated = true;
-  }
-};
-
-module.exports.getDataForAssertions = (apiData) => getDataForPages({
-  apiData,
-  sourceDirectories: ['assertions'],
-  outputDirectories: [''],
-  methodNames: [
-    'attributeContains',
-    'attributeEquals',
-    'attributeMatches',
-    'cssProperty',
-    'domPropertyContains',
-    'domPropertyEquals',
-    'domPropertyMatches',
-    'elementsCount',
-    'elementPresent',
-    'hasClass',
-    'hasAttribute',
-    'enabled',
-    'selected',
-    'textContains',
-    'textEquals',
-    'textMatches',
-    'titleContains',
-    'titleEquals',
-    'titleMatches',
-    'urlContains',
-    'urlEquals',
-    'urlMatches',
-    'valueContains',
-    'valueEquals',
-    'visible'
-  ]
-});
-
-module.exports.getDataForExpect = function (apiData, config) {
-  return {
-    element: getDataForPages({
-      apiData,
+    generateIndependentPages({
       config,
+      apiData,
       sourceDirectories: ['expect', 'assertions', 'element'],
-      outputDirectories: [''],
+      outputDirectories: ['expect', 'element'],
       methodNames: [
         'type', // a
         'active',
@@ -360,15 +321,28 @@ module.exports.getDataForExpect = function (apiData, config) {
         'value',
         'visible'
       ]
-    }),
-    elements: getDataForPages({
-      apiData,
+    });
+
+    generateIndependentPages({
       config,
+      apiData,
       sourceDirectories: ['expect', 'assertions', 'elements'],
-      outputDirectories: [''],
+      outputDirectories: ['expect', 'elements'],
       methodNames: [
         'count'
       ]
-    })
-  };
+    });
+
+    generateIndependentPages({
+      config,
+      apiData,
+      sourceDirectories: ['expect', 'assertions', 'elements'],
+      outputDirectories: ['expect', 'elements'],
+      methodNames: [
+        'count'
+      ]
+    });
+
+    globalThis.generated = true;
+  }
 };

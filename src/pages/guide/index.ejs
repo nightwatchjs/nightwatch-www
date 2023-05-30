@@ -1,5 +1,5 @@
 <%
-const {getReleases, getRightSidebarContent} = require('../../../public/js/app/app-cjs.js');
+const {getReleases, getRightSidebarContent} = require('../../js/app-cjs.js');
 
 const pageContent = page.url === "/guide/overview/whats-new.html"
         ? await include("sections/releases", {releases: await getReleases(Config)})

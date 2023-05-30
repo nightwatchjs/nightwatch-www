@@ -78,6 +78,7 @@
                     <li class="nav-item"><a href="/api/assert/elementPresent.html">elementPresent</a></li>
                     <li class="nav-item"><a href="/api/assert/hasClass.html">hasClass</a></li>
                     <li class="nav-item"><a href="/api/assert/hasAttribute.html">hasAttribute</a></li>
+                    <li class="nav-item"><a href="/api/assert/hasDescendants.html">hasDescendants</a></li>
                     <li class="nav-item"><a href="/api/assert/enabled.html">enabled</a></li>
                     <li class="nav-item"><a href="/api/assert/selected.html">selected</a></li>
                     <li class="nav-item"><a href="/api/assert/textContains.html">textContains</a></li>
@@ -140,6 +141,7 @@
             </button>
             <div class="collapse" id="commands-collapse" data-section-url="/api/commands/">
                 <ul class="btn-toggle-nav local-nav">
+                    <li class="nav-item"><a href="/api/element/">Overview</a></li>
                     <li>
                         <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#findelements-collapse" aria-expanded="false">
                             <a class="section">Find Elements</a>
@@ -252,46 +254,45 @@
         </li>
 
         <li>
-            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#firefox-collapse" aria-expanded="false">
-                <a>.firefox</a>
-            </button>
-            <div class="collapse" id="firefox-collapse" data-section-url="/api/firefox/">
-                <ul class="btn-toggle-nav local-nav">
-                    <li class="nav-item"><a href="/api/firefox/">Overview</a></li>
-                </ul>
-            </div>
-        </li>
-
-        <li>
-            <div class="list-header">
-                <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#expect-collapse" aria-expanded="false"><a>.expect</a></button>
-            </div>
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#expect-collapse" aria-expanded="false"><a>.expect</a></button>
 
             <div class="collapse" id="expect-collapse" data-section-url="/api/expect/">
                 <ul class="btn-toggle-nav local-nav">
-                    <li class="nav-item"><a href="/api/expect/#overview">Overview</a></li>
+                    <li class="nav-item"><a href="/api/expect/">Overview</a></li>
                     <li class="nav-item"><a href="/api/expect/#expect-chains">language chains</a></li>
                     <li class="nav-item"><a href="/api/expect/#expect-matchers">equal() / contain() / match()</a></li>
                     <li class="nav-item"><a href="/api/expect/#expect-startend">startWith() / endWith()</a></li>
                     <li class="nav-item"><a href="/api/expect/#expect-negation">.not</a></li>
                     <li class="nav-item"><a href="/api/expect/#expect-before">before() / after()</a></li>
                     <li class="nav-item local-nav"><h5><a href="/api/expect/#expect-cookie">.cookie()</a></h5></li>
-                    <li class="nav-item local-nav"><h5><a href="/api/expect/#expect-element">.element()</a></h5></li>
-                    <li class="nav-item"><a href="/api/expect/#expect-a">.a() / .an()</a></li>
-                    <li class="nav-item"><a href="/api/expect/#expect-active">.active</a></li>
-                    <li class="nav-item"><a href="/api/expect/#expect-attribute">.attribute(name)</a></li>
-                    <li class="nav-item"><a href="/api/expect/#expect-css">.css(property)</a></li>
-                    <li class="nav-item"><a href="/api/expect/#expect-enabled">.enabled</a></li>
-                    <li class="nav-item"><a href="/api/expect/#expect-present">.present</a></li>
-                    <li class="nav-item"><a href="/api/expect/#expect-property">.property(name)</a></li>
-                    <li class="nav-item"><a href="/api/expect/#expect-selected">.selected</a></li>
-                    <li class="nav-item"><a href="/api/expect/#expect-text">.text</a></li>
-                    <li class="nav-item"><a href="/api/expect/#expect-value">.value</a></li>
-                    <li class="nav-item"><a href="/api/expect/#expect-visible">.visible</a></li>
-                    <li class="nav-item local-nav"><h5><a href="/api/expect/#expect-elements">.elements()</a></h5></li>
-                    <li class="nav-item"><a href="/api/expect/#expect-elements-count">.count</a></li>
+
+                    <li class="nav-item local-nav"><h5><a href="/api/expect/element/#">.element()</a></h5></li>
+                    <li class="nav-item"><a href="/api/expect/element/type.html">.a() / .an()</a></li>
+                    <li class="nav-item"><a href="/api/expect/element/active.html">.active</a></li>
+                    <li class="nav-item"><a href="/api/expect/element/attribute.html">.attribute(name)</a></li>
+                    <li class="nav-item"><a href="/api/expect/element/css.html">.css(property)</a></li>
+                    <li class="nav-item"><a href="/api/expect/element/enabled.html">.enabled</a></li>
+                    <li class="nav-item"><a href="/api/expect/element/present.html">.present</a></li>
+                    <li class="nav-item"><a href="/api/expect/element/property.html">.property(name)</a></li>
+                    <li class="nav-item"><a href="/api/expect/element/selected.html">.selected</a></li>
+                    <li class="nav-item"><a href="/api/expect/element/text.html">.text</a></li>
+                    <li class="nav-item"><a href="/api/expect/element/value.html">.value</a></li>
+                    <li class="nav-item"><a href="/api/expect/element/visible.html">.visible</a></li>
+                    <li class="nav-item local-nav"><h5><a href="/api/expect/elements/#">.elements()</a></h5></li>
+                    <li class="nav-item"><a href="/api/expect/elements/count.html">.count</a></li>
                     <li class="nav-item local-nav"><h5><a href="/api/expect/#expect-title">.title()</a></h5></li>
                     <li class="nav-item local-nav"><h5><a href="/api/expect/#expect-url">.url()</a></h5></li>
+                </ul>
+            </div>
+        </li>
+
+        <li>
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#firefox-collapse" aria-expanded="false">
+                <a>.firefox</a>
+            </button>
+            <div class="collapse" id="firefox-collapse" data-section-url="/api/firefox/">
+                <ul class="btn-toggle-nav local-nav">
+                    <li class="nav-item"><a href="/api/firefox/">Overview</a></li>
                 </ul>
             </div>
         </li>

@@ -1,6 +1,11 @@
 <% if (method) { %>
     <div class="page-header">
-        <h1 id="<%= method.name %>"><%= `.${method.name}()` %> <a title="Suggest edits" target="_blank" class="edit-source" href="<%= editLink %>">Suggest edits</a></h1>
+        <% if (method.api === 'expect.element') { %>
+            <h1 id="<%= method.name %>">expect.element().<%= `${method.name + (['css', 'property', 'text', 'a'].includes(method.name) ? '()' : '')}` %> <a title="Suggest edits" target="_blank" class="edit-source" href="<%= editLink %>">Suggest edits</a></h1>
+        <% } else { %>
+            <h1 id="<%= method.name %>"><%= `.${method.name}()` %> <a title="Suggest edits" target="_blank" class="edit-source" href="<%= editLink %>">Suggest edits</a></h1>
+        <% } %>
+
 
         <% if (method.since) { %>
             <span class="since">Since: <%= method.since %></span>
@@ -122,7 +127,7 @@ npx nightwatch <%- method.exampleLink %></code></pre>
         </div>
     <% } %>
 
-    <% if (method.see.length > 0) { %>
+    <% if (method.see && method.see.length > 0) { %>
         <h3>See also</h3>
         <ul class="api-related-links">
             <% for (let link of method.see) { %>

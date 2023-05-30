@@ -911,6 +911,10 @@ section[data-page-uri] {
   content: '📎';
 }
 
+html {
+  scroll-padding-top: 100px;
+}
+
 .doc-main-body h3 {
   font-family: var(--font-family-two);
   font-size: 26px;

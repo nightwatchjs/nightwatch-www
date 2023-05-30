@@ -1,13 +1,34 @@
 <%
 const {generateApiPages} = require('./generate-api-pages.js');
+const path = require('path');
+
+let commandName = path.basename(page.url, path.extname(page.url));
+let commandDescr = '';
+
+if (commandName === 'index') {
+  commandName = '';
+}
+
+if (commandName) {
+  const namespace = page.url.split('/').slice(2);
+  namespace.pop();
+  const commandNamespace = namespace.join('.');
+
+  if (namespace.length) {
+    commandName = `${commandNamespace}.${commandName}`;
+  }
+
+  commandDescr = `Complete API reference for the ${commandName} Nightwatch command/assertion.`;
+  commandName = `${commandName} | API Reference | Nightwatch.js`;
+}
 
 const data = {
     version: Config.version,
     baseUrl: Config.baseUrl,
     section: 'api',
     pageContent: page.content,
-    pageTitle: page.title || 'API Reference | Nightwatch.js',
-    pageDescription: page.description || 'Complete reference of the Nightwatch commands and assertions.',
+    pageTitle: commandName ? commandName : (page.title || 'API Reference | Nightwatch.js'),
+    pageDescription: commandDescr ? commandDescr : (page.description || 'Complete reference of the Nightwatch commands and assertions.'),
     pageImage: page.image || '/img/banners/nightwatch.jpg'
 };
 const apiData = await api;
