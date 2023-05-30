@@ -737,7 +737,7 @@ ul.features {
 }
 
 .sample-test .toolbar .toolbar-item button span {
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .sample-test i {
@@ -1648,6 +1648,7 @@ code {
   color: #f2f2f2;
   background-color: #2E2826;
   border: none;
+  border-radius: 10px;
 }
 
 .secondary pre.language-javascript,

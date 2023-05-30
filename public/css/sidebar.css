@@ -400,9 +400,9 @@ ul.nav .btn-toggle-nav li a.active:hover {
 }
 
 .bs-sidebar ul.nav .btn-toggle-nav li.overview a {
-  padding-left: 0;
+  padding-left: 5px;
   font-size: 16px;
-
+  margin-left: 5px;
 }
 
 .bs-sidebar a,

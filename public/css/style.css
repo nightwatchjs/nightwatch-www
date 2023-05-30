@@ -1408,13 +1408,20 @@ header .navbar-right .nav-item {
 
 .copy-btn,
 div.code-toolbar>.toolbar>.toolbar-item>button {
-  background-color: var(--brown);
-  color: var(--font-color-light);
-  border-radius: 4px;
-  font-family: var(--font-family-main);
+  background-color: var(--background-color-lightgrey);
+  color: var(--color-black);
+  border-radius: 18px;
   border: none;
-  font-size: 14px;
   padding: 4px 10px;
+}
+
+div.code-toolbar>.toolbar>.toolbar-item>button:hover {
+  color: var(--color-orange)
+}
+
+div.code-toolbar>.toolbar>.toolbar-item>button[data-copy-state="copy-success"] {
+  background-color: var(--color-orange);
+  color: white;
 }
 
 .sample-test .toolbar {
