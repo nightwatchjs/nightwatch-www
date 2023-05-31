@@ -144,6 +144,7 @@
 }
 
 .hero__action-copy-command {
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   background: var(--color-white);
   border-radius: 3px;
@@ -549,6 +550,8 @@
   line-height: var(--line-height-33);
   padding: 3px 23px 3px 20px;
   text-decoration: none;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
 }
 
@@ -629,6 +632,8 @@
   line-height: var(--line-height-33);
   padding: 3px 23px 3px 20px;
   text-decoration: none;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
 }
 
@@ -727,6 +732,8 @@
   line-height: var(--line-height-33);
   padding: 12px 20px;
   text-decoration: none;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
 }
 
@@ -867,6 +874,8 @@
   line-height: var(--line-height-33);
   padding: 12px 20px;
   text-decoration: none;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
 }
 
@@ -1198,6 +1207,7 @@
 }
 
 .call-to-action-content-action-copy-command {
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   background: var(--color-white);
   border-radius: 3px;
@@ -1384,6 +1394,7 @@
 }
 
 .footer__wrapper-inner-social-subscribe-input {
+  -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
   background: var(--color-white);
   border-radius: 2px;
@@ -1396,6 +1407,38 @@
   /* TODO: change it to var */
   line-height: calc(21 / 16);
   padding: 10px 36px 10px 14px;
+}
+
+.footer__wrapper-inner-social-subscribe-input::-webkit-input-placeholder {
+  color: var(--color-black);
+  font-family: inherit;
+  font-size: var(--font-size-16);
+  font-weight: 400;
+  line-height: var(--line-height-22);
+}
+
+.footer__wrapper-inner-social-subscribe-input::-moz-placeholder {
+  color: var(--color-black);
+  font-family: inherit;
+  font-size: var(--font-size-16);
+  font-weight: 400;
+  line-height: var(--line-height-22);
+}
+
+.footer__wrapper-inner-social-subscribe-input:-ms-input-placeholder {
+  color: var(--color-black);
+  font-family: inherit;
+  font-size: var(--font-size-16);
+  font-weight: 400;
+  line-height: var(--line-height-22);
+}
+
+.footer__wrapper-inner-social-subscribe-input::-ms-input-placeholder {
+  color: var(--color-black);
+  font-family: inherit;
+  font-size: var(--font-size-16);
+  font-weight: 400;
+  line-height: var(--line-height-22);
 }
 
 .footer__wrapper-inner-social-subscribe-input::placeholder {
