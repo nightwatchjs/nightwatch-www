@@ -150,10 +150,6 @@
   font-size: 18px;
 }
 
-.nav.bs-sidenav h5:hover {
-  background: #f2f2f2;
-}
-
 ul.nav.bs-sidenav a:hover {
   color: #222;
 }
