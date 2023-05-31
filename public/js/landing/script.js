@@ -1,16 +1,3 @@
-function addScript(src, id, callback) {
-  let tag = document.createElement('script');
-  tag.id = id;
-  tag.src = src;
-  tag.async = true;
-  let firstScriptTag = document.getElementsByTagName('script')[0];
-  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-  tag.addEventListener('load', function () {
-    callback();
-  });
-}
-
 docReady(function () {
   addScript('https://cdn.jsdelivr.net/npm/@docsearch/js@3', 'docsearch-script', function () {
     docsearch({
