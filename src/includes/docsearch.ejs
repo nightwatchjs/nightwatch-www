@@ -1,4 +1,4 @@
-<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha"></script>
+<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
 <script>
   docsearch({
     //appId: 'H6WO0X38VS',
@@ -7,8 +7,8 @@
     container: '#docsearch',
     apiKey: '37c74f46d0eab021bc430dc17ebfc089',
     // indexName: 'nightwatchjs',
-    transformItems: function(items) {
-      return items.map(function(item) {
+    transformItems: function (items) {
+      return items.map(function (item) {
         if (!item.content) {
           item.content = item.url.replace('#apimethod-page', '');
         }

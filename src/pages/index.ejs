@@ -2412,7 +2412,18 @@ function activeLink(urlPart) {
     <!-- Footer section end -->
 
   </main>
-  <%- include("docsearch") %>
+  <script>
+    function docReady(fn) {
+      // see if DOM is already available
+      if (document.readyState === 'complete' || document.readyState === 'interactive') {
+        // call on next available tick
+        setTimeout(fn, 1);
+      } else {
+        document.addEventListener('DOMContentLoaded', fn);
+      }
+    }
+  </script>
+  <script src="/js/landing/script.js"></script>
 </body>
 
 </html>
