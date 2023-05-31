@@ -1649,6 +1649,7 @@ code {
   background-color: #2E2826;
   border: none;
   border-radius: 10px;
+  padding: 10px;
 }
 
 .secondary pre.language-javascript,
@@ -1676,6 +1677,7 @@ pre[class*="language-"],
 pre[class*="language-"] .default-theme {
   border: none;
   text-shadow: none;
+  padding: 10px;
 }
 
 code[class*="language-"],
