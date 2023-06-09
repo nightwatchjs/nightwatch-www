@@ -305,6 +305,8 @@ const updatePreStyle = () => {
 onRender((url) => {
   if (url.pathname === '/guide/') {
     navigateTo('/guide/overview/what-is-nightwatch.html');
+  } else if (url.pathname === '/about/highlights/') { 
+    navigateTo('/about/highlights/types-of-testing.html');  
   }
 
   const currentPage = url.pathname.split('/')[1];
