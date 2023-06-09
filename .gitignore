@@ -17,3 +17,4 @@ output/
 # Nightwatch output directory
 tests_output
 /public/__examples/
+package-lock.json
