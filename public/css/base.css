@@ -2,8 +2,8 @@
 
 :root {
   /* Colors */
-  --color-white: hsla(0, 0%, 100%, 1);
-  --color-light-white: hsla(0, 0%, 97%, 1);
+  --background-color: hsla(0, 0%, 100%, 1);
+  --border-color: hsla(0, 0%, 97%, 1);
   --color-black: hsla(0, 0%, 0%, 1);
   --color-light-black: hsla(0, 0%, 0%, 0.08);
   --color-dark-grey: hsla(0, 0%, 21%, 1);
@@ -22,17 +22,15 @@
   --color-dark-brown: hsla(0, 0%, 20%, 1);
 
   /* Font Size */
-  --font-size-68: calc(68 / 16 * 1rem);
-  --font-size-52: calc(52 / 16 * 1rem);
-  --font-size-36: calc(36 / 16 * 1rem);
-  --font-size-28: calc(28 / 16 * 1rem);
-  --font-size-24: calc(24 / 16 * 1rem);
-  --font-size-20: calc(20 / 16 * 1rem);
-  --font-size-21: calc(21 / 16 * 1rem);
-  --font-size-18: calc(18 / 16 * 1rem);
-  --font-size-16: calc(16 / 16 * 1rem);
-  --font-size-14: calc(14 / 16 * 1rem);
-  --font-size-12: calc(12 / 16 * 1rem);
+  --font-size-h1: calc(72 / 16 * 1rem);
+  --font-size-h2: calc(52 / 16 * 1rem);
+  --font-size-h3: calc(45 / 16 * 1rem);
+  --font-size-h4: calc(36 / 16 * 1rem);
+  --font-size-h5: calc(28 / 16 * 1rem);
+  --font-size-h6: calc(24 / 16 * 1rem);
+  --font-size-h7: calc(18 / 16 * 1rem);
+  --font-size-h8: calc(14 / 16 * 1rem);
+  --font-size-h7-mega: calc(21 / 16 * 1rem);
 
   /* Font Weight */
   --weight-100: 100;
@@ -46,26 +44,29 @@
   --weight-900: 900;
 
   /* Line Height (line-height/font-size) */
-  --line-height-72: calc(72 / 68);
-  --line-height-65: calc(65 / 52);
-  --line-height-42: calc(42 / 36);
+  --line-height-h1: calc(80 / 72);
+  --line-height-h2: calc(65 / 52);
+  --line-height-h3: calc(52 / 45);
+  --line-height-h4: calc(42 / 36);
+  --line-height-h5: calc(35 / 28);
+  --line-height-h6: calc(32 / 24);
+  --line-height-h7: calc(36 / 18);
+  --line-height-h7-s: calc(28 / 18);
+  --line-height-h7-xs: calc(24 / 18);
+  --line-height-h8: calc(21 / 14);
+
   --line-height-40: calc(40 / 24);
-  --line-height-36: calc(36 / 18);
-  --line-height-35: calc(35 / 28);
-  --line-height-32: calc(32 / 24);
   --line-height-33: calc(33 / 18);
   --line-height-30: calc(30 / 20);
   --line-height-27: calc(27 / 21);
-  --line-height-28: calc(28 / 18);
   --line-height-25: calc(25 / 14);
-  --line-height-24: calc(24 / 18);
   --line-height-23: calc(23 / 16);
   --line-height-22: calc(22 / 18);
-  --line-height-21: calc(21 / 18);
   --line-height-19: calc(19 / 16);
 
   /* Font family */
-  --font-family-mono: 'IBM Plex Mono', sans-serif;
+  --font-family-primary:  'Source Sans 3', sans-serif;
+  --font-family-code: 'IBM Plex Mono', sans-serif;
 }
 
 .visually-hidden {
@@ -79,5 +80,4 @@
   padding: 0;
   border: 0;
   position: absolute;
-  overflow: hidden;
 }

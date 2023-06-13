@@ -8,11 +8,6 @@
   margin: 0;
 }
 
-html,
-body {
-  font-family: 'Inter', sans-serif;
-}
-
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
