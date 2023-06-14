@@ -413,24 +413,6 @@ section.secondary h3 span {
   margin-right: 50px;
 }
 
-.DocSearch.DocSearch-Button,
-.search-input {
-  margin-top: 2px;
-  border: 1px solid #7ec699;
-  padding: 3px 10px;
-  width: 200px;
-  height: 100%;
-  border-radius: 20px;
-  color: #7ec699;
-  background: #222;
-  margin-left: 10px;
-  margin-right: 10px;
-  transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  -webkit-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
-}
-
 .DocSearch-Button:active,
 .DocSearch-Button:focus,
 .DocSearch-Button:hover {
@@ -1778,15 +1760,6 @@ a:hover {
 
 .navbar-toggle {}
 
-footer {
-  background: #222;
-  color: #aaa;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 15px 0;
-  font-size: 15px;
-  font-weight: 300;
-}
 
 footer .align-left {
   float: left;

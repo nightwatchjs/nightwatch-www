@@ -916,15 +916,6 @@ footer .social-links {
 }
 
 
-.DocSearch.DocSearch-Button,
-.search-input {
-  border: 1px solid rgba(98, 98, 98, .7);
-  color: var(--font-color-light);
-  padding: 4px 10px;
-  width: 150px;
-  font-family: var(--font-family-main);
-}
-
 .DocSearch-Button .DocSearch-Search-Icon {
   color: var(--font-color-light);
   width: 15px;
@@ -941,11 +932,6 @@ footer .social-links {
   font-size: .9rem;
 }
 
-.DocSearch-Button-Keys {
-  display: flex !important;
-  justify-content: flex-end;
-  padding-right: 10px;
-}
 
 .DocSearch-Button-Key {
   background: none;
