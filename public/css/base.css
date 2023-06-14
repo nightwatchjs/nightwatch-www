@@ -5,24 +5,25 @@
   --header-background: hsla(0, 0%, 11%, 1);
   --header-text-color: hsla(0, 0%, 100%, 1);
   --background-color: hsla(0, 0%, 100%, 1);
+  --text-color-light: hsla(0, 0%, 100%, 1);
   --border-color: hsla(0, 0%, 97%, 1);
   --text-color: hsla(0, 0%, 0%, 1);
+  --subtitle-text-color: hsla(23, 9%, 36%, 1);
   --button-border-color:hsla(0, 0%, 0%, 1);
   --box-shadow-color: hsla(0, 0%, 0%, 0.08);
   --button-background-color-dark:  hsla(0, 0%, 21%, 1);
   --button-box-shadow: hsla(180, 1%, 79%, 1);
-  --button-background-color-dark-light: hsla(180, 11%, 98%, 1);
-  --text-color-accent: hsla(14, 95%, 64%, 1);
+  --button-background-color-light: hsla(180, 11%, 98%, 1);
+  --text-color-accent: hsla(23, 72%, 33%, 1);
   --button-border-accent-color: hsla(27.16, 95%, 60.78%, 1);
   --button-background-color-accent: hsla(35.56, 100%, 68.24%, 1);
-  --subtitle-text-color: hsla(23, 55%, 20%, 1);
   --card-border-color: hsla(0, 0%, 94%, 1);
-  --footer-background: hsla(49, 65%, 97%, 1);
   --card-text-color: hsla(23, 9%, 36%, 1);
+  --button-border-color-dark: hsla(32, 11%, 40%, 1);
+  --footer-background-color: hsla(0, 0%, 98%, 1);
 
 
-
-  --color-white: hsla(0, 0%, 100%, 1);
+  /* --color-white: hsla(0, 0%, 100%, 1);
   --color-light-white: hsla(0, 0%, 97%, 1);
   --color-black: hsla(0, 0%, 0%, 1);
   --color-light-black: hsla(0, 0%, 0%, 0.08);
@@ -40,7 +41,7 @@
   --color-muted-brown: hsla(32, 11%, 40%, 1);
   --color-blue: hsla(230, 96%, 55%, 1);
   --color-muted-blue: hsla(217, 74%, 43%, 1);
-  --color-dark-brown:hsla(23, 55%, 20%, 1);
+  --color-dark-brown:hsla(23, 55%, 20%, 1); */
 
   /* Font Size */
   --font-size-h1: calc(72 / 16 * 1rem);
@@ -74,6 +75,7 @@
   --line-height-h7: calc(36 / 18);
   --line-height-h7-s: calc(28 / 18);
   --line-height-h7-xs: calc(24 / 18);
+  --line-height-h7-mega: calc(24 / 21);
   --line-height-h8: calc(21 / 14);
 
   --line-height-40: calc(40 / 24);

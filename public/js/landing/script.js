@@ -1,4 +1,20 @@
 docReady(function () {
+
+  // Copy button script
+  const copyButton = document.querySelector('.hero__action-copy-command-button');
+
+  copyButton.addEventListener('click', function () {
+    const copyText = document.querySelector('.hero__action-copy-command-text');
+
+    navigator.clipboard.writeText(copyText.textContent).then(() => {
+      copyButton.innerHTML = 'Copied!';
+    });
+    setTimeout(() => {
+      copyButton.innerHTML = 'Copy';
+    }, 2000);
+  });
+
+
   addScript('https://cdn.jsdelivr.net/npm/@docsearch/js@3', 'docsearch-script', function () {
     docsearch({
       //appId: 'H6WO0X38VS',
@@ -16,10 +32,11 @@ docReady(function () {
             item.hierarchy.lvl1 = item.content.replace('https://nightwatchjs.org/', '');
             item.type = 'lvl1';
           }
+
           return item;
         });
       },
-      debug: false,
+      debug: false
     });
   });
 });

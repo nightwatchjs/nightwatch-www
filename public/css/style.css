@@ -2922,3 +2922,105 @@ p.bottom-text {
   padding-bottom: 32px;
 }
 /* Footer section end */
+
+.header {
+  display: flex;
+  justify-content: center;
+  background: var(--header-background);
+  position: sticky;
+  top: 0;
+  /* TODO: remove z-index and fix natively */
+  z-index: 100;
+}
+
+/* Navigation section start */
+.navigation__logo {
+  width: 242px;
+  margin-right: auto;
+  padding: 14px 0;
+}
+
+.navigation__logo svg {
+  width: 100%;
+  height: 100%;
+}
+
+.navigation {
+  align-items: center;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1400px;
+}
+
+.navigation-list {
+  align-items: center;
+  display: flex;
+  gap: 52px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-link {
+  color: var(--header-text-color);
+  font-size: initial;
+  font-weight: 600;
+  line-height: var(--line-height-19);
+  text-decoration: none;
+}
+
+.navigation-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.navigation-list > li > a svg {
+  width: 30px;
+  height: 100%;
+  fill: var(--background-color);
+}
+
+.navigation-list:last-child {
+  gap: 32px;
+  padding-left: 52px;
+}
+
+#docsearch > svg {
+  width: 24px;
+  height: 24px;
+  stroke-width: 1.6;
+  color: var(--background-color);
+  cursor: pointer;
+}
+
+#docsearch .DocSearch-Button-Placeholder {
+  display: none;
+}
+
+#docsearch .DocSearch-Button-Keys {
+  display: none;
+}
+
+#docsearch button {
+  background: unset;
+  border-radius: unset;
+  margin: unset;
+  padding: unset;
+}
+
+#docsearch button span.DocSearch-Button-Container {
+  width: 24px;
+  height: 24px;
+}
+
+#docsearch button .DocSearch-Button-Container > svg {
+  --docsearch-text-color: var(--background-color);
+  width: 100%;
+  height: 100%;
+}
+
+#docsearch > button:hover {
+  box-shadow: unset;
+}
