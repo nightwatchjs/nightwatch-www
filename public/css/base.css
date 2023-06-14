@@ -9,6 +9,7 @@
   --border-color: hsla(0, 0%, 97%, 1);
   --text-color: hsla(0, 0%, 0%, 1);
   --subtitle-text-color: hsla(23, 9%, 36%, 1);
+  --feature-title-text-color: hsla(23, 55%, 20%, 1);
   --button-border-color:hsla(0, 0%, 0%, 1);
   --box-shadow-color: hsla(0, 0%, 0%, 0.08);
   --button-background-color-dark:  hsla(0, 0%, 21%, 1);
@@ -90,6 +91,8 @@
   /* Font family */
   --font-family-primary:  'Source Sans 3', sans-serif;
   --font-family-code: 'IBM Plex Mono', sans-serif;
+
+  --layout-content-width: 1200px;
 }
 
 .visually-hidden {
