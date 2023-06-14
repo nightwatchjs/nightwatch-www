@@ -54,6 +54,7 @@
   --font-size-h7: calc(18 / 16 * 1rem);
   --font-size-h8: calc(14 / 16 * 1rem);
   --font-size-h7-mega: calc(21 / 16 * 1rem);
+  --font-size-testimonial: calc(21 / 16 * 1rem);
 
   /* Font Weight */
   --weight-100: 100;
@@ -79,15 +80,16 @@
   --line-height-h7-xs: calc(24 / 18);
   --line-height-h7-mega: calc(24 / 21);
   --line-height-h8: calc(21 / 14);
+  --line-height-testimonial: calc(28 / 21);
 
-  --line-height-40: calc(40 / 24);
+  /* --line-height-40: calc(40 / 24);
   --line-height-33: calc(33 / 18);
   --line-height-30: calc(30 / 20);
   --line-height-27: calc(27 / 21);
   --line-height-25: calc(25 / 14);
   --line-height-23: calc(23 / 16);
   --line-height-22: calc(22 / 18);
-  --line-height-19: calc(19 / 16);
+  --line-height-19: calc(19 / 16); */
 
   /* Font family */
   --font-family-primary:  'Source Sans 3', sans-serif;
