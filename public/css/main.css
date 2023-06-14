@@ -866,7 +866,7 @@ ul.features {
 }
 
 p.secondary-text {
-  color: #777 !important;
+  color:#655B55 !important;
   font-size: .95em !important;
   padding-left: 25px;
   margin-top: 20px;
@@ -2546,7 +2546,7 @@ p.whatis-logo+p {
   display: block;
   font-size: 15px;
   line-height: 22px;
-  color: #767676;
+  color: #655B55;
   padding: 2px 10px;
 }
 

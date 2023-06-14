@@ -2108,12 +2108,12 @@ ul.nav .btn-toggle-nav li a {
 }
 
 ul.nav .btn-toggle-nav li a:hover {
-  color: var(--color-orange);
+  color: var(--color-brown);
   text-decoration: none;
 }
 
 ul.nav .btn-toggle-nav li a.active {
-  background: var(--color-orange) !important;
+  background: var(--color-brown) !important;
   border-radius: 2px;
 }
 
@@ -2258,7 +2258,7 @@ table {
 .right-side-nav .nav-link:hover,
 .right-side-nav .nav-link.active {
   background: none;
-  color: var(--color-orange);
+  color: var(--color-brown);
   text-decoration: none;
 }
 

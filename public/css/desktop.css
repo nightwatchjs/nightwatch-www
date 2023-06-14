@@ -5,6 +5,16 @@
   width: 100%;
 }
 
+.nightwatch-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  gap: 15px;
+  margin-right: 20px;
+}
+
 .hero-section {
   width: 100%;
   background: #1B1B1B;
@@ -426,7 +436,7 @@
   width: 100%;
   left: 0px;
   top: 0px;
-  background: var(--color-dark-brown);
+  background: var(--color-black);
   box-shadow: 1px 1px 11px #0C0A0A;
   position: sticky;
   z-index: 1071;
@@ -465,7 +475,7 @@
 
 a#navbarDropdown {
   margin-top: 11px;
-  color: var(--color-orange);
+  color: white;
   font-weight: bold;
   transition: none;
 }
@@ -478,7 +488,7 @@ a#navbarDropdown:hover {
 }
 
 a#navbarDropdown::after {
-  color: var(--color-orange);
+  color: white;
   margin-left: 2px;
   transition: none;
 }
@@ -641,13 +651,13 @@ button[role="button"] {
 }
 
 .navigation-links a.active {
-  border-bottom: 5px solid var(--color-orange);
+  border-bottom: 5px solid var(--color-yellow);
   padding-bottom: 34px;
 }
 
 .navigation-content .nav-links-right a:hover {
   text-decoration: none;
-  border-bottom: 5px solid var(--color-orange);
+  border-bottom: 5px solid var(--color-yellow);
   padding-bottom: 34px;
 }
 
@@ -848,6 +858,17 @@ button[role="button"] {
   height: 28px;
 }
 
+
+ .nightwatch-logo .nightwatch-title {
+  color: white;
+  opacity: 75%;
+  font-size: 26px;
+}
+
+
+.nightwatch-logo img {
+  height: 50px;
+}
 
 .community-github-info img {
   width: 106px;
