@@ -73,6 +73,7 @@
   --line-height-h4: calc(42 / 36);
   --line-height-h5: calc(35 / 28);
   --line-height-h6: calc(32 / 24);
+  --line-height-h6-mega: calc(40 / 24);
   --line-height-h7: calc(36 / 18);
   --line-height-h7-s: calc(28 / 18);
   --line-height-h7-xs: calc(24 / 18);

@@ -337,7 +337,7 @@
 
 /* Nightwatch Feature section start */
 .features {
-  margin-bottom: 120px;
+  margin-bottom: 160px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 65px;
@@ -505,6 +505,10 @@
   padding: 60px 57px 36px 32px;
 }
 
+.capabilities--single-column .capabilities__card .capabilities__card__image {
+  width: 547px;
+}
+
 .capabilities--single-column .capabilities__card .capabilities__card-content {
   display: flex;
   flex-direction: column;
@@ -530,7 +534,7 @@
 .capabilities--single-column .capabilities__card .capabilities__card-text-list-item {
   color: var(--card-text-color);
   font-size: var(--font-size-h7);
-  font-weight: 500;
+  font-weight: 600;
   line-height: var(--line-height-h7);
 }
 
@@ -540,33 +544,39 @@
 
 .capabilities--single-column .capabilities__card .capabilities__card-button {
   align-items: center;
-  background: var(--button-background-color-light);
+  background: var(--button-background-color-dark);
   border-radius: 6px;
   border: 1px solid var(--button-border-color-dark);
-  box-shadow: inset 0px -4.35724px 0px var(--button-box-shadow-color);
-  color: var(--text-color);
+  box-shadow: inset 0px -4.35724px 0px var(--button-border-color);
+  color: var(--text-color-light);
   display: flex;
   font-family: var(--font-family-code);
   font-feature-settings: 'salt' on;
   font-size: var(--font-size-h7);
-  font-weight: 500;
+  font-weight: 600;
   gap: 13px;
-  line-height: var(--line-height-33);
+  line-height: var(--line-height-h7);
   padding: 3px 23px 3px 20px;
   text-decoration: none;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  stroke: var(--text-color-light);
 }
 
 .capabilities--single-column .capabilities__card .capabilities__card-button:hover {
-  background: var(--button-background-color-accent);
-  border: 1px solid var(--button-border-accent-color);
-  box-shadow: inset 0 -4px 0 var(--button-border-accent-color);
+  background: var(--button-background-color-light);
+  border: 1px solid var(--button-border-color);
+  box-shadow: inset 0 -4px 0 var(--button-border-color);
   color: var(--text-color);
   cursor: pointer;
   transition: 0.3s ease-in-out;
   will-change: background, color, border, box-shadow;
+}
+
+.capabilities--single-column .capabilities__card .capabilities__card-button:hover svg {
+  stroke: var(--text-color);
+  transition: 0.3s ease-in-out;
 }
 
 .capabilities--double-column {
@@ -592,6 +602,10 @@
   margin-bottom: 49px;
 }
 
+.capabilities--double-column .capabilities__card .capabilities__card__image {
+  width: 536px;
+}
+
 .capabilities--double-column .capabilities__card .capabilities__card-heading {
   color: var(--text-color);
   font-size: var(--font-size-h5);
@@ -612,7 +626,7 @@
 .capabilities--double-column .capabilities__card .capabilities__card-text-list-item {
   color: var(--card-text-color);
   font-size: var(--font-size-h7);
-  font-weight: 500;
+  font-weight: 600;
   line-height: var(--line-height-h7);
 }
 
@@ -622,33 +636,39 @@
 
 .capabilities--double-column .capabilities__card .capabilities__card-button {
   align-items: center;
-  background: var(--button-background-color-light);
+  background: var(--button-background-color-dark);
   border-radius: 6px;
   border: 1px solid var(--button-border-color-dark);
-  box-shadow: inset 0px -4.35724px 0px var(--button-box-shadow-color);
-  color: var(--text-color);
+  box-shadow: inset 0px -4.35724px 0px var(--button-border-color);
+  color: var(--text-color-light);
   display: flex;
   font-family: var(--font-family-code);
   font-feature-settings: 'salt' on;
   font-size: var(--font-size-h7);
-  font-weight: 500;
+  font-weight: 600;
   gap: 13px;
-  line-height: var(--line-height-33);
+  line-height: var(--line-height-h7);
   padding: 3px 23px 3px 20px;
   text-decoration: none;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  stroke: var(--text-color-light);
 }
 
 .capabilities--double-column .capabilities__card .capabilities__card-button:hover {
-  background: var(--button-background-color-accent);
-  border: 1px solid var(--button-border-accent-color);
-  box-shadow: inset 0 -4px 0 var(--button-border-accent-color);
+  background: var(--button-background-color-light);
+  border: 1px solid var(--button-border-color);
+  box-shadow: inset 0 -4px 0 var(--button-border-color);
   color: var(--text-color);
   cursor: pointer;
   transition: 0.3s ease-in-out;
   will-change: background, color, border, box-shadow;
+}
+
+.capabilities--double-column .capabilities__card .capabilities__card-button:hover svg {
+  stroke: var(--text-color);
+  transition: 0.3s ease-in-out;
 }
 
 .capabilities__path {
@@ -713,9 +733,9 @@
 }
 
 .performance__content-description-text {
-  font-weight: 500;
+  font-weight: 600;
   font-size: var(--font-size-h6);
-  line-height: var(--line-height-40);
+  line-height: var(--line-height-h6-mega);
   color: var(--card-text-color);
   padding-top: 40px;
 }
@@ -725,15 +745,14 @@
   border-radius: 6px;
   border: 1px solid var(--button-border-color-dark);
   box-shadow: inset 0px -4.35724px 0px var(--button-border-color);
-  color: var(--text-color);
-  color: var(--background-color);
+  color: var(--text-color-light);
   display: flex;
   font-family: var(--font-family-code);
   font-feature-settings: 'salt' on;
   font-size: var(--font-size-h7);
-  font-weight: 500;
+  font-weight: 600;
   gap: 13px;
-  line-height: var(--line-height-33);
+  line-height: var(--line-height-h7);
   padding: 12px 20px;
   text-decoration: none;
   width: -webkit-max-content;
@@ -742,9 +761,9 @@
 }
 
 .performance__content-description-button:hover {
-  background: var(--button-background-color-accent);
-  border: 1px solid var(--button-border-accent-color);
-  box-shadow: inset 0 -4px 0 var(--button-border-accent-color);
+  background: var(--button-background-color-light);
+  border: 1px solid var(--button-border-color);
+  box-shadow: inset 0 -4px 0 var(--button-border-color);
   color: var(--text-color);
   cursor: pointer;
   transition: 0.3s ease-in-out;
