@@ -506,12 +506,13 @@
 }
 
 .capabilities--single-column .capabilities__card .capabilities__card__image {
-  width: 547px;
+  flex: 1 0 0;
 }
 
 .capabilities--single-column .capabilities__card .capabilities__card-content {
   display: flex;
   flex-direction: column;
+  flex: 1 1 0;
 }
 
 .capabilities--single-column .capabilities__card .capabilities__card-heading {
@@ -594,6 +595,7 @@
   display: flex;
   flex-direction: column;
   padding: 60px 16px 33px 23px;
+  flex: 1 1 0;
 }
 
 .capabilities--double-column .capabilities__card .capabilities__card-content {
@@ -602,9 +604,9 @@
   margin-bottom: 49px;
 }
 
-.capabilities--double-column .capabilities__card .capabilities__card__image {
+/* .capabilities--double-column .capabilities__card .capabilities__card__image {
   width: 536px;
-}
+} */
 
 .capabilities--double-column .capabilities__card .capabilities__card-heading {
   color: var(--text-color);
