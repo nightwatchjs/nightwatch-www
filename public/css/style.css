@@ -1,6 +1,6 @@
 html,
 body {
-  font-family: "Segoe UI", Montserrat, system-ui, -apple-system, sans-serif;
+  font-family: var(--font-family-primary);
   background-color: #fff;
 }
 
@@ -1136,13 +1136,13 @@ a {
 .nav>li>a {
   color: var(--font-color-light);
   padding: 4px 16px;
-  font-family: var(--font-family-main);
+  font-family: var(--font-family-primary);
   font-weight: var(--font-weight-semi-light);
   font-size: 16px;
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  font-family: var(--font-family-main);
+  font-family: var(--font-family-primary);
   font-size: 18px;
 }
 
@@ -1179,7 +1179,7 @@ header .navbar-right .nav-item {
 }
 
 .label-github {
-  font-family: var(--font-family-main);
+  font-family: var(--font-family-primary);
   background-color: var(--dark-brown);
   border: 2px solid var(--orange);
   border-radius: 6px;
@@ -1329,12 +1329,12 @@ header .navbar-right .nav-item {
   font-weight: var(--font-weight-regular);
   line-height: 68px;
   margin-bottom: 25px;
-  font-family: var(--font-family-main);
+  font-family: var(--font-family-primary);
 }
 
 #top-section h2 {
   background-image: none;
-  font-family: var(--font-family-main);
+  font-family: var(--font-family-primary);
   font-weight: var(--font-weight-regular);
   color: var(--orange);
   font-size: 56px;
@@ -1349,7 +1349,7 @@ header .navbar-right .nav-item {
   font-size: 20px;
   color: var(--font-color-light);
   margin-bottom: 30px;
-  font-family: var(--font-family-main);
+  font-family: var(--font-family-primary);
   font-weight: var(--font-weight-light);
   max-width: 700px;
   line-height: 35px;
@@ -1361,7 +1361,7 @@ header .navbar-right .nav-item {
 }
 
 .top-section-btns .btn-git {
-  font-family: var(--font-family-main);
+  font-family: var(--font-family-primary);
   font-weight: var(--font-weight-semi-bold);
   background-color: #000;
   color: var(--font-color-light);
@@ -1452,7 +1452,7 @@ div.code-toolbar>.toolbar>.toolbar-item>button[data-copy-state="copy-success"] {
 }
 
 .row.overview h3 {
-  font-family: var(--font-family-main);
+  font-family: var(--font-family-primary);
   font-size: 36px;
   font-weight: var(--background-color-light);
   margin-bottom: 40px;
@@ -1470,14 +1470,14 @@ div.code-toolbar>.toolbar>.toolbar-item>button[data-copy-state="copy-success"] {
   color: var(--font-color-dark);
   font-weight: var(--font-weight-regular);
   margin-bottom: 30px;
-  font-family: var(--font-family-main);
+  font-family: var(--font-family-primary);
   font-size: 56px;
   line-height: 68px;
 }
 
 .index-features p {
   color: var(--font-color-dark) !important;
-  font-family: var(--font-family-main);
+  font-family: var(--font-family-primary);
   font-weight: var(--font-weight-semi-light) !important;
   font-size: 18px;
   line-height: 34px !important;
@@ -1579,7 +1579,7 @@ div.code-toolbar>.toolbar>.toolbar-item>button[data-copy-state="copy-success"] {
 }
 
 .features-items h3 {
-  font-family: var(--font-family-main);
+  font-family: var(--font-family-primary);
   font-size: 36px;
   font-weight: var(--background-color-light);
   margin-bottom: 80px;
@@ -1635,7 +1635,7 @@ div.code-toolbar>.toolbar>.toolbar-item>button[data-copy-state="copy-success"] {
 
 .dev-experience p {
   color: var(--font-color-dark) !important;
-  font-family: var(--font-family-main);
+  font-family: var(--font-family-primary);
   font-weight: var(--font-weight-semi-light) !important;
   font-size: 16px;
   line-height: 34px !important;
@@ -1737,7 +1737,7 @@ div.code-toolbar>.toolbar>.toolbar-item>button[data-copy-state="copy-success"] {
   color: var(--orange);
   font-weight: var(--font-weight-semi-bold);
   margin-bottom: 50px;
-  font-family: var(--font-family-main);
+  font-family: var(--font-family-primary);
   font-size: 36px;
   line-height: 44px;
 }
@@ -1750,7 +1750,7 @@ div.code-toolbar>.toolbar>.toolbar-item>button[data-copy-state="copy-success"] {
 .plugins-integrations ul {
   color: var(--font-color-dark);
   line-height: 30px;
-  font-family: var(--font-family-main);
+  font-family: var(--font-family-primary);
   font-size: 16px;
   line-height: 32px;
   letter-spacing: 0.005em;
@@ -2012,7 +2012,7 @@ img.github-embed {
 
 
 #doc-sidebar-nav h3 {
-  font-family: var(--font-family-main);
+  font-family: var(--font-family-primary);
   font-weight: var(--font-weight-semi-bold);
   font-size: 24px;
   color: var(--font-color-dark);
@@ -2034,7 +2034,7 @@ img.github-embed {
 
 #doc-sidebar-nav .bs-sidenav button a,
 .bs-sidebar .nav>li>a {
-  font-family: var(--font-family-main);
+  font-family: var(--font-family-primary);
   color: var(--font-color-dark);
   font-weight: var(--font-weight-regular) !important;
   font-size: 15px !important;
@@ -2051,7 +2051,7 @@ img.github-embed {
 }
 
 .bs-sidebar .nav>li>a.nav-link {
-  font-family: var(--font-family-main);
+  font-family: var(--font-family-primary);
   font-weight: var(--font-weight-regular);
   line-height: 26px;
   color: var(--dark--orange);
@@ -2085,7 +2085,7 @@ img.github-embed {
 }
 
 ul.nav .btn-toggle-nav li a {
-  font-family: var(--font-family-main);
+  font-family: var(--font-family-primary);
   font-weight: var(--font-weight-regular);
   font-size: 15px;
   line-height: 20px;
@@ -2118,7 +2118,7 @@ ul.nav .btn-toggle-nav li a.active {
 
 section.secondary h2,
 section.secondary h1 {
-  font-family: var(--font-family-main);
+  font-family: var(--font-family-primary);
   font-size: 42px;
   font-weight: 600;
   border-bottom: 1px solid #f2f2f2;
@@ -2142,14 +2142,14 @@ section.secondary h1.community-support-title {
 .doc-main-body h1,
 .doc-main-body h2 {
   padding-top: 20px !important;
-  font-family: var(--font-family-one) !important;
+  font-family: var(--font-family-primary) !important;
 }
 
 .doc-main-body h3 {
   font-size: 34px;
   border-bottom: 1px solid #f2f2f2;
   padding-top: 50px;
-  font-family: var(--font-family-two);
+  font-family: var(--font-family-primary);
   color: var(--font-color-dark);
   margin-bottom: 30px;
 }
@@ -2161,7 +2161,7 @@ section.secondary h1.community-support-title {
 
 .docs-section p {
   margin: 15px 0 25px;
-  font-family: var(--font-family-main);
+  font-family: var(--font-family-primary);
   font-size: 16px;
   line-height: 28px;
 }
@@ -2174,7 +2174,7 @@ section.secondary h1.community-support-title {
 .docs-section ul.introduction,
 .docs-section ol,
 table {
-  font-family: var(--font-family-main);
+  font-family: var(--font-family-primary);
   font-size: 16px;
   line-height: 30px;
 }
@@ -2190,7 +2190,7 @@ table {
 }
 
 .docs-section ul {
-  font-family: var(--font-family-main);
+  font-family: var(--font-family-primary);
   font-size: 16px;
 }
 
@@ -2201,7 +2201,7 @@ table {
 .improve-article-bottom {
   background-color: var(--orange);
   border-radius: 8px;
-  font-family: var(--font-family-main);
+  font-family: var(--font-family-primary);
   font-size: 14px;
   box-shadow: none;
   padding: 16px 24px;
@@ -2220,7 +2220,7 @@ table {
 }
 
 .right-side-nav h5 {
-  font-family: var(--font-family-main);
+  font-family: var(--font-family-primary);
   font-weight: var(--font-weight-semi-bold);
   font-size: 15px;
   color: var(--font-color-dark);
@@ -2232,7 +2232,7 @@ table {
 }
 
 .right-side-nav .nav-link {
-  font-family: var(--font-family-main);
+  font-family: var(--font-family-primary);
   font-weight: var(--font-weight-regular);
   font-size: 14px;
   border-radius: 2px;
@@ -2275,13 +2275,13 @@ section.secondary .docs-section.releases h3.mb-1 {
 .alert-info {
   font-size: 16px;
   line-height: 30px;
-  font-family: var(--font-family-main);
+  font-family: var(--font-family-primary);
 }
 
 [data-page-uri^="/api/ensure"] .apimethod,
 [data-page-uri^="/api/expect"] .apimethod,
 [data-page-uri^="/api/useractions"] .apimethod {
-  font-family: var(--font-family-main);
+  font-family: var(--font-family-primary);
   font-size: 16px !important;
   line-height: 30px;
 }
@@ -2313,7 +2313,7 @@ section.secondary .docs-section.releases h3.mb-1 {
 }
 
 #community-content article h4 {
-  font-family: var(--font-family-main);
+  font-family: var(--font-family-primary);
   margin-bottom: 15px;
   margin-top: 10px;
 }
@@ -2330,7 +2330,7 @@ section.secondary .docs-section.releases h3.mb-1 {
 }
 
 #community-content article p {
-  font-family: var(--font-family-main);
+  font-family: var(--font-family-primary);
   font-weight: var(--font-weight-semi-light);
   margin: 0;
   font-size: 15px;
@@ -2353,7 +2353,7 @@ section.secondary .docs-section.releases h3.mb-1 {
 #community-content article .va-tag {
   border: 1px solid var(--orange);
   background-color: var(--light-orange);
-  font-family: var(--font-family-main);
+  font-family: var(--font-family-primary);
   font-weight: var(--font-weight-semi-light);
   font-size: 14px;
   width: 60px;
