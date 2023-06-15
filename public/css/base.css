@@ -21,6 +21,8 @@
   --card-border-color: hsla(0, 0%, 94%, 1);
   --card-text-color: hsla(23, 9%, 36%, 1);
   --button-border-color-dark: hsla(32, 11%, 40%, 1);
+  --dropdown-background-color: hsla(0, 0%, 98%, 1);
+  --dropdown-box-shadow-color: hsla(0, 0%, 0%, 0.08);
   --footer-background-color: hsla(0, 0%, 98%, 1);
 
 
