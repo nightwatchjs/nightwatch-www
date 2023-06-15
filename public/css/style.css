@@ -2728,7 +2728,7 @@ p.bottom-text {
   flex-direction: column;
   margin-left: auto;
   margin-right: auto;
-  max-width: min(1200px, 90%);
+  max-width: var(--layout-content-width);
   padding-bottom: 50px;
   padding-top: 84px;
   width: 100%;
@@ -2745,20 +2745,20 @@ p.bottom-text {
   flex: 2.4 1 auto;
 }
 
-.footer__wrapper-inner-menu > ul {
+.footer__wrapper-inner-menu>ul {
   display: flex;
   justify-content: space-between;
   list-style: none;
   padding: 0;
 }
 
-.footer__wrapper-inner-menu > ul > li {
+.footer__wrapper-inner-menu>ul>li {
   display: block;
   margin: 0;
   padding: 0;
 }
 
-.footer__wrapper-inner-menu > ul > li > .footer__wrapper-inner-menu-separator {
+.footer__wrapper-inner-menu>ul>li>.footer__wrapper-inner-menu-separator {
   font-weight: 600;
   font-size: var(--font-size-h7);
   line-height: var(--line-height-h7-xs);
@@ -2768,12 +2768,12 @@ p.bottom-text {
   margin-bottom: 19px;
 }
 
-.footer__wrapper-inner-menu > ul > li > ul {
+.footer__wrapper-inner-menu>ul>li>ul {
   list-style: none;
   padding: 0;
 }
 
-.footer__wrapper-inner-menu > ul > li > ul > li a {
+.footer__wrapper-inner-menu>ul>li>ul>li a {
   font-weight: 600;
   font-size: initial;
   /* TODO: replace with var */
@@ -2784,7 +2784,7 @@ p.bottom-text {
   opacity: 0.9;
 }
 
-.footer__wrapper-inner-menu > ul > li > ul > li a:hover {
+.footer__wrapper-inner-menu>ul>li>ul>li a:hover {
   text-decoration: underline;
 }
 
@@ -2856,7 +2856,7 @@ p.bottom-text {
   color: var(--text-color);
   font-family: inherit;
   font-size: initial;
-  font-weight: 400;
+  font-weight: 500;
   line-height: var(--line-height-22);
 }
 
@@ -2864,7 +2864,7 @@ p.bottom-text {
   color: var(--text-color);
   font-family: inherit;
   font-size: initial;
-  font-weight: 400;
+  font-weight: 500;
   line-height: var(--line-height-22);
 }
 
@@ -2872,7 +2872,7 @@ p.bottom-text {
   color: var(--text-color);
   font-family: inherit;
   font-size: initial;
-  font-weight: 400;
+  font-weight: 500;
   line-height: var(--line-height-22);
 }
 
@@ -2883,11 +2883,11 @@ p.bottom-text {
   box-shadow: inset 0px -3.28005px 0px var(--button-border-color);
   color: var(--background-color);
   font-family: var(--font-family-code);
-  font-feature-settings: 'salt' on;
+  font-feature-settings: 'salt'on;
   font-size: var(--font-size-h8);
   font-weight: 600;
-  line-height: var(--line-height-33);
-  padding: 8px 17px;
+  line-height: calc(33 / 14);
+  padding: 5px 17px;
   position: absolute;
   right: 0;
   top: 0;
@@ -2944,20 +2944,16 @@ p.bottom-text {
   padding-bottom: 32px;
 }
 /* Footer section end */
-
-
-
 .header {
   display: flex;
   justify-content: center;
   background: var(--header-background);
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   /* TODO: remove z-index and fix natively */
   z-index: 100;
 }
-
-
 
 /* Navigation section start */
 .navigation__logo {
@@ -3002,7 +2998,7 @@ p.bottom-text {
   text-underline-offset: 4px;
 }
 
-.navigation-list > li > a svg {
+.navigation-list>li>a svg {
   width: 30px;
   height: 100%;
   fill: var(--background-color);
@@ -3013,7 +3009,7 @@ p.bottom-text {
   padding-left: 52px;
 }
 
-#docsearch > svg {
+#docsearch>svg {
   width: 24px;
   height: 24px;
   stroke-width: 1.6;
@@ -3041,13 +3037,14 @@ p.bottom-text {
   height: 24px;
 }
 
-#docsearch button .DocSearch-Button-Container > svg {
+#docsearch button .DocSearch-Button-Container>svg {
   --docsearch-text-color: var(--background-color);
   width: 100%;
   height: 100%;
 }
 
-#docsearch > button:hover {
+#docsearch>button:hover {
   box-shadow: unset;
 }
+
 /* Navigation section end */
