@@ -1012,8 +1012,7 @@
   gap: 10px;
   font-weight: 600;
   font-size: initial;
-  /* TODO: change it to variable */
-  line-height: calc(24 / 16);
+  line-height: var(--line-height-base);
   -webkit-text-decoration-line: underline;
   text-decoration-line: underline;
   color: var(--text-color);
@@ -1156,8 +1155,7 @@
 .integration__content-card-title {
   font-weight: 600;
   font-size: initial;
-  /* TODO: covert into var */
-  line-height: calc(24 / 16);
+  line-height: var(--line-height-base);
   text-align: center;
   color: var(--text-color);
 }
@@ -1560,6 +1558,7 @@
   font-feature-settings: 'salt'on;
   font-size: var(--font-size-h8);
   font-weight: 600;
+  /* TODO: convert to var */
   line-height: calc(33 / 14);
   padding: 5px 17px;
   position: absolute;
@@ -1603,8 +1602,7 @@
   color: var(--button-background-color-dark);
   font-size: initial;
   font-weight: 600;
-  /* TODO: convert to var */
-  line-height: calc(24 / 16);
+  line-height: var(--line-height-base);
   opacity: 0.9;
 }
 

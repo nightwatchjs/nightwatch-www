@@ -45,6 +45,7 @@
   --color-dark-brown:hsla(23, 55%, 20%, 1); */
 
   /* Font Size */
+  --font-size-base: calc(16 / 16 * 1rem);
   --font-size-h1: calc(72 / 16 * 1rem);
   --font-size-h2: calc(52 / 16 * 1rem);
   --font-size-h3: calc(45 / 16 * 1rem);
@@ -56,18 +57,8 @@
   --font-size-h7-mega: calc(21 / 16 * 1rem);
   --font-size-testimonial: calc(21 / 16 * 1rem);
 
-  /* Font Weight */
-  --weight-100: 100;
-  --weight-200: 200;
-  --weight-300: 300;
-  --weight-400: 400;
-  --weight-500: 500;
-  --weight-600: 600;
-  --weight-700: 700;
-  --weight-800: 800;
-  --weight-900: 900;
-
   /* Line Height (line-height/font-size) */
+  --line-height-base: calc(24 / 16);
   --line-height-h1: calc(80 / 72);
   --line-height-h2: calc(65 / 52);
   --line-height-h3: calc(52 / 45);
