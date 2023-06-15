@@ -285,6 +285,11 @@
   padding-top: 20px;
 }
 
+.hero__companies__logos a img {
+  width: 165px;
+  height: 100%;
+}
+
 .features__community-stats {
   align-items: center;
   display: flex;
@@ -986,6 +991,16 @@
   display: flex;
   gap: 28px;
   align-items: center;
+}
+
+.testimonial__content-card-author-image {
+  border: 2px solid #EFEFEF;
+  border-radius: 5px var(--card-border-color);
+}
+
+.testimonial__content-card-author-image img {
+  width: 90px;
+  height: 100%;
 }
 
 .testimonial__content-card-author-name {
