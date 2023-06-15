@@ -1469,7 +1469,7 @@
   color: var(--text-color);
   font-family: inherit;
   font-size: initial;
-  font-weight: 400;
+  font-weight: 500;
   line-height: var(--line-height-22);
 }
 
@@ -1477,7 +1477,7 @@
   color: var(--text-color);
   font-family: inherit;
   font-size: initial;
-  font-weight: 400;
+  font-weight: 500;
   line-height: var(--line-height-22);
 }
 
@@ -1485,7 +1485,7 @@
   color: var(--text-color);
   font-family: inherit;
   font-size: initial;
-  font-weight: 400;
+  font-weight: 500;
   line-height: var(--line-height-22);
 }
 
@@ -1499,8 +1499,8 @@
   font-feature-settings: 'salt' on;
   font-size: var(--font-size-h8);
   font-weight: 600;
-  line-height: var(--line-height-33);
-  padding: 8px 17px;
+  line-height: calc(33 / 14);
+  padding: 5px 17px;
   position: absolute;
   right: 0;
   top: 0;
