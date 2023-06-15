@@ -1,19 +1,41 @@
 docReady(function () {
 
   // Copy button script
-  const copyButton = document.querySelector('.hero__action-copy-command-button');
+  // const copyButton = document.querySelector('.hero__action-copy-command-button');
 
-  copyButton.addEventListener('click', function () {
-    const copyText = document.querySelector('.hero__action-copy-command-text');
+  // copyButton.addEventListener('click', function () {
+  //   const copyText = document.querySelector('.hero__action-copy-command-text');
 
-    navigator.clipboard.writeText(copyText.textContent).then(() => {
-      copyButton.innerHTML = 'Copied!';
+  //   navigator.clipboard.writeText(copyText.textContent).then(() => {
+  //     copyButton.innerHTML = 'Copied!';
+  //   });
+  //   setTimeout(() => {
+  //     copyButton.innerHTML = 'Copy';
+  //   }, 2000);
+  // });
+
+  function addCopyEventListeners(buttonSelector, textSelector) {
+    const copyButton = document.querySelector(buttonSelector);
+
+    copyButton.addEventListener('click', async function () {
+      const copyText = document.querySelector(textSelector);
+
+      try {
+        await navigator.clipboard.writeText(copyText.textContent);
+        copyButton.innerHTML = 'Copied!';
+      } catch (err) {
+        console.error('Failed to copy text: ', err);
+      }
+
+      setTimeout(() => {
+        copyButton.innerHTML = 'Copy';
+      }, 2000);
     });
-    setTimeout(() => {
-      copyButton.innerHTML = 'Copy';
-    }, 2000);
-  });
+  }
 
+
+  addCopyEventListeners('.hero__action-copy-command-button', '.hero__action-copy-command-text');
+  addCopyEventListeners('.call-to-action-content-action-copy-command-button', '.call-to-action-content-action-copy-command-text');
 
   addScript('https://cdn.jsdelivr.net/npm/@docsearch/js@3', 'docsearch-script', function () {
     docsearch({

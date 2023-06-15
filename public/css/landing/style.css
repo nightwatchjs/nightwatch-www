@@ -1292,10 +1292,12 @@
   font-size: var(--font-size-h7);
   font-weight: 600;
   line-height: var(--line-height-h7-s);
-  padding: 12px 50px;
+  padding: 12px 0;
   position: absolute;
   right: -9px;
   top: -2px;
+  width: 100%;
+  max-width: 145px;
 }
 
 .call-to-action-content-action-copy-command-button:hover {
