@@ -389,6 +389,70 @@
   text-align: center;
 }
 
+@media (max-width: 480px) {
+  .hero__content {
+    max-width: 30rem;
+    gap: 12px;
+  }
+
+  .hero {
+    padding-top: 30px;
+  }
+
+  .hero__heading {
+    font-size: var(--font-size-h5);
+    line-height: var(--line-height-h5);
+  }
+
+  .hero__sub-heading {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    padding: 0 35px;
+  }
+
+  .hero__action {
+    margin-top: 28px;
+    margin-bottom: 24px;
+    gap: 20px;
+    padding: 0 40px;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+
+  .hero__action-copy-command {
+    padding: 10px 12px;
+  }
+
+  .hero__action-copy-command-text {
+    font-size: var(--font-size-h7);
+    line-height: var(--line-height-h7);
+    display: flex;
+  }
+
+  .hero__action-copy-command-button {
+    padding: 11px 36px;
+    max-width: 113px;
+  }
+
+  .hero__action-button--get-started {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .hero__companies {
+    padding: 22px 22px;
+  }
+
+  .hero__companies__text {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+  }
+  
+  .hero__companies__logos a img {
+    width: 100px;
+    height: 100%;
+  }
+}
 /* Hero Section end */
 
 /* Nightwatch Feature section start */
