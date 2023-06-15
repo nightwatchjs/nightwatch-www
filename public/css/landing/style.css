@@ -67,6 +67,58 @@
   padding-left: 52px;
 }
 
+.navigation-list>li button {
+  font-weight: 700;
+  font-size: var(--font-size-h7);
+  line-height: var(--line-height-h7-xs);
+  color: var(--text-color-light);
+  background: transparent;
+  border: unset;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.navigation-list .release-button-action {
+  position: relative;
+}
+
+.navigation-list>li [role="menu"] {
+  display: none;
+  position: absolute;
+  margin: 0;
+  background: #FAFAFA;
+  box-shadow: 3px 4px 7px 1px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  padding: 21px 25px;
+  width: max-content;
+  left: -90px;
+  top: 45px;
+}
+
+.navigation-list>li [role="menu"] li:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.navigation-list>li>ul [role="menuitem"] {
+  display: block;
+  border-radius: 5px;
+}
+
+.navigation-list>li>ul [role="menuitem"] a {
+  font-weight: 600;
+  font-size: initial;
+  /* TODO: replace with var */
+  line-height: calc(19/16);
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.navigation-list>li>ul [role="menuitem"] a:hover {
+  text-decoration: underline;
+}
+
 #docsearch>svg {
   width: 24px;
   height: 24px;

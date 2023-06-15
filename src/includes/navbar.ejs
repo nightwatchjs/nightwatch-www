@@ -1,8 +1,4 @@
-<%
-  function activeLink(urlPart) {
-    return page.url.includes(urlPart) ? 'active' : '';
-  }
-%>
+<% function activeLink(urlPart) { return page.url.includes(urlPart) ? 'active' : '' ; } %>
 
   <!-- Navbar start -->
   <header class="header" id="header">
@@ -131,7 +127,8 @@
             </svg>
           </div>
         </li>
-        <li><a href="https://github.com/nightwatchjs/" target="_blank" rel="noopener noreferrer" class="navigation-link">
+        <li><a href="https://github.com/nightwatchjs/" target="_blank" rel="noopener noreferrer"
+            class="navigation-link">
             <svg role="img" viewBox="0 0 16 16" version="1.1" shape-rendering="geometricPrecision"
               text-rendering="geometricPrecision">
               <title>GitHub</title>
@@ -160,6 +157,22 @@
               </g>
             </svg>
           </a></li>
+        <li class="release-button-action"><button type="button" id="releaseVersionButton" aria-controls="releaseVersionMenu"
+            aria-haspopup="true">3.0<svg width="12" height="8" viewBox="0 0 12 8" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M10.5858 0.984375H1.41421C0.523309 0.984375 0.0771403 2.06152 0.707105 2.69148L5.29289 7.27727C5.68342 7.66779 6.31658 7.66779 6.70711 7.27727L11.2929 2.69148C11.9229 2.06152 11.4767 0.984375 10.5858 0.984375Z"
+                fill="white" />
+            </svg>
+          </button>
+        <ul id="releaseVersionMenu" role="menu" aria-labelledby="releaseVersionButton">
+          <li role="menuitem"><a href="#!">Previous 2.6.19
+          </a></li>
+          <li role="menuitem"><a href="#!">Version 1.7</a></li>
+          <li role="menuitem"><a href="#!">Version 0.9</a></li>
+          <li role="menuitem"><a href="#!">All versions</a></li>
+        </ul>
+        </li>
       </ul>
     </nav>
   </header>
