@@ -31,7 +31,7 @@
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  max-width: 1400px;
+  max-width: min(1400px, 90%);
 }
 
 .navigation-list {
@@ -317,7 +317,7 @@
   display: flex;
   flex-direction: column;
   margin: auto;
-  max-width: var(--layout-content-width);
+  max-width: min(var(--layout-content-width), 90%);
   padding: 48px 117px;
   width: 100%;
 }
@@ -352,7 +352,7 @@
   /* margin-left: auto;
   margin-right: auto; */
   /* margin-top: 64px; */
-  max-width: var(--layout-content-width);
+  max-width: min(var(--layout-content-width), 90%);
   width: 100%;
   border: 5px solid var(--border-color);
   border-radius: 20px;
@@ -401,7 +401,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 65px;
-  max-width: var(--layout-content-width);
+  max-width: min(var(--layout-content-width), 90%);
   width: 100%;
   position: relative;
 }
@@ -527,7 +527,7 @@
 .capabilities {
   margin-left: auto;
   margin-right: auto;
-  max-width: var(--layout-content-width);
+  max-width: min(var(--layout-content-width), 90%);
   width: 100%;
   margin-bottom: 200px;
   position: relative;
@@ -850,7 +850,7 @@
 .comparison {
   margin-left: auto;
   margin-right: auto;
-  max-width: var(--layout-content-width);
+  max-width: min(var(--layout-content-width), 90%);
   width: 100%;
   margin-bottom: 160px;
 }
@@ -965,7 +965,7 @@
 .testimonial {
   margin-left: auto;
   margin-right: auto;
-  max-width: var(--layout-content-width);
+  max-width: min(var(--layout-content-width), 90%);
   width: 100%;
   margin-bottom: 120px;
   position: relative;
@@ -1093,7 +1093,7 @@
   margin-bottom: 120px;
   margin-left: auto;
   margin-right: auto;
-  max-width: var(--layout-content-width);
+  max-width: min(var(--layout-content-width), 90%);
   width: 100%;
   position: relative;
 }
@@ -1178,7 +1178,7 @@
   margin-bottom: 80px;
   margin-left: auto;
   margin-right: auto;
-  max-width: var(--layout-content-width);
+  max-width: min(var(--layout-content-width), 90%);
   width: 100%;
   z-index: 1;
   position: relative;
@@ -1254,7 +1254,7 @@
   margin-bottom: 120px;
   margin-left: auto;
   margin-right: auto;
-  max-width: var(--layout-content-width);
+  max-width: min(var(--layout-content-width), 90%);
   width: 100%;
   display: flex;
   gap: 94px;
@@ -1400,7 +1400,7 @@
   flex-direction: column;
   margin-left: auto;
   margin-right: auto;
-  max-width: var(--layout-content-width);
+  max-width: min(var(--layout-content-width), 90%);
   padding-bottom: 50px;
   padding-top: 84px;
   width: 100%;
