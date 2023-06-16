@@ -1234,6 +1234,10 @@
   color: var(--card-text-color);
 }
 
+.open-source-content-card-text--paragraph a {
+  color: inherit;
+}
+
 /* Open Source section end */
 
 /* Call to action section start */
