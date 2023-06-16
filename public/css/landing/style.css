@@ -580,6 +580,66 @@
   width: 100%;
 }
 
+@media (max-width: 480px) {
+  .features {
+    max-width: 30rem;
+    margin-top: 32px;
+  }
+
+  .features__heading {
+    font-size: var(--font-size-h5);
+    padding: 0 0 28px 59px;
+    text-align: start;
+  }
+
+  .features__content {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .features__content:not(:last-child) {
+    margin-bottom: 0px;
+  }
+
+  .features__content-wrapper {
+    gap: 16px;
+  }
+
+  .features__content-wrapper-heading {
+    font-size: var(--font-size-h7-mega);
+    line-height: var(--font-size-h7-mega);
+    padding-left: 59px;
+  }
+
+  .features__content-wrapper-description {
+    padding-left: 59px;
+    gap: 12px;
+  }
+
+  .features__content-wrapper-description-title {
+    font-size: var(--font-size-h7);
+    line-height: 32px;
+  }
+
+  .features__content-wrapper-description-list {
+    font-size: var(--font-size-14);
+    line-height: calc(21/14);
+    padding-left: 18px;
+  }
+
+  .features__content-image {
+    padding-right: 60px;
+    margin-left: 58px;
+    width: 100%;
+  }
+
+  .features__path {
+    /* Changes required here */
+    top: 7rem;
+    right: 26rem;
+  }
+}
+
 /* Nightwatch Feature section end */
 
 /* Nightwatch Capabilities section start */
