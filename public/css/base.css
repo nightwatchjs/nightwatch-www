@@ -56,6 +56,7 @@
   --font-size-h6: calc(24 / 16 * 1rem);
   --font-size-h7: calc(18 / 16 * 1rem);
   --font-size-h8: calc(14 / 16 * 1rem);
+  --font-size-h8-s: calc(12 / 16 * 1rem);
   --font-size-h7-mega: calc(21 / 16 * 1rem);
   --font-size-testimonial: calc(21 / 16 * 1rem);
 
