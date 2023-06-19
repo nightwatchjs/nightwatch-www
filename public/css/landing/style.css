@@ -405,6 +405,10 @@
     width: 100px;
     height: 100%;
   }
+
+  .hero__companies__logos a:nth-child(2) {
+    display: none;
+  }
 }
 
 /* Hero Section end */
@@ -661,6 +665,8 @@
   .features__community-stats {
     gap: 18px;
     padding: 33px 0;
+    margin-left: 50px;
+    max-width: min(var(--layout-content-width), 85%);
   }
 
   .features__path {
@@ -895,6 +901,100 @@
   margin: auto;
 }
 
+@media (max-width: 480px) {
+  .capabilities {
+    margin-bottom: 60px;
+    margin-left: 30px;
+  }
+  
+  .capabilities__heading {
+    padding: 40px 30px 24px;
+    text-align: unset;
+    font-size: var(--font-size-h5);
+    line-height: var(--line-height-h5);
+  }
+  
+  .capabilities--single-column {
+    margin-left: 20px;
+  }
+  
+  .capabilities--single-column .capabilities__card {
+    flex-direction: column;
+    gap: 36px;
+    padding: 32px 31px 36px 15px;
+  }
+  
+  .capabilities--single-column .capabilities__card .capabilities__card-content {
+    padding-left: 10px;
+  }
+  
+  .capabilities--single-column .capabilities__card .capabilities__card-heading {
+    font-size: var(--font-size-h7-mega);
+    line-height: var(--line-height-h7-mega);
+    margin-bottom: 15px;
+  }
+  
+  .capabilities--single-column .capabilities__card .capabilities__card-text {
+    margin-bottom: 24px;
+  }
+  
+  .capabilities--single-column .capabilities__card .capabilities__card-text-list-item {
+    font-size: var(--font-size-h8);
+    line-height: var(--line-height-h7);
+  }
+  
+  .capabilities--single-column .capabilities__card .capabilities__card-button {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    padding: 5px 24px 8px 20px;
+  }
+  
+  .capabilities--double-column {
+    flex-direction: column;
+    margin-left: 20px;
+  }
+
+  .capabilities--double-column .capabilities__card {
+    padding: 32px 31px 36px 25px;
+  }
+  
+  .capabilities--double-column .capabilities__card .capabilities__card-heading {
+    font-size: var(--font-size-h7-mega);
+    line-height: var(--line-height-h7-mega);
+  }
+  
+  .capabilities--double-column .capabilities__card .capabilities__card-text {
+    margin-bottom: 34px;
+  }
+  
+  .capabilities--double-column .capabilities__card .capabilities__card-text-list-item {
+    font-size: var(--font-size-h8);
+    line-height: var(--line-height-h7);
+  }
+  
+  .capabilities--double-column .capabilities__card .capabilities__card-button {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    padding: 5px 24px 8px 20px;
+  }
+
+  .capabilities--double-column .capabilities__card .capabilities__card-content {
+    margin-bottom: 30px;
+  }
+  
+  .capabilities__path {
+    position: absolute;
+    width: 100%;
+    top: 3px;
+    overflow: hidden;
+  }
+  
+  .capabilities__path svg {
+    width: 1053px;
+    margin: auto;
+  }
+}
+
 /* Nightwatch Capabilities section end */
 
 /* Nightwatch Performance section Start */
@@ -994,6 +1094,42 @@
   margin: auto;
 }
 
+
+@media (max-width: 480px) {
+  .performance {
+    margin-left: 50px;
+    margin-right: auto;
+    max-width: min(480px, 85%);
+    margin-bottom: 70px;
+  }
+  
+  .performance__heading {
+    text-align: unset;
+    font-size: var(--font-size-h5);
+    line-height: var(--line-height-h5);
+    padding-bottom: 24px;
+    margin-left: 9px;
+  }
+  
+  .performance__content {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .performance__content-description {
+    gap: 28px;
+  }
+
+  .performance__content-description-text {
+    font-size: var(--font-size-h7);
+    line-height: var(--line-height-h7);
+    padding-top: 20px;
+  }
+  
+  .performance__path {
+    display: none;
+  }
+}
 /* Nightwatch Performance section end */
 
 /* Nightwatch Comparison section start */
