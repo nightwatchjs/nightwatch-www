@@ -2195,3 +2195,11 @@
 }
 
 /* Footer section end */
+
+
+@media (max-width: 480px) {
+  /* Changes required here */
+  .navigation-list>li button {
+    display: none;
+  }
+}
