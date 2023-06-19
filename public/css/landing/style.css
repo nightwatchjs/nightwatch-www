@@ -157,6 +157,15 @@
   box-shadow: unset;
 }
 
+@media (max-width: 1024px) {
+  .navigation-list:first-of-type {
+    display: none;
+  }
+  .navigation-list:last-of-type li:not(:first-of-type) {
+    display: none;
+  }
+}
+
 /* Navigation section end */
 
 /* Hero Section start */
@@ -907,49 +916,49 @@
     margin-bottom: 60px;
     margin-left: 30px;
   }
-  
+
   .capabilities__heading {
     padding: 40px 30px 24px;
     text-align: unset;
     font-size: var(--font-size-h5);
     line-height: var(--line-height-h5);
   }
-  
+
   .capabilities--single-column {
     margin-left: 20px;
   }
-  
+
   .capabilities--single-column .capabilities__card {
     flex-direction: column;
     gap: 36px;
     padding: 32px 31px 36px 15px;
   }
-  
+
   .capabilities--single-column .capabilities__card .capabilities__card-content {
     padding-left: 10px;
   }
-  
+
   .capabilities--single-column .capabilities__card .capabilities__card-heading {
     font-size: var(--font-size-h7-mega);
     line-height: var(--line-height-h7-mega);
     margin-bottom: 15px;
   }
-  
+
   .capabilities--single-column .capabilities__card .capabilities__card-text {
     margin-bottom: 24px;
   }
-  
+
   .capabilities--single-column .capabilities__card .capabilities__card-text-list-item {
     font-size: var(--font-size-h8);
     line-height: var(--line-height-h7);
   }
-  
+
   .capabilities--single-column .capabilities__card .capabilities__card-button {
     font-size: var(--font-size-base);
     line-height: var(--line-height-base);
     padding: 5px 24px 8px 20px;
   }
-  
+
   .capabilities--double-column {
     flex-direction: column;
     margin-left: 20px;
@@ -958,21 +967,21 @@
   .capabilities--double-column .capabilities__card {
     padding: 32px 31px 36px 25px;
   }
-  
+
   .capabilities--double-column .capabilities__card .capabilities__card-heading {
     font-size: var(--font-size-h7-mega);
     line-height: var(--line-height-h7-mega);
   }
-  
+
   .capabilities--double-column .capabilities__card .capabilities__card-text {
     margin-bottom: 34px;
   }
-  
+
   .capabilities--double-column .capabilities__card .capabilities__card-text-list-item {
     font-size: var(--font-size-h8);
     line-height: var(--line-height-h7);
   }
-  
+
   .capabilities--double-column .capabilities__card .capabilities__card-button {
     font-size: var(--font-size-base);
     line-height: var(--line-height-base);
@@ -982,7 +991,7 @@
   .capabilities--double-column .capabilities__card .capabilities__card-content {
     margin-bottom: 30px;
   }
-  
+
   .capabilities__path {
     /* Changes required here */
     display: none;
@@ -1096,7 +1105,7 @@
     max-width: min(480px, 85%);
     margin-bottom: 70px;
   }
-  
+
   .performance__heading {
     text-align: unset;
     font-size: var(--font-size-h5);
@@ -1104,12 +1113,12 @@
     padding-bottom: 24px;
     margin-left: 9px;
   }
-  
+
   .performance__content {
     flex-direction: column;
     gap: 0;
   }
-  
+
   .performance__content-description {
     gap: 28px;
   }
@@ -1119,12 +1128,13 @@
     line-height: var(--line-height-h7);
     padding-top: 20px;
   }
-  
+
   .performance__path {
     /* Changes required here */
     display: none;
   }
 }
+
 /* Nightwatch Performance section end */
 
 /* Nightwatch Comparison section start */
@@ -1246,7 +1256,7 @@
     max-width: min(480px, 85%);
     margin-bottom: 25px;
   }
-  
+
   .comparison__heading {
     text-align: unset;
     font-size: var(--font-size-h5);
@@ -1254,25 +1264,25 @@
     padding-bottom: 24px;
     margin-left: 9px;
   }
-  
+
   .comparison__content {
     display: flex;
     gap: 56px;
   }
-  
+
   .comparison__content-image {
     display: none;
   }
-  
+
   .comparison__content-wrapper {
     gap: 28px;
     padding-top: 0px;
   }
-  
+
   .comparison__content-wrapper .comparison__content-wrapper-container {
     gap: 20px;
   }
-  
+
   .comparison__content-wrapper .comparison__content-wrapper-container .comparison__content-wrapper-card {
     display: flex;
     gap: 24px;
@@ -1282,23 +1292,24 @@
     flex: 2 1 0%;
     padding: 21px 19px 15px 20px;
   }
-  
+
   .comparison__content-wrapper .comparison__content-wrapper-container .comparison__content-wrapper-card .comparison__content-wrapper-card-description .comparison__content-wrapper-card-description-title {
     font-size: var(--font-size-h7-mega);
     line-height: var(--line-height-h7-mega);
   }
-  
+
   .comparison__content-wrapper .comparison__content-wrapper-container .comparison__content-wrapper-card .comparison__content-wrapper-card-description .comparison__content-wrapper-card-description-subtitle {
     font-size: var(--font-size-h8);
     line-height: var(--line-height-h8);
   }
-  
+
   .comparison__content-wrapper-button {
     font-size: var(--font-size-base);
     line-height: var(--font-size-base);
     padding: 16px 20px;
   }
 }
+
 /* Nightwatch Comparison section end */
 
 /* Nightwatch Testimonials section start */
@@ -1466,6 +1477,7 @@
     line-height: var(--line-height-h5);
   }
 }
+
 /* Nightwatch Testimonials section end */
 
 /* Nightwatch Integrations section start */
@@ -1589,7 +1601,7 @@
     max-width: min(480px, 85%);
     margin-bottom: 90px;
   }
-  
+
   .integration__heading {
     text-align: unset;
     font-size: var(--font-size-h5);
@@ -1729,7 +1741,7 @@
     max-width: min(480px, 85%);
     margin-bottom: 60px;
   }
-  
+
   .open-source__heading {
     text-align: unset;
     font-size: var(--font-size-h5);
@@ -1765,6 +1777,7 @@
     width: 65px;
   }
 }
+
 /* Open Source section end */
 
 /* Call to action section start */
@@ -1923,7 +1936,7 @@
     width: 50%;
   }
 
-  .call-to-action-image > svg {
+  .call-to-action-image>svg {
     transform: translate(50%, 0);
   }
 
@@ -2195,11 +2208,3 @@
 }
 
 /* Footer section end */
-
-
-@media (max-width: 480px) {
-  /* Changes required here */
-  .navigation-list>li button {
-    display: none;
-  }
-}
