@@ -1318,6 +1318,10 @@
   text-decoration: none;
 }
 
+.integration__content-card:nth-last-child(-n+2) {
+  display: none;
+}
+
 .integration__content-card-image {
   height: 51px;
 }
@@ -1344,6 +1348,12 @@
 .integration__path svg {
   width: 100%;
   margin: auto;
+}
+
+@media (max-width: 1145px) {
+  .integration__content-card:nth-last-child(-n+2) {
+    display: flex;
+  }
 }
 
 /* Nightwatch Integrations section end */
