@@ -420,6 +420,19 @@
   }
 }
 
+
+@media (max-width: 444px) {
+  .hero__action-copy-command-text {
+    font-size: var(--font-size-h8);
+  }
+
+  .hero__action-copy-command-button {
+    font-size:  var(--font-size-h8);
+    padding: 11px 0px;
+    max-width: 80px;
+  }
+}
+
 /* Hero Section end */
 
 /* Nightwatch Feature section start */
@@ -1277,6 +1290,7 @@
   .comparison__content-wrapper {
     gap: 28px;
     padding-top: 0px;
+    max-width: 100%;
   }
 
   .comparison__content-wrapper .comparison__content-wrapper-container {
@@ -1942,17 +1956,6 @@
 
   .call-to-action-content-action {
     flex-direction: column;
-  }
-
-  .hero__action-copy-command-text {
-    font-size: var(--font-size-h7);
-    line-height: var(--line-height-h7);
-    display: flex;
-  }
-
-  .hero__action-copy-command-button {
-    padding: 11px 36px;
-    max-width: 113px;
   }
 
   .call-to-action-content-action-copy-command-text {
