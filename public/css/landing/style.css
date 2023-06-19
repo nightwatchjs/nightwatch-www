@@ -86,7 +86,7 @@
 
 .navigation-list:last-of-type {
   gap: 32px;
-  padding-left: 52px;
+  padding-left: 26px;
 }
 
 .navigation-list>li button {
