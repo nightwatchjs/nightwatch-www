@@ -47,4 +47,29 @@ docReady(function () {
       debug: false
     });
   });
+
+  const breakpoint = window.matchMedia('(min-width: 769px)');
+
+  let testimonialSwiper;
+
+  if (window.innerWidth <= 768) {
+    addStylesheet('https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css');
+    addScript('https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js', null, function(){
+      const testimonialSwiper = new Swiper('.swiper', {
+        spaceBetween: 100,
+        centeredSlides: true,
+        loop: true,
+        autoplay: {
+          delay: 5000
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+        a11y: {
+          enabled: true
+        }
+      });
+    });
+  }
 });

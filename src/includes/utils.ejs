@@ -11,14 +11,25 @@
 
   function addScript(src, id, callback) {
     let tag = document.createElement('script');
-    tag.id = id;
+    if (typeof id !== 'undefined' && id !== null) {
+      tag.id = id;
+    }
     tag.src = src;
     tag.async = true;
     let firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-    tag.addEventListener('load', function () {
-      callback();
-    });
+    if (typeof callback !== 'undefined' && callback !== null) {
+      tag.addEventListener('load', function () {
+        callback();
+      });
+    }
+  }
+
+  function addStylesheet(src) {
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = src
+    document.head.appendChild(link);
   }
 </script>
