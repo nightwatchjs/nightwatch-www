@@ -1249,7 +1249,7 @@
   .comparison {
     margin-left: 50px;
     max-width: min(480px, 85%);
-    margin-bottom: 70px;
+    margin-bottom: 25px;
   }
   
   .comparison__heading {
@@ -1423,7 +1423,6 @@
   margin: auto;
 }
 
-
 @media (max-width: 768px) {
   .swiper {
     width: 100%;
@@ -1453,6 +1452,20 @@
   }
 }
 
+@media (max-width: 480px) {
+  .testimonial {
+    margin-left: 50px;
+    max-width: min(480px, 85%);
+    margin-bottom: 90px;
+  }
+
+  .testimonial__heading {
+    padding: 60px 30px 24px;
+    text-align: unset;
+    font-size: var(--font-size-h5);
+    line-height: var(--line-height-h5);
+  }
+}
 /* Nightwatch Testimonials section end */
 
 /* Nightwatch Integrations section start */
