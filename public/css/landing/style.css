@@ -1902,6 +1902,66 @@
   will-change: background, color, border, box-shadow;
 }
 
+@media (max-width: 480px) {
+  .call-to-action {
+    margin-left: 50px;
+    max-width: min(480px, 85%);
+    margin-bottom: 60px;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding: 28px 20px 25px 20px;
+  }
+
+  .call-to-action-content-wrapper .call-to-action-content--heading {
+    font-size: var(--font-size-h5);
+    line-height: var(--line-height-h5);
+  }
+
+  .call-to-action-image {
+    width: 50%;
+  }
+
+  .call-to-action-image > svg {
+    transform: translate(50%, 0);
+  }
+
+  .call-to-action-content-action {
+    flex-direction: column;
+  }
+
+  .hero__action-copy-command-text {
+    font-size: var(--font-size-h7);
+    line-height: var(--line-height-h7);
+    display: flex;
+  }
+
+  .hero__action-copy-command-button {
+    padding: 11px 36px;
+    max-width: 113px;
+  }
+
+  .call-to-action-content-action-copy-command-text {
+    font-size: var(--font-size-h7);
+    line-height: var(--line-height-h7);
+  }
+
+  .call-to-action-content-action-copy-command {
+    padding: 5px 110px 7px 10px;
+  }
+
+  .call-to-action-content-action-copy-command-button {
+    max-width: 102px;
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+  }
+
+  .call-to-action-content-action-button--get-started {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+  }
+}
+
 /* Call to action section end */
 
 /* Footer section start */
