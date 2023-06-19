@@ -671,8 +671,9 @@
 
   .features__path {
     /* Changes required here */
-    top: 7rem;
-    right: 26rem;
+    /* top: 7rem;
+    right: 26rem; */
+    display: none;
   }
 }
 
@@ -983,15 +984,8 @@
   }
   
   .capabilities__path {
-    position: absolute;
-    width: 100%;
-    top: 3px;
-    overflow: hidden;
-  }
-  
-  .capabilities__path svg {
-    width: 1053px;
-    margin: auto;
+    /* Changes required here */
+    display: none;
   }
 }
 
@@ -1127,6 +1121,7 @@
   }
   
   .performance__path {
+    /* Changes required here */
     display: none;
   }
 }
@@ -1450,6 +1445,11 @@
   .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
     background-color: var(--pagination-background-color)
   }
+
+  .testimonial__path {
+    /* Changes required here */
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1599,6 +1599,7 @@
   }
 
   .integration__path {
+    /* Changes required here */
     display: none;
   }
 
