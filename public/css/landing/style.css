@@ -927,6 +927,8 @@
 @media (max-width: 480px) {
   .capabilities {
     margin-bottom: 60px;
+    padding-right: 6px;
+    margin-right: unset;
     margin-left: 30px;
   }
 
@@ -938,7 +940,7 @@
   }
 
   .capabilities--single-column {
-    margin-left: 20px;
+    padding-left: 20px;
   }
 
   .capabilities--single-column .capabilities__card {
@@ -1114,7 +1116,7 @@
 @media (max-width: 480px) {
   .performance {
     margin-left: 50px;
-    margin-right: auto;
+    padding-right: 6px;
     max-width: min(480px, 85%);
     margin-bottom: 70px;
   }
@@ -1140,6 +1142,11 @@
     font-size: var(--font-size-h7);
     line-height: var(--line-height-h7);
     padding-top: 20px;
+  }
+
+  .performance__content-description-button {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
   }
 
   .performance__path {
@@ -1266,6 +1273,7 @@
 @media (max-width: 480px) {
   .comparison {
     margin-left: 50px;
+    padding-right: 6px;
     max-width: min(480px, 85%);
     margin-bottom: 25px;
   }
@@ -1481,12 +1489,13 @@
 @media (max-width: 480px) {
   .testimonial {
     margin-left: 50px;
+    padding-right: 6px;
     max-width: min(480px, 85%);
     margin-bottom: 90px;
   }
 
   .testimonial__heading {
-    padding: 60px 30px 24px;
+    padding: 60px 9px 24px;
     text-align: unset;
     font-size: var(--font-size-h5);
     line-height: var(--line-height-h5);
@@ -1613,6 +1622,7 @@
 @media (max-width: 480px) {
   .integration {
     margin-left: 50px;
+    padding-right: 6px;
     max-width: min(480px, 85%);
     margin-bottom: 90px;
   }
