@@ -1319,8 +1319,9 @@
 
   .comparison__content-wrapper-button {
     font-size: var(--font-size-base);
-    line-height: var(--font-size-base);
+    line-height: var(--line-height-base);
     padding: 16px 20px;
+    max-width: 90%;
   }
 }
 
@@ -1964,7 +1965,7 @@
   }
 
   .call-to-action-content-action-copy-command {
-    padding: 5px 110px 7px 10px;
+    padding: 5px 0px 7px 10px;
   }
 
   .call-to-action-content-action-copy-command-button {
@@ -1976,6 +1977,18 @@
   .call-to-action-content-action-button--get-started {
     font-size: var(--font-size-base);
     line-height: var(--line-height-base);
+  }
+}
+
+@media (max-width: 470px) {
+  .call-to-action-content-action-copy-command-text {
+    font-size: var(--font-size-h8);
+  }
+
+  .call-to-action-content-action-copy-command-button {
+    font-size:  var(--font-size-h8);
+    padding: 10px 0px;
+    max-width: 80px;
   }
 }
 
