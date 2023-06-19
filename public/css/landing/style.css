@@ -1584,6 +1584,24 @@
 }
 
 @media (max-width: 480px) {
+  .integration {
+    margin-left: 50px;
+    max-width: min(480px, 85%);
+    margin-bottom: 90px;
+  }
+  
+  .integration__heading {
+    text-align: unset;
+    font-size: var(--font-size-h5);
+    line-height: var(--line-height-h5);
+    padding-bottom: 24px;
+    margin-left: 9px;
+  }
+
+  .integration__path {
+    display: none;
+  }
+
   .integration__content {
     display: none;
   }
@@ -1704,6 +1722,48 @@
   color: inherit;
 }
 
+@media (max-width: 480px) {
+  .open-source {
+    margin-left: 50px;
+    max-width: min(480px, 85%);
+    margin-bottom: 60px;
+  }
+  
+  .open-source__heading {
+    text-align: unset;
+    font-size: var(--font-size-h5);
+    line-height: var(--line-height-h5);
+    padding-bottom: 24px;
+    margin-left: 9px;
+  }
+
+  .open-source-content {
+    flex-direction: column;
+    gap: 21px;
+  }
+
+  .open-source-content-card {
+    display: flex;
+    gap: 24px;
+    flex: 2 1 0%;
+    padding: 21px 19px 15px 20px;
+    flex-direction: row;
+  }
+
+  .open-source-content-card-text--heading {
+    font-size: var(--font-size-h7-mega);
+    line-height: var(--line-height-h7-mega);
+  }
+
+  .open-source-content-card-text--paragraph {
+    font-size: var(--font-size-h8);
+    line-height: var(--line-height-h8);
+  }
+
+  .open-source-content-card-image {
+    width: 65px;
+  }
+}
 /* Open Source section end */
 
 /* Call to action section start */
