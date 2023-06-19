@@ -70,6 +70,23 @@ docReady(function () {
           enabled: true
         }
       });
+
+      const integrationSwiper = new Swiper('.integration-swiper', {
+        spaceBetween: 100,
+        centeredSlides: true,
+        loop: true,
+        autoplay: {
+          delay: 5000
+        },
+
+        pagination: {
+          el: '.swiper-pagination-integrations',
+          clickable: true
+        },
+        a11y: {
+          enabled: true
+        }
+      });
     });
   }
 });

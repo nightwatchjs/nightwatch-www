@@ -24,6 +24,8 @@
   --dropdown-background-color: hsla(0, 0%, 98%, 1);
   --dropdown-box-shadow-color: hsla(0, 0%, 0%, 0.08);
   --footer-background-color: hsla(0, 0%, 98%, 1);
+  --pagination-background-color: hsla(23, 72%, 33%, 1);
+  --pagination-bullet-background-color: hsla(47, 18%, 80%, 1);
 
 
   /* --color-white: hsla(0, 0%, 100%, 1);
