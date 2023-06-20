@@ -1740,7 +1740,8 @@
   }
 
   .integration__content-card {
-    width: 150px;
+    width: auto;
+    flex-grow: 1;
   }
 }
 
@@ -1781,6 +1782,15 @@
     border-radius: 20px;
     border: 5px solid var(--border-color);
     padding: 38px 28px;
+    flex-direction: column;
+  }
+
+  .integration__content__row {
+    display: flex;
+    gap: 20px;
+    flex-basis: 100px;
+    flex-grow: 1;
+    flex-shrink: 1;
   }
 
   .swiper-pagination-integrations {
