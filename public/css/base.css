@@ -8,24 +8,23 @@
   --text-color-light: hsla(0, 0%, 100%, 1);
   --border-color: hsla(0, 0%, 97%, 1);
   --text-color: hsla(0, 0%, 0%, 1);
-  --subtitle-text-color: hsla(23, 9%, 36%, 1);
-  --feature-title-text-color: hsla(23, 55%, 20%, 1);
+  --subtitle-text-color: hsla(22.5, 8.6%, 36.47%, 1);
+  --feature-title-text-color: hsla(23.16, 55.34%, 20.2%, 1);
   --button-border-color:hsla(0, 0%, 0%, 1);
   --box-shadow-color: hsla(0, 0%, 0%, 0.08);
   --button-background-color-dark:  hsla(0, 0%, 21%, 1);
   --button-box-shadow: hsla(180, 1%, 79%, 1);
   --button-background-color-light: hsla(180, 11%, 98%, 1);
-  --text-color-accent: hsla(23, 72%, 33%, 1);
+  --text-color-accent: hsla(22.81, 71.6%, 33.14%, 1);
   --button-border-accent-color: hsla(27.16, 95%, 60.78%, 1);
-  --button-background-color-accent: hsla(35.56, 100%, 68.24%, 1);
   --card-border-color: hsla(0, 0%, 94%, 1);
-  --card-text-color: hsla(23, 9%, 36%, 1);
+  --card-text-color: hsla(22.5, 8.6%, 36.47%, 1);
   --button-border-color-dark: hsla(32, 11%, 40%, 1);
   --dropdown-background-color: hsla(0, 0%, 98%, 1);
   --dropdown-box-shadow-color: hsla(0, 0%, 0%, 0.08);
   --footer-background-color: hsla(0, 0%, 98%, 1);
-  --pagination-background-color: hsla(23, 72%, 33%, 1);
-  --pagination-bullet-background-color: hsla(47, 18%, 80%, 1);
+  --pagination-background-color: hsla(22.81, 71.6%, 33.14%, 1);
+  --pagination-bullet-background-color: hsla(46.67, 18%, 80.39%, 1);
 
 
   /* --color-white: hsla(0, 0%, 100%, 1);
