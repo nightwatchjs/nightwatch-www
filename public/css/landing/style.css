@@ -2359,6 +2359,9 @@
   padding-bottom: 32px;
 }
 
+.footer__wrapper-bottom-logo-mobile {
+  display: none;
+}
 
 @media (max-width: 480px) {
   .footer-landing {
