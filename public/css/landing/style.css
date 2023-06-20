@@ -421,8 +421,9 @@
   display: flex;
   flex-direction: column;
   margin: auto;
+  --layout-content-width: 800px;
   max-width: min(var(--layout-content-width), 72%);
-  padding: 48px 117px;
+  padding: 48px 0;
   width: 100%;
 }
 
