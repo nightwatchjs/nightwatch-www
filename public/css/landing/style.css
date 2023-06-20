@@ -55,8 +55,7 @@
   padding: 28px 26px 28px 26px;
 }
 
-.navigation-list-pages .navigation-link:hover,
-.navigation-link.active {
+.navigation-list-pages .navigation-link:hover,  .navigation-link.active {
   border-bottom: 3px solid var(--button-border-accent-color);
   color: var(--header-text-color)
 }
