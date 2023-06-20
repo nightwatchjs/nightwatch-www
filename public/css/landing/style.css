@@ -1395,6 +1395,7 @@
   flex: 1;
   gap: 30px;
   padding: 34px 12px 42px 28px;
+  justify-content: space-between;
 }
 
 .testimonial__content-card-description {
@@ -1751,19 +1752,19 @@
 }
 
 .open-source-content-card {
-  display: flex;
-  flex-direction: column;
+  display: block;
   padding: 48px 37px 47px 40px;
   background: var(--background-color);
   border: 5px solid var(--border-color);
   border-radius: 20px;
-  justify-content: space-between;
   height: 290px;
+  flex: 1 1 0;
 }
 
 .open-source-content-card-image {
   width: 50px;
   height: 52px;
+  margin-bottom: 32px;
 }
 
 .open-source-content-card-image>svg {
@@ -1902,7 +1903,7 @@
   border: 2px solid var(--button-border-color);
   box-shadow: 2px 4px 10px var(--box-shadow-color);
   display: flex;
-  padding: 13px 156px 14px 19px;
+  padding: 14px 156px 14px 19px;
   position: relative;
 }
 
@@ -2010,7 +2011,7 @@
   }
 
   .call-to-action-content-action-copy-command {
-    padding: 5px 0px 7px 10px;
+    padding: 6px 0px 7px 10px;
   }
 
   .call-to-action-content-action-copy-command-button {
