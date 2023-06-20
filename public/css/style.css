@@ -2719,7 +2719,7 @@ p.bottom-text {
 .footer-landing {
   background: var(--footer-background-color);
   border-radius: 30px;
-  margin: 0 20px 20px 20px;
+  margin: 40px 20px 20px 20px;
   position: relative;
 }
 
@@ -2988,13 +2988,20 @@ p.bottom-text {
 
 .navigation-link {
   color: var(--header-text-color);
-  font-size: initial;
+  font-size: 16px;
+  font-family: "Source Sans 3", sans-serif;
   font-weight: 600;
   line-height: var(--line-height-19);
   text-decoration: none;
 }
 
 .navigation-link:hover {
+  color: var(--header-text-color);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+a.navigation-link.active {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
