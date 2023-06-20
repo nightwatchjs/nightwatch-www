@@ -9,13 +9,15 @@ docReady(function () {
       try {
         await navigator.clipboard.writeText(copyText.textContent);
         copyButton.innerHTML = 'Copied!';
+        copyButton.classList.add('active');
       } catch (err) {
         console.error('Failed to copy text: ', err);
       }
 
       setTimeout(() => {
         copyButton.innerHTML = 'Copy';
-      }, 2000);
+        copyButton.classList.remove('active');
+      }, 3000);
     });
   }
 
