@@ -327,7 +327,7 @@ class MenuButtonActions {
 function activateDropdown() {
   // Menu Button
   var menuButtons = document.querySelectorAll('.release-button-action');
-  console.log(menuButtons);
+
   function performMenuAction(node) {
     window.location.href = node.children[0].href;
   }
