@@ -55,6 +55,20 @@
               </div>
 
             </li>
+            <li>
+              <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                      data-bs-target="#highlights-collapse" aria-expanded="false">
+                <a>Highlights</a>
+              </button>
+              <div class="collapse" id="highlights-collapse" data-section-url="/about/highlights/">
+                <ul class="btn-toggle-nav">
+                  <li><a href="/about/highlights/developer-experience.html">Developer Experience</a></li>
+                  <li><a href="/about/highlights/beyond-e2e.html">Go beyond E2E</a></li>
+                  <li><a href="/about/highlights/types-of-testing.html">Multiple types of testing</a></li>
+                </ul>
+              </div>
+
+            </li>
           </ul>
         </nav>
       </div>
@@ -529,6 +543,12 @@
           </div>
           <p>Feel free to <a href="https://twitter.com/nightwatchjs">tip us off</a> about any articles or open source
             projects that we should list on this page.</p>
+        </div>
+
+        <div class="docs-section" data-page-uri="<%- pageUrl %>">
+          <div class="docs-sub-section">
+            <div class="page-content"><%- pageContent %></div>
+          </div>
         </div>
       </div>
     </div>

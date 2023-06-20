@@ -2719,7 +2719,7 @@ p.bottom-text {
 .footer-landing {
   background: var(--footer-background-color);
   border-radius: 30px;
-  margin: 0 20px 20px 20px;
+  margin: 40px 20px 20px 20px;
   position: relative;
 }
 
@@ -2974,27 +2974,35 @@ p.bottom-text {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  max-width: 1400px;
+  max-width: min(1400px, 90%);
 }
 
-.navigation-list {
+
+.navigation-list-pages {
   align-items: center;
   display: flex;
-  gap: 52px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.navigation-link {
+.navigation-list-pages .navigation-link {
   color: var(--header-text-color);
-  font-size: initial;
+  font-size: 16px;
+  font-family: "Source Sans 3", sans-serif;
   font-weight: 600;
   line-height: var(--line-height-19);
   text-decoration: none;
+  padding: 28px 26px 28px 26px;
 }
 
 .navigation-link:hover {
+  color: var(--header-text-color);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+a.navigation-link.active {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
@@ -3007,7 +3015,7 @@ p.bottom-text {
 
 .navigation-list:last-child {
   gap: 32px;
-  padding-left: 52px;
+  padding-left: 26px;
 }
 
 .navigation-list>li button {
