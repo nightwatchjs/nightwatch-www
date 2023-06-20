@@ -969,6 +969,10 @@
     line-height: var(--line-height-h7);
   }
 
+  .capabilities--single-column .capabilities__card .capabilities__card-text-list-item>strong {
+    color: var(--text-color);
+  }
+
   .capabilities--single-column .capabilities__card .capabilities__card-button {
     font-size: var(--font-size-base);
     line-height: var(--line-height-base);
@@ -996,6 +1000,10 @@
   .capabilities--double-column .capabilities__card .capabilities__card-text-list-item {
     font-size: var(--font-size-h8);
     line-height: var(--line-height-h7);
+  }
+
+  .capabilities--double-column .capabilities__card .capabilities__card-text-list-item>strong {
+    color: var(--text-color);
   }
 
   .capabilities--double-column .capabilities__card .capabilities__card-button {
@@ -1484,6 +1492,24 @@
   .testimonial__path {
     /* Changes required here */
     display: none;
+  }
+
+  .testimonial__content-card-description {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+  }
+
+  .testimonial__content-card-author-name .testimonial__content-card-author-name-title {
+    font-size: var(--font-size-h7-mega);
+    line-height: var(--line-height-h7-mega);
+  }
+
+  .testimonial__content-card-author-name .testimonial__content-card-author-social {
+    font-size: var(--font-size-base);
+  }
+
+  .testimonial__content-card-author-image img {
+    width: 82px;
   }
 }
 
