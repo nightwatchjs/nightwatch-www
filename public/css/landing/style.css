@@ -1337,8 +1337,8 @@
   .comparison__content-wrapper-button {
     font-size: var(--font-size-base);
     line-height: var(--line-height-base);
-    padding: 16px 20px;
-    max-width: 90%;
+    padding: 16px 12px;
+    max-width: 96%;
   }
 }
 
