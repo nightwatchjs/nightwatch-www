@@ -421,7 +421,7 @@
   display: flex;
   flex-direction: column;
   margin: auto;
-  max-width: min(var(--layout-content-width), 90%);
+  max-width: min(var(--layout-content-width), 72%);
   padding: 48px 117px;
   width: 100%;
 }
@@ -441,9 +441,13 @@
   padding-top: 20px;
 }
 
-.hero__companies__logos a img {
+.hero__companies__logos img {
   width: 165px;
   height: 100%;
+}
+
+.hero__companies__logos img:first-child {
+  align-self: self-end;
 }
 
 @media (max-width: 480px) {
