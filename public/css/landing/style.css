@@ -39,7 +39,8 @@
   max-width: min(1400px, 90%);
 }
 
-.navigation-link:hover, a.navigation-link.active {
+.navigation-link:hover,
+a.navigation-link.active {
   text-decoration: none;
   border-bottom: 2px solid var(--button-border-accent-color);
   color: var(--header-text-color)
@@ -489,13 +490,13 @@
   .hero__action-copy-command-button:hover {
     background: var(--button-background-color-dark);
     color: var(--text-color-light);
-  }  
+  }
 
   .hero__action-copy-command-button.active {
     background: var(--button-background-color-light);
     color: var(--text-color);
   }
-  
+
   .hero__action-button--get-started {
     text-align: center;
     padding: 10px;
@@ -600,6 +601,34 @@
   flex-direction: column;
   flex: 1 1 0%;
   gap: 24px;
+  position: relative;
+}
+
+.features__timeline-path {
+  height: 79%;
+  position: absolute;
+  width: 2px;
+  background-image: linear-gradient(180deg, var(--timeline-background-color) 100%, var(--timeline-background-color) 100%);
+  background-size: 2px 8px;
+  background-repeat: repeat-y;
+  left: 50%;
+  top: 160px;
+}
+
+.features__timeline-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 60px;
+  border: 2px solid var(--timeline-dot-border-color);
+  position: absolute;
+  left: -93px;
+  top: 23px;
+  background: var(--background-color)
+}
+
+.features__timeline-dot.features__timeline-dot--reverse {
+  left: unset;
+  right: -94px;
 }
 
 .features__content-wrapper-heading {
@@ -677,6 +706,9 @@
   border-radius: 20px;
   padding: 34px 0 39px 0;
   margin: auto;
+  z-index: 1;
+  position: relative;
+  background: var(--background-color);
 }
 
 .features__community-stats__text {
