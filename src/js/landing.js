@@ -35,11 +35,10 @@ onRender(() => {
   
   addScript('https://cdn.jsdelivr.net/npm/@docsearch/js@3', 'docsearch-script', function () {
     docsearch({
-      //appId: 'H6WO0X38VS',
-      //apiKey: '5784b55341d8e08305fc280817fbda21',
-      indexName: 'nightwatchjs',
+      appId: 'H6WO0X38VS',
+      indexName: 'crawler_nightwatchjs_v3',
       container: '#docsearch',
-      apiKey: '37c74f46d0eab021bc430dc17ebfc089',
+      apiKey: '11a50b1fdb81a04d20cb9f0a711f9a69',
       // indexName: 'nightwatchjs',
       transformItems: function (items) {
         return items.map(function (item) {
@@ -65,6 +64,14 @@ onRender(() => {
   if (window.innerWidth <= 768) {
     addStylesheet('https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css');
     addScript('https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js', null, function () {
+
+      const mobileIntegrationTemplate = document.querySelector('#mobile-integration-content').innerHTML;
+
+      const desktopIntegrationNode = document.querySelector('.integration__content');
+
+      render(mobileIntegrationTemplate, desktopIntegrationNode);
+      desktopIntegrationNode.remove();
+
       const testimonialSwiper = new Swiper('.swiper', {
         spaceBetween: 100,
         centeredSlides: true,
