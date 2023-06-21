@@ -91,7 +91,7 @@ a.navigation-link.active {
 
 .navigation-list:last-of-type {
   gap: 32px;
-  padding-left: 50px;
+  padding-left: 52px;
 }
 
 .navigation-list>li button {
