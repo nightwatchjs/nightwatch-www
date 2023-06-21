@@ -32,4 +32,9 @@
     link.href = src
     document.head.appendChild(link);
   }
+
+  function render(template, node) {
+    if (!node) return;
+    node.insertAdjacentHTML('afterend', template);
+  };
 </script>

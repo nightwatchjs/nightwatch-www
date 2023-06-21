@@ -65,6 +65,14 @@ onRender(() => {
   if (window.innerWidth <= 768) {
     addStylesheet('https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css');
     addScript('https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js', null, function () {
+
+      const mobileIntegrationTemplate = document.querySelector('#mobile-integration-content').innerHTML;
+
+      const desktopIntegrationNode = document.querySelector('.integration__content');
+
+      render(mobileIntegrationTemplate, desktopIntegrationNode);
+      desktopIntegrationNode.remove();
+
       const testimonialSwiper = new Swiper('.swiper', {
         spaceBetween: 100,
         centeredSlides: true,
