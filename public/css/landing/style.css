@@ -553,7 +553,7 @@ a.navigation-link.active {
   .hero__action-copy-command-button {
     font-size: var(--font-size-h8);
     padding: 11px 0px;
-    max-width: 80px;
+    max-width: 70px;
   }
 
   .hero__action {
@@ -1873,10 +1873,13 @@ a.navigation-link.active {
   }
 
   .testimonial__content-card-author-name .testimonial__content-card-author-name-title {
-    font-size: var(--font-size-h7-mega);
-    line-height: var(--line-height-h7-mega);
+    font-size: var(--font-size-h7);
+    line-height: var(--line-height-h7);
   }
 
+  .testimonial__content-card-author {
+    gap: 5px;
+  }
   .testimonial__content-card-author-name .testimonial__content-card-author-social {
     font-size: var(--font-size-base);
   }
@@ -1897,7 +1900,7 @@ a.navigation-link.active {
   .testimonial__heading {
     padding: 60px 9px 24px;
     text-align: unset;
-    font-size: var(--font-size-h5);
+    font-size: var(--font-size-h6);
     line-height: var(--line-height-h5);
   }
 }
