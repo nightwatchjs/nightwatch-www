@@ -448,7 +448,7 @@
   }
 
   .hero {
-    padding-top: 30px;
+    padding-top: 80px;
   }
 
   .hero__heading {
@@ -459,7 +459,7 @@
   .hero__sub-heading {
     font-size: var(--font-size-base);
     line-height: var(--line-height-base);
-    padding: 0 35px;
+    padding: 5px 50px;
   }
 
   .hero__action {
@@ -502,7 +502,7 @@
   }
 
   .hero__companies {
-    padding: 10px 0;
+    padding: 80px 0;
     --layout-content-width: 400px;
     max-width: min(var(--layout-content-width), 84%);
   }
@@ -713,7 +713,7 @@
   .features {
     max-width: 30rem;
     margin-top: 50px;
-    margin-bottom: 60px
+    margin-bottom: 80px
   }
 
   .features__heading {
@@ -771,8 +771,7 @@
   }
 
   .features__community-stats__text {
-    font-size: var(--font-size-base);
-    line-height: var(--line-height-base);
+    font-size: var(--font-size-h6);
   }
 
   .features__community-stats-wrapper__heading {
@@ -788,6 +787,7 @@
 
   .features__community-stats-container {
     justify-content: space-around;
+    max-width: 100%;
   }
 
   .features__community-stats {
@@ -795,6 +795,7 @@
     padding: 33px 0;
     margin-left: 50px;
     max-width: min(var(--layout-content-width), 83%);
+    margin-top: 70px;
   }
 }
 
@@ -1400,10 +1401,10 @@
   }
 
   .comparison__content-wrapper-button {
-    font-size: var(--font-size-base);
+    font-size: 13px;
     line-height: var(--line-height-base);
     text-align: center;
-    padding: 12px 20px;
+    padding: 10px;
     max-width: 96%;
   }
 }
