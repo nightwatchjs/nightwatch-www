@@ -49,9 +49,9 @@ a {
 
 /* Navigation section start */
 .navigation__logo {
-  width: 242px;
+  width: 200px;
   margin-right: auto;
-  padding: 10px 0;
+  padding: 16px 0;
 }
 
 .navigation__logo svg {
@@ -104,7 +104,7 @@ a {
 
 .navigation-list:last-of-type {
   gap: 32px;
-  padding-left: 52px;
+  padding-left: 32px;
 }
 
 .navigation-list>li button {
