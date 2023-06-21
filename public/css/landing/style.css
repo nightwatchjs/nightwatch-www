@@ -863,7 +863,6 @@ a.navigation-link.active {
   top: -163px;
   left: 50%;
   height: 11%;
-  width: 50%;
   width: 2px;
   background-image: linear-gradient(180deg, var(--timeline-background-color) 100%, var(--timeline-background-color) 100%);
   background-size: 2px 8px;
@@ -876,7 +875,6 @@ a.navigation-link.active {
   bottom: -105px;
   left: 50%;
   height: 7%;
-  width: 50%;
   width: 2px;
   background-image: linear-gradient(180deg, var(--timeline-background-color) 100%, var(--timeline-background-color) 100%);
   background-size: 2px 8px;
@@ -893,6 +891,26 @@ a.navigation-link.active {
   bottom: -74px;
   background: var(--background-color);
   z-index: 1;
+}
+
+.capabilities__timeline-dot::before {
+  content: '';
+  background: var(--background-color);
+  position: absolute;
+  top: -12px;
+  left: 3px;
+  height: 10px;
+  width: 10px;
+}
+
+.capabilities__timeline-dot::after {
+  content: '';
+  background: var(--background-color);
+  position: absolute;
+  bottom: -8px;
+  left: 5px;
+  height: 6px;
+  width: 6px;
 }
 
 .capabilities__heading {
@@ -1027,10 +1045,6 @@ a.navigation-link.active {
   flex-direction: column;
   margin-bottom: 49px;
 }
-
-/* .capabilities--double-column .capabilities__card .capabilities__card__image {
-  width: 536px;
-} */
 
 .capabilities--double-column .capabilities__card .capabilities__card-heading {
   color: var(--text-color);
@@ -1200,6 +1214,49 @@ a.navigation-link.active {
   width: 100%;
   margin-bottom: 160px;
   position: relative;
+}
+
+.performance__timeline-path {
+  position: absolute;
+  bottom: -147px;
+  left: 50%;
+  height: 23%;
+  width: 2px;
+  background-image: linear-gradient(180deg, var(--timeline-background-color) 100%, var(--timeline-background-color) 100%);
+  background-size: 2px 8px;
+  background-repeat: repeat-y;
+}
+
+.performance__timeline-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 60px;
+  border: 2px solid var(--timeline-dot-border-color);
+  position: absolute;
+  left: -9px;
+  top: 63px;
+  background: var(--background-color)
+}
+
+
+.performance__timeline-dot::before {
+  content: '';
+  background: var(--background-color);
+  position: absolute;
+  top: -12px;
+  left: 3px;
+  height: 10px;
+  width: 10px;
+}
+
+.performance__timeline-dot::after {
+  content: '';
+  background: var(--background-color);
+  position: absolute;
+  bottom: -8px;
+  left: 5px;
+  height: 6px;
+  width: 6px;
 }
 
 .performance__heading {
