@@ -1706,7 +1706,7 @@
 }
 
 .integration__content-card:hover {
-  background: #EFEFEF;
+  background: var(--integration-hover-background-color);
   cursor: pointer;
 }
 

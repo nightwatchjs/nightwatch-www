@@ -26,6 +26,8 @@
   --pagination-background-color: hsla(22.81, 71.6%, 33.14%, 1);
   --pagination-bullet-background-color: hsla(46.67, 18%, 80.39%, 1);
   --header-border-color: hsla(270, 8%, 90.2%, 1);
+  --integration-hover-background-color: hsla(0, 0%, 94%, 1);
+
 
   /* --color-white: hsla(0, 0%, 100%, 1);
   --color-light-white: hsla(0, 0%, 97%, 1);
