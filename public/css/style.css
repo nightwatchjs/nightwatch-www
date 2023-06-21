@@ -2951,7 +2951,7 @@ p.bottom-text {
 .footer-landing {
   background: var(--footer-background-color);
   border-radius: 30px;
-  margin: 40px 20px 20px 20px;
+  margin: 0 20px 20px 20px;
   position: relative;
 }
 
@@ -3164,6 +3164,7 @@ p.bottom-text {
   font-weight: 600;
   line-height: var(--line-height-base);
   opacity: 0.9;
+  width: 60%;
 }
 
 .footer__wrapper-bottom-text a {
@@ -3174,6 +3175,11 @@ p.bottom-text {
 
 .footer__wrapper-bottom-text-about {
   padding-bottom: 32px;
+}
+
+.footer__wrapper-bottom-logo {
+  height: 0%;
+  width: 20%;
 }
 
 .footer__wrapper-bottom-logo-mobile {
@@ -3215,7 +3221,12 @@ p.bottom-text {
   }
 
   .footer__wrapper-bottom-logo-mobile {
-    width: 35%;
+    width: 12%;
+    display: unset;
+  }
+
+  .footer__wrapper-bottom-text {
+    width: 72%;
   }
 }
 
