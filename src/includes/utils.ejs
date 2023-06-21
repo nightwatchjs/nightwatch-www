@@ -35,6 +35,8 @@
 
   function render(template, node) {
     if (!node) return;
-    node.insertAdjacentHTML('afterend', template);
+    node.innerHTML = template;
+    node.classList.remove('integration__content');
+    node.classList.add('integration__content-mobile', 'swiper-wrapper');
   };
 </script>

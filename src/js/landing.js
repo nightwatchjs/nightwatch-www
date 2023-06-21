@@ -65,12 +65,27 @@ onRender(() => {
     addStylesheet('https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css');
     addScript('https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js', null, function () {
 
-      const mobileIntegrationTemplate = document.querySelector('#mobile-integration-content').innerHTML;
+      const mobileIntegrationTemplate = document.querySelector('#mobile-integration-content').innerText.trim();
 
       const desktopIntegrationNode = document.querySelector('.integration__content');
 
       render(mobileIntegrationTemplate, desktopIntegrationNode);
-      desktopIntegrationNode.remove();
+
+      const integrationSwiper = new Swiper('.integration-swiper', {
+        spaceBetween: 100,
+        centeredSlides: true,
+        loop: true,
+        autoplay: {
+          delay: 5000
+        },
+        pagination: {
+          el: '.swiper-pagination-integrations',
+          clickable: true
+        },
+        a11y: {
+          enabled: true
+        }
+      });
 
       const testimonialSwiper = new Swiper('.swiper', {
         spaceBetween: 100,
@@ -81,22 +96,6 @@ onRender(() => {
         },
         pagination: {
           el: '.swiper-pagination',
-          clickable: true
-        },
-        a11y: {
-          enabled: true
-        }
-      });
-  
-      const integrationSwiper = new Swiper('.integration-swiper', {
-        spaceBetween: 100,
-        centeredSlides: true,
-        loop: true,
-        autoplay: {
-          delay: 5000
-        },
-        pagination: {
-          el: '.swiper-pagination-integrations',
           clickable: true
         },
         a11y: {
@@ -161,4 +160,17 @@ onRender(() => {
       docsearchBtn.classList.toggle('d-none');
     });
   });
+
+  const footerSocial = document.querySelector('.footer__wrapper-inner-social-subscribe');
+  const iframeNode = document.createElement('iframe');
+  iframeNode.setAttribute('loading', 'lazy');
+  iframeNode.setAttribute('src', 'https://nightwatch.substack.com/embed');
+  iframeNode.setAttribute('width', '80%');
+  iframeNode.setAttribute('height', '125px');
+  iframeNode.setAttribute('style', 'position: relative;left: -11px;top: -20px;');
+  iframeNode.setAttribute('frameborder', '0');
+  iframeNode.setAttribute('scrolling', 'no');
+  iframeNode.setAttribute('title', 'nightwatch-substack');
+  footerSocial.appendChild(iframeNode);
+
 }, {forPage: () => true});
