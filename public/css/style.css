@@ -3143,6 +3143,7 @@ p.bottom-text {
 
 .footer__wrapper-inner-social-links a {
   height: 28px;
+  width: 28px;
 }
 
 .footer__wrapper-inner-social-links svg {

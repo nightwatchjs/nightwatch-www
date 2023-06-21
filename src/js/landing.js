@@ -104,6 +104,7 @@ onRender(() => {
     const mobileMenuToggle = document.getElementById('mobileMenuToggle');
     const mobileMenuContent = document.getElementsByClassName('mobile-navbar-content')[0];
     const body = document.getElementsByTagName('body')[0];
+    const docsearchBtn = document.getElementById('docsearch');
   
     var menuBar = gsap.timeline({paused: true});
   
@@ -151,6 +152,7 @@ onRender(() => {
         mobileMenuContent.classList.remove('active');
       }
       body.classList.toggle('overflow-hidden');
+      docsearchBtn.classList.toggle('d-none');
     });
   });
 }, {forPage: () => true});

@@ -18,6 +18,10 @@
   border-bottom: 1px solid var(--header-border-color);
 }
 
+.d-none {
+  display: none;
+}
+
 /* Navigation section start */
 .navigation__logo {
   width: 200px;
@@ -2328,6 +2332,16 @@ a.navigation-link.active {
     padding: 10px 0px;
     max-width: 60px;
   }
+
+  .call-to-action-content-action-copy-command-button:hover {
+    background: var(--button-background-color-dark);
+    color: var(--text-color-light);
+  }
+
+  .call-to-action-content-action-copy-command-button.active {
+    background: var(--button-background-color-light);
+    color: var(--text-color);
+  }
 }
 
 /* Call to action section end */
@@ -2528,6 +2542,7 @@ a.navigation-link.active {
 
 .footer__wrapper-inner-social-links a {
   height: 28px;
+  width: 28px;
 }
 
 .footer__wrapper-inner-social-links svg {
