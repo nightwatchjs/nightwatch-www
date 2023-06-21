@@ -44,7 +44,7 @@ a {
   top: 0;
   /* TODO: remove z-index and fix natively */
   z-index: 100;
-  border-bottom: 1px solid hsl(270, 8%, 90.2%);
+  border-bottom: 1px solid var(--header-border-color);
 }
 
 /* Navigation section start */
