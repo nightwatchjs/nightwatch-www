@@ -2397,6 +2397,7 @@
   font-weight: 600;
   line-height: var(--line-height-base);
   opacity: 0.9;
+  width: 60%;
 }
 
 .footer__wrapper-bottom-text a {
@@ -2407,6 +2408,11 @@
 
 .footer__wrapper-bottom-text-about {
   padding-bottom: 32px;
+}
+
+.footer__wrapper-bottom-logo {
+  height: 0%;
+  width: 20%;
 }
 
 .footer__wrapper-bottom-logo-mobile {
@@ -2448,8 +2454,12 @@
   }
 
   .footer__wrapper-bottom-logo-mobile {
-    width: 35%;
+    width: 12%;
     display: unset;
+  }
+
+  .footer__wrapper-bottom-text {
+    width: 72%;
   }
 }
 
