@@ -1657,7 +1657,7 @@ a.navigation-link.active {
 }
 
 .testimonial__timeline-path {
-  height: 430%;
+  height: 530%;
   width: 87%;
   position: absolute;
   border: 2px solid var(--timeline-background-color);
