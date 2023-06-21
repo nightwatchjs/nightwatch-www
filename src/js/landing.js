@@ -95,7 +95,6 @@ onRender(() => {
         autoplay: {
           delay: 5000
         },
-  
         pagination: {
           el: '.swiper-pagination-integrations',
           clickable: true
