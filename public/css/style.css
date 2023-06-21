@@ -89,7 +89,7 @@ a {
 
 .navigation-link {
   color: var(--header-text-color);
-  font-size: 15px;
+  font-size: initial;
   font-weight: 600;
   line-height: var(--line-height-19);
   text-decoration: none;
