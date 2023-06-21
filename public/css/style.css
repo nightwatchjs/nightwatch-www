@@ -3107,7 +3107,7 @@ p.bottom-text {
 .footer__wrapper-inner-social-subscribe-btn {
   background: var(--button-background-color-dark);
   border-radius: 4.3px;
-  border: 0.752783px solid var(--button-border-color-dark);
+  border: 0.752783px solid var(--button-border-color);
   box-shadow: inset 0px -3.28005px 0px var(--button-border-color);
   color: var(--background-color);
   font-family: var(--font-family-code);
