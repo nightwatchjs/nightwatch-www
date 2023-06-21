@@ -1040,32 +1040,6 @@ span.since {
   overflow-x: auto;
 }
 
-.social {
-  margin: 50px auto 0;
-  padding: 0;
-  width: 320px;
-}
-
-.social .fb_iframe_widget {
-  font-size: 6px;
-}
-
-.social ul {
-  list-style: none;
-  height: 20px;
-  padding: 0;
-  margin: 0;
-}
-
-.social ul li {
-  float: left;
-  height: 20px;
-  line-height: 1;
-  margin: 10px;
-  padding: 0;
-  text-align: right;
-}
-
 .col-lg-6.download {
   text-align: right;
 }
@@ -1561,10 +1535,6 @@ ul.features li.introspect {
 }
 
 @media only screen and (min-width: 1200px) {
-  body {
-    font-size: 18px;
-  }
-
   .index-features.container {
     /*max-width: 1080px*/
   }
