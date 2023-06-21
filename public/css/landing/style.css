@@ -198,7 +198,7 @@ a.navigation-link.active {
   display: flex;
   justify-content: center;
   height: 100%;
-  padding: 113px 32px;
+  padding: 92px 32px;
 }
 
 .mobile-navbar-wrapper ul {
@@ -445,6 +445,10 @@ a.navigation-link.active {
 }
 
 @media (max-width: 480px) {
+  .navigation__logo {
+    width: 170px;
+  }
+
   .hero__content {
     max-width: 30rem;
     gap: 12px;
@@ -2061,7 +2065,7 @@ a.navigation-link.active {
   font-size: inherit;
   font-weight: 700;
   line-height: inherit;
-  padding-right: 12px;
+  padding-right: 5px;
 }
 
 .call-to-action-content-action-copy-command-button {
@@ -2158,7 +2162,7 @@ a.navigation-link.active {
   }
 
   .call-to-action-content-action-copy-command {
-    padding: 6px 0px 7px 10px;
+    padding: 6px 0px 7px 6px;
   }
 
   .call-to-action-content-action-copy-command-button {
@@ -2175,13 +2179,13 @@ a.navigation-link.active {
 
 @media (max-width: 470px) {
   .call-to-action-content-action-copy-command-text {
-    font-size: var(--font-size-h8);
+    font-size: var(--font-size-h8-s);
   }
 
   .call-to-action-content-action-copy-command-button {
-    font-size: var(--font-size-h8);
+    font-size: var(--font-size-h8-s);
     padding: 10px 0px;
-    max-width: 80px;
+    max-width: 60px;
   }
 }
 
