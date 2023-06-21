@@ -35,6 +35,10 @@ a {
   text-decoration: none;
 }
 
+.hidden-block {
+  display: none !important;
+}
+
 .header {
   display: flex;
   justify-content: center;
