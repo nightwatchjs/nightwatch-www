@@ -55,9 +55,15 @@
   padding: 28px 26px 28px 26px;
 }
 
-.navigation-list-pages .navigation-link:hover,  .navigation-link.active {
-  border-bottom: 3px solid var(--button-border-accent-color);
-  color: var(--header-text-color)
+.navigation-link:hover {
+  color: var(--header-text-color);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+a.navigation-link.active {
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .navigation-list {
@@ -85,7 +91,7 @@
 
 .navigation-list:last-of-type {
   gap: 32px;
-  padding-left: 26px;
+  padding-left: 52px;
 }
 
 .navigation-list>li button {
@@ -198,7 +204,7 @@
   top: 0;
   width: 100%;
   height: 100vh;
-  z-index: 1;
+  z-index: 10;
   background: var(--background-color);
   display: none;
 }
