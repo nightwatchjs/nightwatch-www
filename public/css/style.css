@@ -226,7 +226,7 @@ a {
   display: flex;
   justify-content: center;
   height: 100%;
-  padding: 113px 32px;
+  padding: 92px 32px;
 }
 
 .mobile-navbar-wrapper ul {
@@ -2333,6 +2333,10 @@ section.secondary h1 {
 }
 
 @media (max-width: 480px) {
+  .navigation__logo {
+    width: 170px;
+  }
+
   .doc-container.top-border .doc-sidebar {
     border-radius: 0;
   }
