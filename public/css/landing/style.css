@@ -768,7 +768,7 @@ a.navigation-link.active {
   .features__timeline-path {
     left: 28px;
     top: 117px;
-    height: 350%;
+    height: 450%;
   }
 
   .features__heading {
@@ -842,8 +842,8 @@ a.navigation-link.active {
     border-radius: 60px;
     border: 2px solid var(--timeline-dot-border-color);
     position: relative;
-    left: -217px;
-    top: 94px;
+    left: 19px;
+    top: 184px;
     background: var(--background-color);
   }
 
@@ -1173,12 +1173,12 @@ a.navigation-link.active {
 
   .capabilities__timeline-path-mobile {
     display: block;
-    height: 9%;
+    height: 15%;
     width: 94%;
     position: absolute;
     border-right: 2px solid var(--timeline-background-color);
     border-radius: 0 60px;
-    left: -29px;
+    left: -23px;
     right: 0;
     margin: auto;
     border-top: 2px solid var(--timeline-background-color);
@@ -1834,7 +1834,7 @@ a.navigation-link.active {
     position: absolute;
     border-right: 2px solid var(--timeline-background-color);
     border-radius: 0 60px;
-    left: -56px;
+    left: -52px;
     right: 0;
     margin: auto;
     border-top: 2px solid var(--timeline-background-color);
