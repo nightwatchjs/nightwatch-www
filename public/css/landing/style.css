@@ -496,6 +496,16 @@
     max-width: 113px;
   }
 
+  .hero__action-copy-command-button:hover {
+    background: var(--button-background-color-dark);
+    color: var(--text-color-light);
+  }  
+
+  .hero__action-copy-command-button.active {
+    background: var(--button-background-color-light);
+    color: var(--text-color);
+  }
+  
   .hero__action-button--get-started {
     text-align: center;
     padding: 10px;
@@ -2439,6 +2449,7 @@
 
   .footer__wrapper-bottom-logo-mobile {
     width: 35%;
+    display: unset;
   }
 }
 
