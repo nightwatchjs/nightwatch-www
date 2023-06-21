@@ -666,20 +666,6 @@
   flex: 1 1 0%;
 }
 
-.features__path {
-  position: absolute;
-  height: 100%;
-  overflow: hidden;
-  top: 150px;
-  left: 0;
-  right: 0;
-}
-
-.features__path svg {
-  height: 1471px;
-  width: 100%;
-}
-
 .features__community-stats {
   align-items: center;
   display: flex;
@@ -809,13 +795,6 @@
     padding: 33px 0;
     margin-left: 50px;
     max-width: min(var(--layout-content-width), 83%);
-  }
-
-  .features__path {
-    /* Changes required here */
-    /* top: 7rem;
-    right: 26rem; */
-    display: none;
   }
 }
 
@@ -1032,18 +1011,6 @@
   transition: 0.3s ease-in-out;
 }
 
-.capabilities__path {
-  position: absolute;
-  width: 100%;
-  top: 3px;
-  overflow: hidden;
-}
-
-.capabilities__path svg {
-  width: 1053px;
-  margin: auto;
-}
-
 @media (max-width: 480px) {
   .capabilities {
     margin-bottom: 60px;
@@ -1135,11 +1102,6 @@
   .capabilities--double-column .capabilities__card .capabilities__card-content {
     margin-bottom: 30px;
   }
-
-  .capabilities__path {
-    /* Changes required here */
-    display: none;
-  }
 }
 
 /* Nightwatch Capabilities section end */
@@ -1229,19 +1191,6 @@
   will-change: background, color, border, box-shadow;
 }
 
-.performance__path {
-  position: absolute;
-  width: 100%;
-  overflow: hidden;
-  padding-top: 23px;
-}
-
-.performance__path svg {
-  width: 100%;
-  margin: auto;
-}
-
-
 @media (max-width: 480px) {
   .performance {
     margin-left: 50px;
@@ -1276,11 +1225,6 @@
   .performance__content-description-button {
     font-size: var(--font-size-base);
     line-height: var(--line-height-base);
-  }
-
-  .performance__path {
-    /* Changes required here */
-    display: none;
   }
 }
 
@@ -1572,18 +1516,6 @@
   color: var(--text-color);
 }
 
-.testimonial__path {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: -138px;
-}
-
-.testimonial__path svg {
-  width: 100%;
-  margin: auto;
-}
-
 @media (max-width: 768px) {
   .swiper {
     width: 100%;
@@ -1610,11 +1542,6 @@
 
   .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
     background-color: var(--pagination-background-color)
-  }
-
-  .testimonial__path {
-    /* Changes required here */
-    display: none;
   }
 
   .testimonial__content-card-description {
@@ -1745,17 +1672,6 @@
   color: var(--text-color);
 }
 
-.integration__path {
-  position: absolute;
-  width: 100%;
-  top: -120px;
-}
-
-.integration__path svg {
-  width: 100%;
-  margin: auto;
-}
-
 @media (max-width: 1186px) {
   .integration__content {
     padding: 38px 36px;
@@ -1791,11 +1707,6 @@
     line-height: var(--line-height-h5);
     padding-bottom: 24px;
     margin-left: 9px;
-  }
-
-  .integration__path {
-    /* Changes required here */
-    display: none;
   }
 
   .integration__content {
