@@ -705,7 +705,7 @@ a.navigation-link.active {
   width: 100%;
   border: 5px solid var(--border-color);
   border-radius: 20px;
-  padding: 39px 0;
+  padding: 34px 0 39px 0;
   margin: auto;
 }
 
@@ -1474,7 +1474,8 @@ a.navigation-link.active {
   .comparison__content-wrapper-button {
     font-size: var(--font-size-base);
     line-height: var(--line-height-base);
-    padding: 16px 12px;
+    text-align: center;
+    padding: 12px 20px;
     max-width: 96%;
   }
 }
@@ -1720,6 +1721,11 @@ a.navigation-link.active {
   justify-content: center;
 }
 
+.integration__content-card:hover {
+  background: #EFEFEF;
+  cursor: pointer;
+}
+
 .integration__content-link:nth-last-child(-n+2) {
   display: none;
 }
@@ -1791,6 +1797,11 @@ a.navigation-link.active {
     padding-right: 2px;
     max-width: min(480px, 83%);
     margin-bottom: 90px;
+  }
+
+  .integration__content-card:hover {
+    background: var(--background-color);
+    cursor: unset;
   }
 
   .integration__heading {
