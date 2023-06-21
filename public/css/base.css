@@ -25,7 +25,7 @@
   --footer-background-color: hsla(0, 0%, 98%, 1);
   --pagination-background-color: hsla(22.81, 71.6%, 33.14%, 1);
   --pagination-bullet-background-color: hsla(46.67, 18%, 80.39%, 1);
-  --header-border-color: hsl(270, 8%, 90.2%);
+  --header-border-color: hsla(270, 8%, 90.2%, 1);
 
   /* --color-white: hsla(0, 0%, 100%, 1);
   --color-light-white: hsla(0, 0%, 97%, 1);
