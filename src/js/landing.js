@@ -1,7 +1,8 @@
 import {onRender} from 'postdoc/client';
 
 onRender(
-    docready(function () {
+  () => {
+    docReady(function () {
       // Copy Button
       function addCopyEventListeners(buttonSelector, textSelector) {
         const copyButton = document.querySelector(buttonSelector);
@@ -173,5 +174,6 @@ onRender(
       iframeNode.setAttribute('title', 'nightwatch-substack');
       footerSocial.appendChild(iframeNode);
     });
+  },
   {forPage: () => true}
 );
