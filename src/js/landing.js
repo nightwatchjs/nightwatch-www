@@ -173,6 +173,8 @@ onRender(
       iframeNode.setAttribute('scrolling', 'no');
       iframeNode.setAttribute('title', 'nightwatch-substack');
       footerSocial.appendChild(iframeNode);
+
+      addScript('https://www.googletagmanager.com/gtm.js?id=GTM-MWC4FHS', null);
     });
   },
   {forPage: () => true}

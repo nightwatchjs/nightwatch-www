@@ -2110,6 +2110,18 @@ function activeLink(urlPart) {
     <%- include('utils') %>
     <script type="module" src="<%= url("~/src/js/dropdown.js") %>"></script>
     <script type="module" src="<%= url("~/src/js/landing.js") %>"></script>
+    <script async>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {dataLayer.push(arguments);}
+      var GA_LOCAL_STORAGE_KEY = 'ga:clientId';
+      if (window.localStorage) {
+        (function() {
+          gtag('gtm.start', new Date().getTime());
+          gtag('config', 'GTM-MWC4FHS');
+          gtag('event', 'gtm.js');
+        }());
+      }
+    </script>
   </body>
 
   <noscript id="mobile-integration-content">
