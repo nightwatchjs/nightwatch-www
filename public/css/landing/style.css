@@ -2555,7 +2555,7 @@ a.navigation-link.active {
   border: 2px solid var(--button-border-color);
   box-shadow: 2px 4px 10px var(--box-shadow-color);
   display: flex;
-  padding: 14px 156px 14px 19px;
+  padding: 14px 115px 14px 19px;
   position: relative;
 }
 
@@ -2652,7 +2652,7 @@ a.navigation-link.active {
   }
 
   .call-to-action-content-action-copy-command {
-    padding: 12px 138px 12px 20px;
+    padding: 12px 115px 12px 20px;
   }
   
   .call-to-action-image>svg {
