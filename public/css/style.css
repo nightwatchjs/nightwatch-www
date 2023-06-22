@@ -886,6 +886,15 @@ section[data-page-uri] {
   background-image: url(https://pbs.twimg.com/profile_images/972952007127396353/SI-e-RLN_400x400.jpg);
 }
 
+.harshit .profile-pic {
+  background-image: url(https://avatars.githubusercontent.com/u/94462364?v=4);
+}
+
+.priyansh .profile-pic {
+  background-image: url(https://avatars.githubusercontent.com/u/39924567?v=4);
+}
+
+
 #team h4 {
   text-align: center;
   padding-top: 10px;
@@ -929,10 +938,11 @@ section[data-page-uri] {
 }
 
 #team .profile {
-  margin: 5px;
-  padding-top: 10px;
+  margin: 15px;
+  padding-top: 30px;
   padding-bottom: 10px;
-  background-color: #f2f2f2;
+  background-color: var(--integration-hover-background-color);
+  border-radius: 20px;
 }
 
 #about-container .roadmap h4 {
@@ -1277,7 +1287,7 @@ html {
 }
 
 a {
-  color: var(--color-muted-blue);
+  color: var(--text-color-accent);
 }
 
 /* Nav Section */
