@@ -55,11 +55,11 @@ jobs:
               browser.url('http://localhost:5173/api').pause(10000);
             }
           };" > navigate.js
-          npx nightwatch navigate.js -e chrome --headless
+          npx nightwatch navigate.js -e chrome --headless --verbose
 
       - name: Show server output
         run: cat server.log
-        
+
       - name: Build the website
         run: npm run build
 
