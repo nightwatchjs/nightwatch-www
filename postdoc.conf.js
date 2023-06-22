@@ -26,7 +26,7 @@ module.exports = {
     apiRepoUrl: 'https://github.com',
     githubRepo: 'nightwatchjs/nightwatch',
     docsRepoUrl: 'https://github.com/nightwatchjs/nightwatch-docs/blob/',
-    docsRepoBranch: 'versions/2.0',
+    docsRepoBranch: 'versions/3.0',
     mdFolder: MD_DOCS_FOLDER,
     apiFolder: API_DOCS_FOLDER,
     examples: {
