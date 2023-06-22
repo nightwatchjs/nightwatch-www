@@ -22,17 +22,22 @@ function activeLink(urlPart) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%- include("meta-tags", data) %>
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
-      <link rel="stylesheet" href="/css/base.css">
+      <!-- Commenting till we automatically inline the critical css -->
+      <!-- <link rel="stylesheet" href="/css/base.css"> -->
       <link rel="stylesheet" href="/css/landing/style.css">
       <title><%- data.pageTitle %></title>
 
+      <style>
+        *,::after,::before{box-sizing:border-box}*{margin:0}body{line-height:1.5;-webkit-font-smoothing:antialiased}canvas,img,picture,svg,video{display:block;max-width:100%}button,input,select,textarea{font:inherit}h1,h2,h3,h4,h5,h6,p{overflow-wrap:break-word}main{display:block;overflow:hidden}
+        :root{--header-background:hsla(0, 0%, 10.59%, 1);--header-text-color:hsla(0, 0%, 100%, 1);--background-color:hsla(0, 0%, 100%, 1);--text-color-light:hsla(0, 0%, 100%, 1);--border-color:hsla(0, 0%, 96.47%, 1);--text-color:hsla(0, 0%, 0%, 1);--subtitle-text-color:hsla(22.5, 8.6%, 36.47%, 1);--feature-title-text-color:hsla(23.16, 55.34%, 20.2%, 1);--button-border-color:hsla(0, 0%, 0%, 1);--box-shadow-color:hsla(0, 0%, 0%, 0.08);--button-background-color-dark:hsla(0, 0%, 21%, 1);--button-box-shadow:hsla(0, 0.92%, 78.63%, 1);--button-background-color-light:hsla(180, 11.11%, 98.24%, 1);--text-color-accent:hsla(22.81, 71.6%, 33.14%, 1);--button-border-accent-color:hsla(27.16, 95%, 60.78%, 1);--card-border-color:hsla(0, 0%, 94%, 1);--card-text-color:hsla(22.5, 8.6%, 36.47%, 1);--dropdown-background-color:hsla(0, 0%, 98%, 1);--dropdown-box-shadow-color:hsla(0, 0%, 0%, 0.08);--footer-background-color:hsla(0, 7.69%, 97.45%, 1);--pagination-background-color:hsla(22.81, 71.6%, 33.14%, 1);--pagination-bullet-background-color:hsla(46.67, 18%, 80.39%, 1);--header-border-color:hsla(270, 8%, 90.2%, 1);--integration-hover-background-color:hsla(0, 0%, 94%, 1);--timeline-dot-border-color:hsla(217.5, 14.81%, 89.41%, 1);--timeline-background-color:hsla(217.5, 14.81%, 89.41%, 1);--font-size-base:calc(16 / 16 * 1rem);--font-size-h1:calc(72 / 16 * 1rem);--font-size-h2:calc(52 / 16 * 1rem);--font-size-h3:calc(45 / 16 * 1rem);--font-size-h4:calc(36 / 16 * 1rem);--font-size-h5:calc(28 / 16 * 1rem);--font-size-h6:calc(24 / 16 * 1rem);--font-size-h7:calc(18 / 16 * 1rem);--font-size-h8:calc(14 / 16 * 1rem);--font-size-h8-s:calc(12 / 16 * 1rem);--font-size-h7-mega:calc(21 / 16 * 1rem);--font-size-testimonial:calc(21 / 16 * 1rem);--line-height-base:calc(24 / 16);--line-height-h1:calc(80 / 72);--line-height-h2:calc(65 / 52);--line-height-h3:calc(52 / 45);--line-height-h4:calc(42 / 36);--line-height-h5:calc(35 / 28);--line-height-h6:calc(32 / 24);--line-height-h6-mega:calc(40 / 24);--line-height-h7:calc(36 / 18);--line-height-h7-s:calc(28 / 18);--line-height-h7-xs:calc(24 / 18);--line-height-h7-mega:calc(24 / 21);--line-height-h8:calc(21 / 14);--line-height-testimonial:calc(28 / 21);--font-family-primary:'Source Sans 3',sans-serif;--font-family-code:'IBM Plex Mono',sans-serif;--layout-content-width:1200px}
+      </style>
       <!-- Fonts -->
       <style>
         @font-face {
           font-family: 'Source Sans 3';
           font-style: italic;
           font-weight: 600;
-          font-display: fallback;
+          font-display: swap;
           src: url(/css/landing/fonts/source-sans-3-italic.woff2) format('woff2');
           unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
         }
@@ -41,7 +46,7 @@ function activeLink(urlPart) {
           font-family: 'Source Sans 3';
           font-style: normal;
           font-weight: 400;
-          font-display: fallback;
+          font-display: swap;
           src:
             url(/css/landing/fonts/source-sans-3.woff2) format('woff2'),
             url(/css/landing/fonts/source-sans-3.woff2) format('woff2 supports variations'),
@@ -53,7 +58,7 @@ function activeLink(urlPart) {
           font-family: 'Source Sans 3';
           font-style: normal;
           font-weight: 600;
-          font-display: fallback;
+          font-display: swap;
           src:
             url(/css/landing/fonts/source-sans-3.woff2) format('woff2'),
             url(/css/landing/fonts/source-sans-3.woff2) format('woff2 supports variations'),
@@ -65,7 +70,7 @@ function activeLink(urlPart) {
           font-family: 'Source Sans 3';
           font-style: normal;
           font-weight: 700;
-          font-display: fallback;
+          font-display: swap;
           src:
             url(/css/landing/fonts/source-sans-3.woff2) format('woff2'),
             url(/css/landing/fonts/source-sans-3.woff2) format('woff2 supports variations'),
@@ -77,7 +82,7 @@ function activeLink(urlPart) {
           font-family: 'IBM Plex Mono';
           font-style: normal;
           font-weight: 400;
-          font-display: fallback;
+          font-display: swap;
           src:
             url(/css/landing/fonts/ibm-plex-mono-400.woff2) format('woff2'),
             url(/css/landing/fonts/ibm-plex-mono-400.woff2) format('woff2 supports variations'),
@@ -89,7 +94,7 @@ function activeLink(urlPart) {
           font-family: 'IBM Plex Mono';
           font-style: normal;
           font-weight: 600;
-          font-display: fallback;
+          font-display: swap;
           src:
             url(/css/landing/fonts/ibm-plex-mono-600.woff2) format('woff2'),
             url(/css/landing/fonts/ibm-plex-mono-600.woff2) format('woff2 supports variations'),
@@ -101,7 +106,7 @@ function activeLink(urlPart) {
           font-family: 'IBM Plex Mono';
           font-style: normal;
           font-weight: 700;
-          font-display: fallback;
+          font-display: swap;
           src:
             url(/css/landing/fonts/ibm-plex-mono-700.woff2) format('woff2'),
             url(/css/landing/fonts/ibm-plex-mono-700.woff2) format('woff2 supports variations'),
