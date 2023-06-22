@@ -2048,6 +2048,13 @@ a.navigation-link.active {
   color: var(--text-color);
 }
 
+@media (max-width: 1024px) {
+
+  .testimonial__timeline-path {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
 
   .testimonial__timeline-path {
@@ -2627,6 +2634,46 @@ a.navigation-link.active {
   cursor: pointer;
   transition: 0.4s ease-in-out;
   will-change: background, color, border, box-shadow;
+}
+
+@media (max-width: 1024px) {
+  .call-to-action {
+    margin-left: 105px;
+    max-width: min(1024px, 83%);
+    margin-bottom: 60px;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding: 28px 20px 25px 20px;
+  }
+
+  .call-to-action-image {
+    width: 50%;
+  }
+
+  .call-to-action-content-action-copy-command {
+    padding: 12px 138px 12px 20px;
+  }
+  
+  .call-to-action-image>svg {
+    transform: translate(50%, 0);
+  }
+
+  .call-to-action-content-action-copy-command-text {
+    font-size: var(--font-size-h7);
+    line-height: var(--line-height-h7);
+  }
+
+  .call-to-action-content-action-copy-command-button {
+    font-size: var(--font-size-h7);
+    line-height: var(--line-height-h7);
+    max-width: 115px
+  }
+
+  .call-to-action-content-action-button--get-started {
+    font-size: var(--font-size-h7);
+    line-height: var(--line-height-h7);
+  }
 }
 
 @media (max-width: 480px) {
