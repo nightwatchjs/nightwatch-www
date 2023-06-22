@@ -43,10 +43,17 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Start server
+      - name: Build and run Docker image
         run: |
-          nohup npm start > server.log 2>&1 &
-          sleep 10          
+          echo 'FROM node:16' > Dockerfile
+          echo 'WORKDIR /app' >> Dockerfile
+          echo 'COPY package*.json ./' >> Dockerfile
+          echo 'RUN npm install' >> Dockerfile
+          echo 'COPY . .' >> Dockerfile
+          echo 'EXPOSE 5173' >> Dockerfile
+          echo 'CMD [ "npm", "start" ]' >> Dockerfile
+          docker build -t my-image .
+          docker run -d -p 5173:5173 -v ${{ github.workspace }}:/app my-image         
 
       - name: Run Selenium script
         run: |
