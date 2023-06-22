@@ -53,6 +53,7 @@ jobs:
           echo "module.exports = {
             demoTest(browser) {
               browser
+                .resizeWindow(1920, 1080)
                 .url('http://127.0.0.1:5173/')
                 .pause(5000)
                 .saveScreenshot('screens/index.png')
