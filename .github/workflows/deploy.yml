@@ -46,8 +46,6 @@ jobs:
       - name: List API_DOCS_FOLDER
         run: |
           echo $API_DOCS_FOLDER
-          cd $API_DOCS_FOLDER 
-          less web-element/commands/click.js
 
       - name: Build the website
         run: npm run build
@@ -55,11 +53,10 @@ jobs:
       - name: List API_DOCS_FOLDER
         run: cd out/api && ls -la
 
-
-#      - name: Deploy to server
-#        run: |
-#          mkdir -p ~/.ssh
-#          echo "${{ secrets.PROD_DEPLOY_SECRET }}" > ~/.ssh/id_rsa
-#          chmod 600 ~/.ssh/id_rsa
-#          ssh-keyscan ${{ env.REMOTE_SERVER }} >> ~/.ssh/known_hosts
-#          rsync -azP --delete ./out/ ${{ env.REMOTE_USER }}@${{ env.REMOTE_SERVER }}:${{ secrets.REMOTE_DIRECTORY }}
+      - name: Deploy to server
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.PROD_DEPLOY_SECRET }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan ${{ env.REMOTE_SERVER }} >> ~/.ssh/known_hosts
+          rsync -azP --delete ./out/ ${{ env.REMOTE_USER }}@${{ env.REMOTE_SERVER }}:${{ secrets.REMOTE_DIRECTORY }}
