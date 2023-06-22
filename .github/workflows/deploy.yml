@@ -1,0 +1,48 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - 'release/*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Checkout Nightwatch source code
+        uses: actions/checkout@v2
+        with:
+          repository: nightwatchjs/nightwatch
+
+      - name: Checkout Nightwatch docs folder
+        uses: actions/checkout@v2
+        with:
+          repository: nightwatchjs/nightwatch-docs
+
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build the website
+        run: npm run build
+
+      - name: Deploy to server
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.PROD_DEPLOY_SECRET }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H ${{ secrets.REMOTE_SERVER }} >> ~/.ssh/known_hosts
+          rsync -azP --delete ./out/ ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_SERVER }}:${{ secrets.REMOTE_DIRECTORY }}
+        env:
+          MD_DOCS_FOLDER: ${{ github.workspace }}/nightwatch-docs
+          API_DOCS_FOLDER: ${{ github.workspace }}/nightwatch/lib/api
+          REMOTE_USER: ${{ env.REMOTE_USER }}
+          REMOTE_SERVER: ${{ env.REMOTE_SERVER }}
+          REMOTE_DIRECTORY: ${{ secrets.REMOTE_DIRECTORY }}
