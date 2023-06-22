@@ -76,8 +76,8 @@ jobs:
           };" > navigate.js
           npx nightwatch navigate.js -e chrome --headless --verbose
 
-      - name: Show server output
-        run: cat server.log
+#      - name: Show server output
+#        run: cat server.log
 
       - name: Archive screenshots
         run: zip -r screenshots.zip screens/
