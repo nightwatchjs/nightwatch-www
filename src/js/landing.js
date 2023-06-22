@@ -36,7 +36,7 @@ onRender(() => {
   addScript('https://cdn.jsdelivr.net/npm/@docsearch/js@3', 'docsearch-script', function () {
     docsearch({
       appId: 'H6WO0X38VS',
-      indexName: 'crawler_nightwatchjs',
+      indexName: 'crawler_nightwatchjs_v3',
       container: '#docsearch',
       apiKey: '11a50b1fdb81a04d20cb9f0a711f9a69',
       getMissingResultsUrl({query}) {
