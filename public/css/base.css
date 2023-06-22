@@ -29,27 +29,6 @@
   --timeline-dot-border-color: hsla(217.5, 14.81%, 89.41%, 1);
   --timeline-background-color: hsla(217.5, 14.81%, 89.41%, 1);
 
-
-  /* --color-white: hsla(0, 0%, 100%, 1);
-  --color-light-white: hsla(0, 0%, 97%, 1);
-  --color-black: hsla(0, 0%, 0%, 1);
-  --color-light-black: hsla(0, 0%, 0%, 0.08);
-  --color-dark-grey: hsla(0, 0%, 21%, 1);
-  --color-light-grey: hsla(180, 1%, 79%, 1);
-  --color-light-cyan: hsla(180, 11%, 98%, 1);
-  --color-orange: hsla(14, 95%, 64%, 1);
-  --color-vibrant-orange: hsla(27.16, 95%, 60.78%, 1);
-  --color-pure-yellow: hsla(35.56, 100%, 68.24%, 1);
-  --color-yellow: hsla(35, 85%, 46%, 1);
-  --text-color-accent: hsla(23, 72%, 33%, 1);
-  --color-grey: hsla(0, 0%, 94%, 1);
-  --color-light-yellow: hsla(49, 65%, 97%, 1);
-  --color-light-brown: hsla(23, 9%, 36%, 1);
-  --color-muted-brown: hsla(32, 11%, 40%, 1);
-  --color-blue: hsla(230, 96%, 55%, 1);
-  --color-muted-blue: hsla(217, 74%, 43%, 1);
-  --color-dark-brown:hsla(23, 55%, 20%, 1); */
-
   /* Font Size */
   --font-size-base: calc(16 / 16 * 1rem);
   --font-size-h1: calc(72 / 16 * 1rem);
@@ -80,31 +59,9 @@
   --line-height-h8: calc(21 / 14);
   --line-height-testimonial: calc(28 / 21);
 
-  /* --line-height-40: calc(40 / 24);
-  --line-height-33: calc(33 / 18);
-  --line-height-30: calc(30 / 20);
-  --line-height-27: calc(27 / 21);
-  --line-height-25: calc(25 / 14);
-  --line-height-23: calc(23 / 16);
-  --line-height-22: calc(22 / 18);
-  --line-height-19: calc(19 / 16); */
-
   /* Font family */
   --font-family-primary:  'Source Sans 3', sans-serif;
   --font-family-code: 'IBM Plex Mono', sans-serif;
 
   --layout-content-width: 1200px;
-}
-
-.visually-hidden {
-  clip: rect(1px, 1px, 1px, 1px);
-  -webkit-clip-path: inset(50%);
-  clip-path: inset(50%);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  border: 0;
-  position: absolute;
 }
