@@ -55,7 +55,7 @@ jobs:
               browser.url('http://localhost:5173').pause(5000);
             }
           };" > navigate.js
-          node navigate.js
+          npx nightwatch navigate.js -e chrome --headless
 
       - name: Build the website
         run: npm run build
