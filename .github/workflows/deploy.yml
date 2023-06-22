@@ -8,6 +8,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      REMOTE_SERVER: ${{ secrets.REMOTE_SERVER }}
+      REMOTE_USER: ${{ secrets.REMOTE_USER }}
+      MD_DOCS_FOLDER: ${{ github.workspace }}/nightwatch-docs
+      API_DOCS_FOLDER: ${{ github.workspace }}/nightwatch/lib/api
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -46,11 +51,7 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.PROD_DEPLOY_SECRET }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          echo "Remote server: $REMOTE_SERVER"
-          ssh-keyscan $REMOTE_SERVER >> ~/.ssh/known_hosts
+          echo "Remote server: ${{ env.REMOTE_SERVER }}"
+          ssh-keyscan ${{ env.REMOTE_SERVER }} >> ~/.ssh/known_hosts
           rsync -azP --delete ./out/ $REMOTE_USER@$REMOTE_SERVER:${{ secrets.REMOTE_DIRECTORY }}
-        env:
-          REMOTE_SERVER: ${{ env.REMOTE_SERVER }}
-          REMOTE_USER: ${{ env.REMOTE_USER }}
-          MD_DOCS_FOLDER: ${{ github.workspace }}/nightwatch-docs
-          API_DOCS_FOLDER: ${{ github.workspace }}/nightwatch/lib/api
+        
