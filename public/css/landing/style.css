@@ -530,7 +530,7 @@ a.navigation-link.active {
   }
 
   .hero__companies {
-    padding: 80px 0;
+    padding: 10px 0;
     --layout-content-width: 400px;
     max-width: min(var(--layout-content-width), 84%);
   }
@@ -1352,6 +1352,7 @@ a.navigation-link.active {
   .capabilities--double-column {
     flex-direction: column;
     margin-left: 20px;
+    padding-left: 0px;
   }
 
   .capabilities--double-column .capabilities__card {
@@ -1805,6 +1806,7 @@ a.navigation-link.active {
     padding-right: 2px;
     max-width: min(480px, 83%);
     margin-bottom: 25px;
+    padding-left: 0px;
   }
 
   .comparison__timeline-dot {
@@ -1844,6 +1846,7 @@ a.navigation-link.active {
 
   .comparison__content-wrapper .comparison__content-wrapper-container {
     gap: 20px;
+    flex-direction: column;
   }
 
   .comparison__content-wrapper .comparison__content-wrapper-container .comparison__content-wrapper-card {
