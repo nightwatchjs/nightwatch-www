@@ -54,8 +54,9 @@ jobs:
             demoTest(browser) {
               browser.url('http://localhost:5173/api')
                 .pause(5000)
+                .saveScreenshot('screens/api_page.png')
                 .url('http://127.0.0.1:5173/api/element/find.html')
-                .saveScreenshot('screens/screenshot.png');
+                .saveScreenshot('screens/element_page.png');
             }
           };" > navigate.js
           npx nightwatch navigate.js -e chrome --headless --verbose
