@@ -14,7 +14,7 @@ module.exports = {
     includes: 'src/includes',
     layouts: 'src/pages',
     pages: MD_DOCS_FOLDER,
-    api: API_DOCS_FOLDER
+    api: path.resolve(API_DOCS_FOLDER)
   },
 
   app_settings: {
