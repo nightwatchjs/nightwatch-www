@@ -825,10 +825,6 @@ a.navigation-link.active {
   article.features__content.features__content--reverse {
     margin-bottom: 73px;
   }
-
-  .capabilities__timeline-path {
-    display: none;
-  }
 }
 
 @media (max-width: 480px) {
@@ -922,7 +918,7 @@ a.navigation-link.active {
   }
 
   .features__community-stats__text {
-    font-size: var(--font-size-h6);
+    font-size: var(--font-size-h7);
   }
 
   .features__community-stats-wrapper__heading {
@@ -1238,6 +1234,7 @@ a.navigation-link.active {
 @media (max-width: 1024px) {
   .capabilities {
     margin-bottom: 80px;
+    padding-left: 80px;
   }
 
   .capabilities__timeline-path-mobile {
@@ -1252,8 +1249,8 @@ a.navigation-link.active {
     border-top: 2px solid var(--timeline-background-color);
   }
 
-  .capabilities--single-column, .capabilities--double-column {
-    padding-left: 80px;
+  .capabilities__timeline-path {
+    display: none;
   }
 
   .capabilities--single-column .capabilities__card {
@@ -1268,7 +1265,7 @@ a.navigation-link.active {
   .capabilities__heading {
     font-size: var(--font-size-h4);
     line-height: var(--line-height-h4);
-    padding: 40px 30px 35px 94px;
+    padding: 40px 30px 35px 14px;
     text-align: unset;
   }
 
@@ -1290,6 +1287,7 @@ a.navigation-link.active {
     margin-right: unset;
     margin-left: 30px;
     max-width: min(480px, 88%);
+    padding-left: 0;
   }
 
   .capabilities__timeline-path {
@@ -1556,7 +1554,7 @@ a.navigation-link.active {
     border-radius: 60px;
     border: 2px solid var(--timeline-dot-border-color);
     position: relative;
-    left: -39px;
+    left: -61px;
     top: 32px;
     background: var(--background-color);
   }
@@ -1572,6 +1570,7 @@ a.navigation-link.active {
     padding-right: 2px;
     max-width: min(480px, 83%);
     margin-bottom: 70px;
+    padding-left: 0;
   }
 
   .performance__timeline-path {
@@ -2050,23 +2049,20 @@ a.navigation-link.active {
   color: var(--text-color);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .testimonial {
+    padding-left: 80px;
+  }
 
   .testimonial__timeline-path {
     display: none;
   }
 
-  .testimonial__timeline-path-mobile {
-    display: block;
-    height: 30%;
-    width: 97%;
-    position: absolute;
-    border-right: 2px solid var(--timeline-background-color);
-    border-radius: 0 60px;
-    left: -52px;
-    right: 0;
-    margin: auto;
-    border-top: 2px solid var(--timeline-background-color);
+  .testimonial__heading {
+    text-align: unset;
+    padding: 24px 0;
+    font-size: var(--font-size-h4);
+    line-height: var(--line-height-h4);
   }
 
   .swiper {
@@ -2094,6 +2090,19 @@ a.navigation-link.active {
 
   .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
     background-color: var(--pagination-background-color)
+  }
+
+  .testimonial__timeline-path-mobile {
+    display: block;
+    height: 30%;
+    width: 80%;
+    position: absolute;
+    border-right: 2px solid var(--timeline-background-color);
+    border-radius: 0 60px;
+    left: 29px;
+    top: 0;
+    margin: auto;
+    border-top: 2px solid var(--timeline-background-color);
   }
 
   .testimonial__content-card-description {
@@ -2124,6 +2133,7 @@ a.navigation-link.active {
     padding-right: 2px;
     max-width: min(480px, 83%);
     margin-bottom: 90px;
+    padding-left: 0;
   }
 
   .testimonial__heading {
@@ -2431,11 +2441,54 @@ a.navigation-link.active {
   color: var(--text-color-accent);
 }
 
+@media (max-width: 1024px) {
+  .open-source {
+    padding-left: 80px;
+  }
+
+  .open-source__heading {
+    text-align: unset;
+    font-size: var(--font-size-h4);
+    line-height: var(--line-height-h4);
+  }
+
+  .open-source-content {
+    gap: 20px
+  }
+
+  .open-source-content-card {
+    padding: 21px 19px 15px 20px;
+    height: auto;
+  }
+
+  .open-source-content-card-text--heading {
+    font-size: var(--font-size-h7);
+    line-height: var(--line-height-h7-s);
+  }
+
+  .open-source-content-card-text--paragraph {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+  }
+
+  .open-source__timeline-dot {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 60px;
+    border: 2px solid var(--timeline-dot-border-color);
+    position: relative;
+    left: -61px;
+    top: 32px;
+    background: var(--background-color);
+  }
+}
 @media (max-width: 480px) {
   .open-source {
     margin-left: 50px;
     max-width: min(480px, 83%);
     margin-bottom: 60px;
+    padding-left: 0;
   }
 
   .open-source__timeline-dot {

@@ -61,7 +61,7 @@ onRender(() => {
   
   let testimonialSwiper;
   
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth <= 1024) {
     addStylesheet('https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css');
     addScript('https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js', null, function () {
 
