@@ -262,7 +262,7 @@ a.navigation-link.active {
 .hero {
   display: flex;
   flex-direction: column;
-  padding-top: 86px;
+  padding-top: 70px;
 }
 
 .hero__content {
@@ -325,6 +325,8 @@ a.navigation-link.active {
   font-size: var(--font-size-h7-mega);
   font-weight: 400;
   line-height: var(--line-height-h7-mega);
+  /* Fix for glitch, happening bc of reboot.css from bootstrap on API/Guide */
+  margin-bottom: 0;
 }
 
 .hero__action-copy-command-text::before {
@@ -425,7 +427,7 @@ a.navigation-link.active {
   margin: auto;
   --layout-content-width: 800px;
   max-width: min(var(--layout-content-width), 72%);
-  padding: 48px 0;
+  padding: 35px 0;
   width: 100%;
 }
 
@@ -588,7 +590,7 @@ a.navigation-link.active {
   margin-bottom: 160px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 65px;
+  margin-top: 50px;
   max-width: min(var(--layout-content-width), 90%);
   width: 100%;
   position: relative;
@@ -626,7 +628,7 @@ a.navigation-link.active {
   font-size: var(--font-size-h2);
   font-weight: 700;
   line-height: var(--line-height-h2);
-  padding-bottom: 72px;
+  padding-bottom: 55px;
   text-align: center;
 }
 
@@ -2047,6 +2049,18 @@ a.navigation-link.active {
   font-size: initial;
   line-height: var(--line-height-base);
   color: var(--text-color);
+}
+
+.testimonial__content-card-author-name a svg path {
+  fill: var(--text-color);
+}
+
+.testimonial__content-card-author-name a:hover {
+  color: var(--text-color-accent);
+}
+
+.testimonial__content-card-author-name a:hover svg path {
+  fill: var(--text-color-accent);
 }
 
 @media (max-width: 1024px) {
