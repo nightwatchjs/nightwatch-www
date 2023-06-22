@@ -480,8 +480,8 @@ a.navigation-link.active {
   }
 
   .hero__heading {
-    font-size: var(--font-size-h5);
-    line-height: var(--line-height-h5);
+    font-size: var(--font-size-h6);
+    line-height: var(--line-height-h6);
   }
 
   .hero__sub-heading {
@@ -530,7 +530,7 @@ a.navigation-link.active {
   }
 
   .hero__companies {
-    padding: 10px 0;
+    padding: 40px 0;
     --layout-content-width: 400px;
     max-width: min(var(--layout-content-width), 84%);
   }
@@ -836,14 +836,13 @@ a.navigation-link.active {
 
   .features__timeline-path {
     left: 28px;
-    top: 117px;
+    top: 100px;
     height: 450%;
   }
 
   .features__heading {
     font-size: var(--font-size-h5);
-    padding: 0 0 28px 59px;
-    text-align: start;
+    padding: 0;
   }
 
   .features__content {
@@ -1522,7 +1521,7 @@ a.navigation-link.active {
 
 @media (max-width: 1024px) {
   .performance {
-    margin-bottom: 140px;
+    margin-bottom: 120px;
     max-width: min(1024px, 90%);
     padding-left: 80px;
   }
@@ -2053,14 +2052,6 @@ a.navigation-link.active {
   .testimonial {
     padding-left: 80px;
   }
-
-  .testimonial__timeline-path {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
-
   .testimonial__timeline-path {
     display: none;
   }
@@ -2273,6 +2264,40 @@ a.navigation-link.active {
   }
 }
 
+@media (max-width: 1024px) {
+  .integration {
+    padding-left: 80px;
+  }
+
+  .integration__heading {
+    text-align: unset;
+    font-size: var(--font-size-h4);
+    line-height: var(--line-height-h4);
+  }
+
+  .integration__content-mobile .swiper-slide {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background: var(--background-color);
+    border-radius: 20px;
+    border: 5px solid var(--border-color);
+    padding: 38px 28px;
+  }
+
+  .integration__timeline-dot {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 60px;
+    border: 2px solid var(--timeline-dot-border-color);
+    position: relative;
+    left: -61px;
+    top: 30px;
+    background: var(--background-color);
+  }
+}
+
 @media (max-width: 910px) {
   .integration__content {
     gap: 26px;
@@ -2285,6 +2310,7 @@ a.navigation-link.active {
     padding-right: 2px;
     max-width: min(480px, 83%);
     margin-bottom: 90px;
+    padding-left: 0;
   }
 
   .integration__timeline-dot {
