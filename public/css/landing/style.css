@@ -1822,6 +1822,18 @@ a.navigation-link.active {
   color: var(--text-color);
 }
 
+.testimonial__content-card-author-name a svg path {
+  fill: var(--text-color);
+}
+
+.testimonial__content-card-author-name a:hover {
+  color: var(--text-color-accent);
+}
+
+.testimonial__content-card-author-name a:hover svg path {
+  fill: var(--text-color-accent);
+}
+
 @media (max-width: 768px) {
 
   .testimonial__timeline-path {
