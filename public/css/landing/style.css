@@ -2749,7 +2749,8 @@ a.navigation-link.active {
   }
 
   .call-to-action-content-action-copy-command {
-    padding: 12px 0 12px 20px  
+    padding: 12px 0 12px 20px;
+    width: 100%;
   }
 
   .call-to-action-content-action {
@@ -3089,7 +3090,35 @@ a.navigation-link.active {
   display: none;
 }
 
+@media (max-width: 1024px) {
+  .footer__wrapper-inner-social {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .footer__wrapper-inner-social-links {
+    align-items: center;
+  }
+
+  .footer__wrapper-inner-social-logo {
+    min-width: 100%;
+  }
+
+  .footer__wrapper-inner-social-logo svg {
+    max-width: 270px;
+  }
+}
+
 @media (max-width: 480px) {
+  .footer__wrapper-inner-social {
+    display: inherit;
+    flex: inherit;
+  }
+
+  .footer__wrapper-inner-social-links {
+    align-items: unset;
+  }
+
   .footer-landing {
     border-radius: 0px;
     margin: 0;
