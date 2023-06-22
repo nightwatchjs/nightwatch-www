@@ -2301,7 +2301,6 @@ a.navigation-link.active {
 .call-to-action-content-action {
   display: flex;
   gap: 28px;
-  justify-content: center;
 }
 
 .call-to-action-content-action-copy-command {
@@ -2312,8 +2311,9 @@ a.navigation-link.active {
   border: 2px solid var(--button-border-color);
   box-shadow: 2px 4px 10px var(--box-shadow-color);
   display: flex;
-  padding: 14px 156px 14px 19px;
+  padding: 14px 0 14px 19px;
   position: relative;
+  width: 70%;
 }
 
 .call-to-action-content-action-copy-command-text {
