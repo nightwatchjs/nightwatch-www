@@ -53,5 +53,5 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           echo "Remote server: ${{ env.REMOTE_SERVER }}"
           ssh-keyscan ${{ env.REMOTE_SERVER }} >> ~/.ssh/known_hosts
-          rsync -azP --delete ./out/ $REMOTE_USER@$REMOTE_SERVER:${{ secrets.REMOTE_DIRECTORY }}
+          rsync -azP --delete ./out/ ${{ env.REMOTE_USER }}@${{ env.REMOTE_SERVER }}:${{ secrets.REMOTE_DIRECTORY }}
         
