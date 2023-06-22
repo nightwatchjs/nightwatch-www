@@ -2707,9 +2707,13 @@ a.navigation-link.active {
   }
 
   .call-to-action-content-action-copy-command {
-    padding: 12px 138px 12px 20px;
+    padding: 12px 0 12px 20px  
   }
-  
+
+  .call-to-action-content-action {
+    flex-direction: column;
+  }
+
   .call-to-action-image>svg {
     transform: translate(50%, 0);
   }
