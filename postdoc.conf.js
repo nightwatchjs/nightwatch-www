@@ -10,13 +10,14 @@ const {
 
 
 console.log('API_DOCS_FOLDER', API_DOCS_FOLDER)
+console.log('MD_DOCS_FOLDER', MD_DOCS_FOLDER)
 
 module.exports = {
   directories: {
     includes: 'src/includes',
     layouts: 'src/pages',
     pages: MD_DOCS_FOLDER,
-    api: path.resolve(API_DOCS_FOLDER)
+    api: API_DOCS_FOLDER
   },
 
   app_settings: {
@@ -26,8 +27,8 @@ module.exports = {
     githubRepo: 'nightwatchjs/nightwatch',
     docsRepoUrl: 'https://github.com/nightwatchjs/nightwatch-docs/blob/',
     docsRepoBranch: 'versions/2.0',
-    mdFolder: path.resolve(MD_DOCS_FOLDER),
-    apiFolder: path.resolve(API_DOCS_FOLDER),
+    mdFolder: MD_DOCS_FOLDER,
+    apiFolder: API_DOCS_FOLDER,
     examples: {
       output_folder: 'public/__examples',
       source_folder: EXAMPLES_FOLDER
