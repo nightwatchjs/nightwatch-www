@@ -52,7 +52,7 @@ jobs:
         run: |
           echo "module.exports = {
             demoTest(browser) {
-              browser.url('http://localhost:5173').pause(10000);
+              browser.url('http://localhost:5173/api').pause(10000);
             }
           };" > navigate.js
           npx nightwatch navigate.js -e chrome --headless
