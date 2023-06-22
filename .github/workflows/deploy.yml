@@ -3,7 +3,7 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - 'release/*'
+      - 'release/1.0'
 
 jobs:
   build:

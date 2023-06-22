@@ -45,5 +45,11 @@ Quickly serve the generated files with:
 npx serve out
 ```
 
+## Deploy to Production
+
+In order to deploy to the production server, you need to create a PR for the `release/1.0` branch. 
+
+The PR requires at least 2 approvals from the maintainers. Once the PR is merged, the website will be automatically deployed to the production server.
+
 ## License
 MIT
