@@ -52,7 +52,11 @@ jobs:
         run: |
           echo "module.exports = {
             demoTest(browser) {
-              browser.url('http://localhost:5173/api')
+              browser
+                .url('http://127.0.0.1:5173/')
+                .pause(5000)
+                .saveScreenshot('screens/index.png')
+                .url('http://127.0.0.1:5173/api')
                 .pause(5000)
                 .saveScreenshot('screens/api_page.png')
                 .url('http://127.0.0.1:5173/api/element/find.html')
@@ -72,9 +76,6 @@ jobs:
         with:
           name: screenshots
           path: screenshots.zip
-
-      - name: List nightwatch docs
-        run: cd nightwatch-docs/api/element && ls -la
 
       - name: Build the website
         run: npm run build
