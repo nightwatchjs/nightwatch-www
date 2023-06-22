@@ -1964,7 +1964,8 @@ a.navigation-link.active {
 }
 
 .integration__content-card:hover {
-  background: var(--integration-hover-background-color);
+  border: 2px solid var(--button-border-color);
+  border-radius: 20px;
   cursor: pointer;
 }
 
