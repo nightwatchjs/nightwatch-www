@@ -21,6 +21,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: nightwatchjs/nightwatch-docs
+          ref: versions/3.0
 
       - name: Delete not needed files
         run: |
