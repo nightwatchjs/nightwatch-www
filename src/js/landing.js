@@ -41,21 +41,9 @@ onRender(
           indexName: 'crawler_nightwatchjs_v3',
           container: '#docsearch',
           apiKey: '11a50b1fdb81a04d20cb9f0a711f9a69',
-          // indexName: 'nightwatchjs',
-          transformItems: function (items) {
-            return items.map(function (item) {
-              if (!item.content) {
-                item.content = item.url.replace('#apimethod-page', '');
-              }
-              if (item.hierarchy && !item.hierarchy.lvl1) {
-                item.hierarchy.lvl1 = item.content.replace('https://nightwatchjs.org/', '');
-                item.type = 'lvl1';
-              }
-
-              return item;
-            });
-          },
-          debug: false
+          getMissingResultsUrl({query}) {
+            return `https://github.com/nightwatchjs/nightwatch-docs/issues/new?title=${query}`;
+          }
         });
       });
 
