@@ -45,14 +45,14 @@ jobs:
 
       - name: Start server
         run: |
-          nohup npm start &
+          npm start &
           sleep 10          
 
       - name: Run Selenium script
         run: |
           echo "module.exports = {
             demoTest(browser) {
-              browser.url('http://localhost:5173').pause(5000);
+              browser.url('http://localhost:5173').pause(10000);
             }
           };" > navigate.js
           npx nightwatch navigate.js -e chrome --headless
