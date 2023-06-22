@@ -46,8 +46,8 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.PROD_DEPLOY_SECRET }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H ${{ secrets.REMOTE_SERVER }} >> ~/.ssh/known_hosts
-          rsync -azP --delete ./out/ ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_SERVER }}:${{ secrets.REMOTE_DIRECTORY }}
+          ssh-keyscan -H ${{ env.REMOTE_SERVER }} >> ~/.ssh/known_hosts
+          rsync -azP --delete ./out/ ${{ env.REMOTE_USER }}@${{ env.REMOTE_SERVER }}:${{ secrets.REMOTE_DIRECTORY }}
         env:
           MD_DOCS_FOLDER: ${{ github.workspace }}/nightwatch-docs
           API_DOCS_FOLDER: ${{ github.workspace }}/nightwatch/lib/api
