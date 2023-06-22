@@ -9,6 +9,9 @@ const {
 } = process.env;
 
 
+console.log('API_DOCS_FOLDER', API_DOCS_FOLDER)
+console.log('MD_DOCS_FOLDER', MD_DOCS_FOLDER)
+
 module.exports = {
   directories: {
     includes: 'src/includes',
@@ -23,9 +26,9 @@ module.exports = {
     apiRepoUrl: 'https://github.com',
     githubRepo: 'nightwatchjs/nightwatch',
     docsRepoUrl: 'https://github.com/nightwatchjs/nightwatch-docs/blob/',
-    docsRepoBranch: 'versions/2.0',
-    mdFolder: path.resolve(MD_DOCS_FOLDER),
-    apiFolder: path.resolve(API_DOCS_FOLDER),
+    docsRepoBranch: 'versions/3.0',
+    mdFolder: MD_DOCS_FOLDER,
+    apiFolder: API_DOCS_FOLDER,
     examples: {
       output_folder: 'public/__examples',
       source_folder: EXAMPLES_FOLDER
