@@ -1520,6 +1520,8 @@ a.navigation-link.active {
 @media (max-width: 1024px) {
   .performance {
     margin-bottom: 140px;
+    max-width: min(1024px, 90%);
+    padding-left: 80px;
   }
 
   .performance__content {
@@ -1529,6 +1531,7 @@ a.navigation-link.active {
 
   .performance__heading {
     text-align: unset;
+    padding-bottom: 40px;
   }
 
   .performance__content-description-text {
@@ -1547,7 +1550,7 @@ a.navigation-link.active {
     border-radius: 60px;
     border: 2px solid var(--timeline-dot-border-color);
     position: relative;
-    left: -39px;
+    left: -61px;
     top: 41px;
     background: var(--background-color);
   }
