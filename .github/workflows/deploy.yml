@@ -46,9 +46,13 @@ jobs:
       - name: List API_DOCS_FOLDER
         run: cd $API_DOCS_FOLDER && ls -la
 
-#      - name: Build the website
-#        run: npm run build
-#
+      - name: Build the website
+        run: npm run build
+
+      - name: List API_DOCS_FOLDER
+        run: cd out/api && ls -la
+
+
 #      - name: Deploy to server
 #        run: |
 #          mkdir -p ~/.ssh
