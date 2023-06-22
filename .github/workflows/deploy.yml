@@ -44,7 +44,10 @@ jobs:
         run: npm install
 
       - name: List API_DOCS_FOLDER
-        run: cd $API_DOCS_FOLDER && ls -la
+        run: |
+          echo $API_DOCS_FOLDER
+          cd $API_DOCS_FOLDER 
+          less web-element/commands/click.js
 
       - name: Build the website
         run: npm run build
