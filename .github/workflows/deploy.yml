@@ -60,6 +60,9 @@ jobs:
       - name: Show server output
         run: cat server.log
 
+      - name: List nightwatch docs
+        run: cd nightwatch-docs/api/element && ls -la
+
       - name: Build the website
         run: npm run build
 
