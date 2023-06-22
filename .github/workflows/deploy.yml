@@ -61,16 +61,16 @@ jobs:
             demoTest(browser) {
               browser
                 .resizeWindow(1920, 1080)
-                .url('http://127.0.0.1:5173/')
+                .url('http://localhost:5173/')
                 .pause(5000)
                 .saveScreenshot('screens/index.png')
-                .click('header ul li:nth-child(2) a')
+                .url('http://localhost:5173/api')
                 .pause(5000)
                 .saveScreenshot('screens/api_page.png')
-                .url('http://127.0.0.1:5173/guide')
+                .url('http://localhost:5173/guide')
                 .pause(5000)
                 .saveScreenshot('screens/guide.png')
-                .url('http://127.0.0.1:5173/api/element/find.html')
+                .url('http://localhost:5173/api/element/find.html')
                 .saveScreenshot('screens/element_page.png');
             }
           };" > navigate.js
