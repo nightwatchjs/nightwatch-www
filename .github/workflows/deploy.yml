@@ -52,6 +52,3 @@ jobs:
         env:
           MD_DOCS_FOLDER: ${{ github.workspace }}/nightwatch-docs
           API_DOCS_FOLDER: ${{ github.workspace }}/nightwatch/lib/api
-          REMOTE_USER: ${{ env.REMOTE_USER }}
-          REMOTE_SERVER: ${{ env.REMOTE_SERVER }}
-          REMOTE_DIRECTORY: ${{ secrets.REMOTE_DIRECTORY }}
