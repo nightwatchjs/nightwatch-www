@@ -9,6 +9,8 @@ const {
 } = process.env;
 
 
+console.log('API_DOCS_FOLDER', API_DOCS_FOLDER)
+
 module.exports = {
   directories: {
     includes: 'src/includes',
