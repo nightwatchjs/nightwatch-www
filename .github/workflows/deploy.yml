@@ -45,7 +45,7 @@ jobs:
 
       - name: Start server
         run: |
-          npm start &
+          nohup npm start > server.log 2>&1 &
           sleep 10          
 
       - name: Run Selenium script
@@ -57,6 +57,9 @@ jobs:
           };" > navigate.js
           npx nightwatch navigate.js -e chrome --headless
 
+      - name: Show server output
+        run: cat server.log
+        
       - name: Build the website
         run: npm run build
 
