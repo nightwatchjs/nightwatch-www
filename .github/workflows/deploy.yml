@@ -51,7 +51,5 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.PROD_DEPLOY_SECRET }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          echo "Remote server: ${{ env.REMOTE_SERVER }}"
           ssh-keyscan ${{ env.REMOTE_SERVER }} >> ~/.ssh/known_hosts
           rsync -azP --delete ./out/ ${{ env.REMOTE_USER }}@${{ env.REMOTE_SERVER }}:${{ secrets.REMOTE_DIRECTORY }}
-        
