@@ -31,10 +31,10 @@ jobs:
           ref: versions/3.0-tmp
           path: nightwatch-docs
 
-      - name: Delete not needed files
-        run: |
-          rm ${{ github.workspace }}/nightwatch-docs/LICENSE.md
-          rm ${{ github.workspace }}/nightwatch-docs/README.md
+#      - name: Delete not needed files
+#        run: |
+#          rm ${{ github.workspace }}/nightwatch-docs/LICENSE.md
+#          rm ${{ github.workspace }}/nightwatch-docs/README.md
 
       - name: Use Node.js
         uses: actions/setup-node@v2
