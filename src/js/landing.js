@@ -156,7 +156,6 @@ onRender(
       const iframeNode = document.createElement('iframe');
       iframeNode.setAttribute('loading', 'lazy');
       iframeNode.setAttribute('src', 'https://nightwatch.substack.com/embed');
-      iframeNode.setAttribute('width', '80%');
       iframeNode.setAttribute('height', '125px');
       iframeNode.setAttribute('style', 'position: relative;left: -11px;top: -20px;');
       iframeNode.setAttribute('frameborder', '0');
