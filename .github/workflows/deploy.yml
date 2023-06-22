@@ -43,13 +43,16 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build the website
-        run: npm run build
+      - name: List API_DOCS_FOLDER
+        run: cd $API_DOCS_FOLDER && ls -la
 
-      - name: Deploy to server
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.PROD_DEPLOY_SECRET }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan ${{ env.REMOTE_SERVER }} >> ~/.ssh/known_hosts
-          rsync -azP --delete ./out/ ${{ env.REMOTE_USER }}@${{ env.REMOTE_SERVER }}:${{ secrets.REMOTE_DIRECTORY }}
+#      - name: Build the website
+#        run: npm run build
+#
+#      - name: Deploy to server
+#        run: |
+#          mkdir -p ~/.ssh
+#          echo "${{ secrets.PROD_DEPLOY_SECRET }}" > ~/.ssh/id_rsa
+#          chmod 600 ~/.ssh/id_rsa
+#          ssh-keyscan ${{ env.REMOTE_SERVER }} >> ~/.ssh/known_hosts
+#          rsync -azP --delete ./out/ ${{ env.REMOTE_USER }}@${{ env.REMOTE_SERVER }}:${{ secrets.REMOTE_DIRECTORY }}
