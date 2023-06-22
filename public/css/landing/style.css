@@ -321,6 +321,8 @@ a.navigation-link.active {
   font-size: var(--font-size-h7-mega);
   font-weight: 400;
   line-height: var(--line-height-h7-mega);
+  /* Fix for glitch, happening bc of reboot.css from bootstrap on API/Guide */
+  margin-bottom: 0;
 }
 
 .hero__action-copy-command-text::before {
