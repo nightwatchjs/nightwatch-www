@@ -606,7 +606,7 @@ header .navbar-right .nav-item.dropdown {
 .btn-lg {
   border-radius: 10px;
   border: 0;
-  background: #CE8E34;
+  background: var(--text-color-accent);
   text-transform: uppercase;
   color: #eee;
   font-size: 20px;
