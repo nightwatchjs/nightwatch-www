@@ -63,30 +63,32 @@ onRender(
 
       let testimonialSwiper;
 
-      if (window.innerWidth <= 768) {
+      if (window.innerWidth <= 1024) {
         addStylesheet('https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css');
         addScript('https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js', null, function () {
           const mobileIntegrationTemplate = document.querySelector('#mobile-integration-content').innerText.trim();
 
           const desktopIntegrationNode = document.querySelector('.integration__content');
 
-          render(mobileIntegrationTemplate, desktopIntegrationNode);
+          if (window.innerWidth <= 480) {
+            render(mobileIntegrationTemplate, desktopIntegrationNode);
 
-          const integrationSwiper = new Swiper('.integration-swiper', {
-            spaceBetween: 100,
-            centeredSlides: true,
-            loop: true,
-            autoplay: {
-              delay: 5000
-            },
-            pagination: {
-              el: '.swiper-pagination-integrations',
-              clickable: true
-            },
-            a11y: {
-              enabled: true
-            }
-          });
+            const integrationSwiper = new Swiper('.integration-swiper', {
+              spaceBetween: 100,
+              centeredSlides: true,
+              loop: true,
+              autoplay: {
+                delay: 5000
+              },
+              pagination: {
+                el: '.swiper-pagination-integrations',
+                clickable: true
+              },
+              a11y: {
+                enabled: true
+              }
+            });
+          }
 
           const testimonialSwiper = new Swiper('.swiper', {
             spaceBetween: 100,

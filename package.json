@@ -20,8 +20,6 @@
     "@halo-lab/stream": "Halo-Lab/stream",
     "eslint": "^8.32.0",
     "geckodriver": "^3.2.0",
-    "nightwatch": "nightwatchjs/nightwatch",
-    "nightwatch-docs": "nightwatchjs/nightwatch-docs#versions/3.0",
     "nightwatch-examples": "nightwatchjs-community/nightwatch-examples",
     "postdoc": "0.1.3"
   }
