@@ -22,6 +22,10 @@
   display: none;
 }
 
+.comparison__content-image svg {
+  width: 100%;
+}
+
 /* Navigation section start */
 .navigation__logo {
   width: 200px;
