@@ -312,6 +312,7 @@ a.navigation-link.active {
   display: flex;
   padding: 16px 210px 16px 19px;
   position: relative;
+  border-radius: 6px;
 }
 
 .hero__action-copy-command-text {
