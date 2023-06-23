@@ -47,10 +47,16 @@ jobs:
       - name: Build the website
         run: npm run build
 
+      - name: Creating symlinks to old version
+        run: |
+          ln -s ../nightwatchjs.org v17
+          ln -s ../v09.nightwatchjs.org v09
+          ln -s ../nightwatch-v26 v26
+
       - name: Deploy to server
         run: |
           mkdir -p ~/.ssh
           echo "${{ secrets.PROD_DEPLOY_SECRET }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan ${{ env.REMOTE_SERVER }} >> ~/.ssh/known_hosts
-          rsync -azP --delete --delete-excluded --exclude='v26' --exclude='v17' --exclude='v09' ./out/ ${{ env.REMOTE_USER }}@${{ env.REMOTE_SERVER }}:${{ secrets.REMOTE_DIRECTORY }}
+          rsync -azP --delete --copy-links ./out/ ${{ env.REMOTE_USER }}@${{ env.REMOTE_SERVER }}:${{ secrets.REMOTE_DIRECTORY }}
