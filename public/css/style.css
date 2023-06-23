@@ -3205,7 +3205,35 @@ p.bottom-text {
   display: none;
 }
 
+@media (max-width: 1024px) {
+  .footer__wrapper-inner-social {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .footer__wrapper-inner-social-links {
+    align-items: center;
+  }
+
+  .footer__wrapper-inner-social-logo {
+    min-width: 100%;
+  }
+
+  .footer__wrapper-inner-social-logo svg {
+    max-width: 270px;
+  }
+}
+
 @media (max-width: 480px) {
+  .footer__wrapper-inner-social {
+    display: inherit;
+    flex: inherit;
+  }
+
+  .footer__wrapper-inner-social-links {
+    align-items: unset;
+  }
+
   .footer-landing {
     border-radius: 0px;
     margin: 0;
