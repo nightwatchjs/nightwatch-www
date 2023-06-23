@@ -53,4 +53,4 @@ jobs:
           echo "${{ secrets.PROD_DEPLOY_SECRET }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan ${{ env.REMOTE_SERVER }} >> ~/.ssh/known_hosts
-          rsync -azP --delete ./out/ ${{ env.REMOTE_USER }}@${{ env.REMOTE_SERVER }}:${{ secrets.REMOTE_DIRECTORY }}
+          rsync -azP --delete --delete-excluded --exclude='v26' --exclude='v17' --exclude='v09' ./out/ ${{ env.REMOTE_USER }}@${{ env.REMOTE_SERVER }}:${{ secrets.REMOTE_DIRECTORY }}
