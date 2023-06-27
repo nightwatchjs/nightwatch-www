@@ -68,7 +68,10 @@ const findSelectedTabs = (currentUrl, activeDropdownIdsSet) => {
       const selectedElement = selectedBlockList.querySelector(
         `li:not([data-redirect="true"]) > a[href="${stripHtmlExtension(currentUrl)}"]`
       );
-      if (selectedElement) {selectedElement.classList.add('active')}
+      if (selectedElement) {
+        selectedElement.classList.add('active');
+        selectedBlock.classList.add('active');
+      }
 
       const currentPage = currentUrl.split('/')[1];
       const visibleContentPage = {
@@ -140,7 +143,7 @@ const createSidebarFilterHandler = (sidebarFilter, filterList) => (event) => {
   filterList.append(...clonedLinks);
   filterList.classList.add('d-block');
   //set filterList width
-  $(filterList).width( $(sidebarFilter).width());
+  $(filterList).width($(sidebarFilter).width());
 };
 
 const focusFilterListItem = (index) => {
