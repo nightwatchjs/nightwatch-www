@@ -164,6 +164,7 @@ onRender(
       footerSocial.appendChild(iframeNode);
 
       addScript('https://www.googletagmanager.com/gtm.js?id=GTM-MWC4FHS', null);
+      addScript('https://dev.visualwebsiteoptimizer.com/lib/366135.js', 'vwoCode');
     });
   },
   {forPage: () => true}
