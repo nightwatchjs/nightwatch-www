@@ -1,0 +1,7 @@
+[submodule "nightwatch"]
+	path = nightwatch
+	url = git@github.com:nightwatchjs/nightwatch.git
+[submodule "nightwatch-docs"]
+	path = nightwatch-docs
+	url = git@github.com:nightwatchjs/nightwatch-docs.git
+	branch = versions/3.0-tmp
