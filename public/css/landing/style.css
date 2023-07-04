@@ -47,13 +47,6 @@
   max-width: min(1648px, 90%);
 }
 
-.navigation-link:hover,
-a.navigation-link.active {
-  text-decoration: none;
-  border-bottom: 2px solid var(--button-border-accent-color);
-  color: var(--header-text-color)
-}
-
 .navigation-list.social .navigation-link {
   border: 0;
 }
@@ -61,10 +54,29 @@ a.navigation-link.active {
 .navigation-list {
   align-items: center;
   display: flex;
-  gap: 10px;
+  gap: 52px;
   list-style: none;
   margin: 0;
   padding: 0;
+  height: 100%;
+  position: relative;
+}
+
+.navigation-list:first-of-type li:not(:last-child) {
+  height: inherit;
+  cursor: pointer;
+}
+
+.navigation-link-active-state {
+  position: absolute;
+  height: 3px;
+  border-radius: 4px;
+  bottom: 0;
+  background-color: var(--navigation-link-hover-color);
+  width: 66px;
+  left: -13px;
+  transition: all .5s ease 0s;
+  display: none;
 }
 
 .navigation-link {
@@ -73,7 +85,29 @@ a.navigation-link.active {
   font-weight: 600;
   line-height: var(--line-height-19);
   text-decoration: none;
-  padding: 28px 16px 25px 16px;
+  display: flex;
+  align-items: center;
+  height: inherit;
+}
+
+.navigation-list:first-of-type li:nth-of-type(1):hover~.navigation-link-active-state {
+  display: block;
+  left: -12px;
+}
+
+.navigation-list:first-of-type li:nth-of-type(2):hover~.navigation-link-active-state {
+  display: block;
+  left: 71px;
+}
+
+.navigation-list:first-of-type li:nth-of-type(3):hover~.navigation-link-active-state {
+  display: block;
+  left: 158px;
+}
+
+.navigation-list:first-of-type li:nth-of-type(4):hover~.navigation-link-active-state {
+  display: block;
+  left: 244px;
 }
 
 .navigation-list>li>a svg {
@@ -821,6 +855,7 @@ a.navigation-link.active {
     font-size: var(--font-size-h5);
     line-height: var(--line-height-h2);
   }
+
   .features__community-stats-wrapper__sub-heading {
     font-size: var(--font-size-h8);
   }
@@ -1757,6 +1792,7 @@ a.navigation-link.active {
     flex-direction: column;
     gap: 0;
   }
+
   .comparison__content-image {
     display: none;
   }
@@ -2067,6 +2103,7 @@ a.navigation-link.active {
   .testimonial {
     padding-left: 80px;
   }
+
   .testimonial__timeline-path {
     display: none;
   }
@@ -2131,6 +2168,7 @@ a.navigation-link.active {
   .testimonial__content-card-author {
     gap: 5px;
   }
+
   .testimonial__content-card-author-name .testimonial__content-card-author-social {
     font-size: var(--font-size-base);
   }
@@ -2532,6 +2570,7 @@ a.navigation-link.active {
     background: var(--background-color);
   }
 }
+
 @media (max-width: 480px) {
   .open-source {
     margin-left: 50px;
