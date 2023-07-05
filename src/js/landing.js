@@ -35,7 +35,7 @@ onRender(
         '.call-to-action-content-action-copy-command-text'
       );
 
-      addScript('https://cdn.jsdelivr.net/npm/@docsearch/js@3', 'docsearch-script', function () {
+      addScript('https://cdn.jsdelivr.net/npm/@docsearch/js@3', 'docsearch-script', false, function () {
         docsearch({
           appId: 'H6WO0X38VS',
           indexName: 'crawler_nightwatchjs_v3',
@@ -47,56 +47,11 @@ onRender(
         });
       });
 
-      const breakpoint = window.matchMedia('(min-width: 769px)');
-
-      let testimonialSwiper;
-
       if (window.innerWidth <= 1024) {
-        addStylesheet('https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css');
-        addScript('https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js', null, function () {
-          const mobileIntegrationTemplate = document.querySelector('#mobile-integration-content').innerText.trim();
-
-          const desktopIntegrationNode = document.querySelector('.integration__content');
-
-          if (window.innerWidth <= 480) {
-            render(mobileIntegrationTemplate, desktopIntegrationNode);
-
-            const integrationSwiper = new Swiper('.integration-swiper', {
-              spaceBetween: 100,
-              centeredSlides: true,
-              loop: true,
-              autoplay: {
-                delay: 5000
-              },
-              pagination: {
-                el: '.swiper-pagination-integrations',
-                clickable: true
-              },
-              a11y: {
-                enabled: true
-              }
-            });
-          }
-
-          const testimonialSwiper = new Swiper('.swiper', {
-            spaceBetween: 100,
-            centeredSlides: true,
-            loop: true,
-            autoplay: {
-              delay: 5000
-            },
-            pagination: {
-              el: '.swiper-pagination',
-              clickable: true
-            },
-            a11y: {
-              enabled: true
-            }
-          });
-        });
+        addScript('src/js/swiper.js', null, true);
       }
 
-      addScript('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js', null, function () {
+      addScript('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js', null, false, function () {
         const mobileMenuToggle = document.getElementById('mobileMenuToggle');
         const mobileMenuContent = document.getElementsByClassName('mobile-navbar-content')[0];
         const body = document.getElementsByTagName('body')[0];
@@ -163,8 +118,8 @@ onRender(
       iframeNode.setAttribute('title', 'nightwatch-substack');
       footerSocial.appendChild(iframeNode);
 
-      addScript('https://www.googletagmanager.com/gtm.js?id=GTM-MWC4FHS', null);
-      addScript('https://dev.visualwebsiteoptimizer.com/lib/366135.js', 'vwoCode');
+      addScript('https://www.googletagmanager.com/gtm.js?id=GTM-MWC4FHS', null, false);
+      addScript('https://dev.visualwebsiteoptimizer.com/lib/366135.js', 'vwoCode', false);
     });
   },
   {forPage: () => true}
