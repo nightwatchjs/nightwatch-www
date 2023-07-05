@@ -52,8 +52,8 @@ onRender(
       let testimonialSwiper;
 
       if (window.innerWidth <= 1024) {
-        addStylesheet('https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css');
-        addScript('https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js', null, function () {
+        addStylesheet('https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css');
+        addScript('https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js', null, function () {
           const mobileIntegrationTemplate = document.querySelector('#mobile-integration-content').innerText.trim();
 
           const desktopIntegrationNode = document.querySelector('.integration__content');
