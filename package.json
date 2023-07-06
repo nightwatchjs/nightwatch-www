@@ -5,7 +5,7 @@
   "scripts": {
     "test": "postdoc test -- test/src -o tests_output --headless",
     "start": "postdoc run",
-    "build": "postdoc build && node build/criticalCSS.mjs",
+    "build": "postdoc build && node build/optimize.mjs",
     "eslint": "eslint src test --quiet"
   },
   "author": "Andrei Rusu <andrei@pineview.io>",

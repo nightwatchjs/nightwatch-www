@@ -3,6 +3,7 @@ import {minify} from 'html-minifier';
 import {readFileSync, writeFileSync} from 'fs';
 import path from 'path';
 
+// Inline critical CSS
 generate({
   inline: true,
   base: 'out/',
@@ -29,6 +30,7 @@ generate({
   ignoreInlinedStyles: true
 });
 
+// Minify HTML
 const htmlPath = path.resolve('out/index.html');
 const htmlContent = readFileSync(htmlPath, 'utf8');
 const minifiedHTMLContent = minify(htmlContent, {
