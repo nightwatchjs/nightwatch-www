@@ -47,8 +47,52 @@ onRender(
         });
       });
 
+
+      const breakpoint = window.matchMedia('(min-width: 769px)');
+
       if (window.innerWidth <= 1024) {
-        addScript('src/js/swiper.js', null, true);
+        addStylesheet('/css/swiper-bundle.min.css');
+        addScript('/js/third-party/swiper-bundle.min.js', null, false, function () {
+          const mobileIntegrationTemplate = document.querySelector('#mobile-integration-content').innerText.trim();
+
+          const desktopIntegrationNode = document.querySelector('.integration__content');
+
+          if (window.innerWidth <= 480) {
+            render(mobileIntegrationTemplate, desktopIntegrationNode);
+
+            const integrationSwiper = new Swiper('.integration-swiper', {
+              spaceBetween: 100,
+              centeredSlides: true,
+              loop: true,
+              autoplay: {
+                delay: 5000
+              },
+              pagination: {
+                el: '.swiper-pagination-integrations',
+                clickable: true
+              },
+              a11y: {
+                enabled: true
+              }
+            });
+          }
+
+          const testimonialSwiper = new Swiper('.swiper', {
+            spaceBetween: 100,
+            centeredSlides: true,
+            loop: true,
+            autoplay: {
+              delay: 5000
+            },
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true
+            },
+            a11y: {
+              enabled: true
+            }
+          });
+        });
       }
 
       addScript('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js', null, false, function () {
