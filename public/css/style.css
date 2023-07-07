@@ -72,12 +72,6 @@ a {
   max-width: min(1648px, 90%);
 }
 
-.navigation-link:hover, a.navigation-link.active {
-  text-decoration: none;
-  border-bottom: 2px solid var(--button-border-accent-color);
-  color: var(--header-text-color)
-}
-
 .navigation-list.social .navigation-link {
   border: 0;
 }
@@ -85,10 +79,28 @@ a {
 .navigation-list {
   align-items: center;
   display: flex;
-  gap: 10px;
+  gap: 52px;
   list-style: none;
   margin: 0;
   padding: 0;
+  height: 100%;
+  position: relative;
+}
+
+.navigation-list:first-of-type li:not(:last-child) {
+  height: inherit;
+  cursor: pointer;
+}
+
+.navigation-link-active-state {
+  position: absolute;
+  height: 3px;
+  border-radius: 4px;
+  bottom: 0;
+  background-color: var(--navigation-link-hover-color);
+  width: 66px;
+  left: -13px;
+  transition: all .5s ease 0s;
 }
 
 .navigation-link {
@@ -97,7 +109,47 @@ a {
   font-weight: 600;
   line-height: var(--line-height-19);
   text-decoration: none;
-  padding: 28px 16px 25px 16px;
+  display: flex;
+  align-items: center;
+  height: inherit;
+}
+
+.navigation-link:hover {
+  text-decoration: none;
+  color: var(--header-text-color);
+}
+
+
+.navigation .navigation-list:first-of-type li:nth-child(1):hover~.navigation-link-active-state {
+  left: -12px;
+}
+
+.navigation-list:first-of-type li:nth-child(1).active~.navigation-link-active-state{
+  left: -12px;
+}
+
+.navigation .navigation-list:first-of-type li:nth-child(2):hover~.navigation-link-active-state {
+  left: 71px;
+}
+
+.navigation-list:first-of-type li:nth-child(2).active~.navigation-link-active-state{
+  left: 71px;
+}
+
+.navigation .navigation-list:first-of-type li:nth-of-type(3):hover~.navigation-link-active-state {
+  left: 158px;
+}
+
+.navigation-list:first-of-type li:nth-child(3).active~.navigation-link-active-state{
+  left: 158px;
+}
+
+.navigation .navigation-list:first-of-type li:nth-of-type(4):hover~.navigation-link-active-state {
+  left: 244px;
+}
+
+.navigation-list:first-of-type li:nth-child(4).active~.navigation-link-active-state{
+  left: 244px;
 }
 
 .navigation-list>li>a svg {
