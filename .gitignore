@@ -19,3 +19,7 @@ output/
 tests_output
 /public/__examples/
 package-lock.json
+
+# Nightwatch repos
+nightwatch
+nightwatch-docs
