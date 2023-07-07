@@ -5,12 +5,14 @@
   "scripts": {
     "test": "postdoc test -- test/src -o tests_output --headless",
     "start": "postdoc run",
-    "build": "postdoc build && node build/optimize.mjs",
+    "build": "npm run partytown && postdoc build && node build/optimize.mjs",
+    "partytown": "partytown copylib public/~partytown",
     "eslint": "eslint src test --quiet"
   },
   "author": "Andrei Rusu <andrei@pineview.io>",
   "license": "MIT",
   "dependencies": {
+    "@builder.io/partytown": "^0.8.0",
     "ejs": "^3.1.9",
     "isomorphic-fetch": "^3.0.0",
     "marked": "^4.3.0",
