@@ -131,7 +131,11 @@ npx nightwatch <%- method.exampleLink %></code></pre>
         <h3>See also</h3>
         <ul class="api-related-links">
             <% for (let link of method.see) { %>
-                <li><code><a href="<%- Config.baseUrl.replace(/\/$/, '') -%>/api/<%- link.split('.').join('/') %>.html"><%= link %></a></code></li>
+                <% if (link.startsWith('http')) { %>
+                    <li><code><a href="<%- link %>"><%= link %></a></code></li>
+                <% } else { %>
+                    <li><code><a href="<%- Config.baseUrl.replace(/\/$/, '') -%>/api/<%- link.split('.').join('/') %>.html"><%= link %></a></code></li>
+                <% } %>
             <% } %>
         </ul>
     <% } %>
