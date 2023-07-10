@@ -33,6 +33,7 @@
   --font-size-h2: calc(52 / 16 * 1rem);
   --font-size-h3: calc(45 / 16 * 1rem);
   --font-size-h4: calc(36 / 16 * 1rem);
+  --font-size-h4-s: calc(32 / 16 * 1rem);
   --font-size-h5: calc(28 / 16 * 1rem);
   --font-size-h6: calc(24 / 16 * 1rem);
   --font-size-h7: calc(18 / 16 * 1rem);
@@ -43,10 +44,12 @@
 
   /* Line Height (line-height/font-size) */
   --line-height-base: calc(24 / 16);
+  --line-height-base-l: calc(33 / 16);
   --line-height-h1: calc(80 / 72);
   --line-height-h2: calc(65 / 52);
   --line-height-h3: calc(52 / 45);
   --line-height-h4: calc(42 / 36);
+  --line-height-h4-s: calc(36 / 32);
   --line-height-h5: calc(35 / 28);
   --line-height-h6: calc(32 / 24);
   --line-height-h6-mega: calc(40 / 24);
@@ -55,6 +58,7 @@
   --line-height-h7-xs: calc(24 / 18);
   --line-height-h7-mega: calc(24 / 21);
   --line-height-h8: calc(21 / 14);
+  --line-height-h8-s: calc(16 / 12);
   --line-height-testimonial: calc(28 / 21);
 
   /* Font family */
