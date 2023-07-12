@@ -534,13 +534,14 @@
     height: 7.5vh;
   }
 
-  .navigation__logo svg{
+  .navigation__logo svg {
     height: 30px;
     width: 100%;
     max-width: 145px;
   }
 
-  #docsearch, #docsearch button span.DocSearch-Button-Container{
+  #docsearch,
+  #docsearch button span.DocSearch-Button-Container {
     height: 20px;
     width: 20px;
     scale: 0.9;
@@ -970,6 +971,7 @@
   .features__heading {
     padding-bottom: 0;
     text-align: left;
+    padding-left: 30px;
   }
 
   .features__content {
@@ -1747,7 +1749,7 @@
   .performance__content-description-text {
     padding-top: 23px;
   }
-  
+
   .performance__content-description {
     gap: 40px;
   }
@@ -2406,7 +2408,8 @@
     line-height: var(--line-height-base);
   }
 
-  .testimonial__content-card-description::after, .testimonial__content-card-description::before {
+  .testimonial__content-card-description::after,
+  .testimonial__content-card-description::before {
     font-size: inherit;
     line-height: inherit;
   }
