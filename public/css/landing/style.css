@@ -276,13 +276,6 @@
   font-style: italic;
 }
 
-
-@media (max-width: 480px) {
-  .navigation-menu-toggle {
-    padding: 0;
-  }
-}
-
 @media (max-width: 1024px) {
   .navigation-list:first-of-type {
     display: none;
@@ -300,6 +293,17 @@
   .navigation-menu-toggle svg {
     height: 30px;
     width: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navigation-menu-toggle {
+    padding: 0;
+  }
+
+  .navigation-menu-toggle svg {
+    height: 20px;
+    width: 20px;
   }
 }
 
@@ -536,7 +540,7 @@
 
 @media (max-width: 480px) {
   .navigation {
-    height: 7.5vh;
+    height: 12.4vw;
   }
 
   .navigation__logo svg {
