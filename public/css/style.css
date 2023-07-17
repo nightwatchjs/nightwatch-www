@@ -101,6 +101,7 @@ a {
   width: 66px;
   left: -13px;
   transition: all .5s ease 0s;
+  display: none;
 }
 
 .navigation-link {
@@ -114,41 +115,23 @@ a {
   height: inherit;
 }
 
-.navigation-link:hover {
-  text-decoration: none;
-  color: var(--header-text-color);
-}
-
-
-.navigation .navigation-list:first-of-type li:nth-child(1):hover~.navigation-link-active-state {
+.navigation-list:first-of-type li:nth-of-type(1):hover~.navigation-link-active-state {
+  display: block;
   left: -12px;
 }
 
-.navigation-list:first-of-type li:nth-child(1).active~.navigation-link-active-state{
-  left: -12px;
-}
-
-.navigation .navigation-list:first-of-type li:nth-child(2):hover~.navigation-link-active-state {
+.navigation-list:first-of-type li:nth-of-type(2):hover~.navigation-link-active-state {
+  display: block;
   left: 71px;
 }
 
-.navigation-list:first-of-type li:nth-child(2).active~.navigation-link-active-state{
-  left: 71px;
-}
-
-.navigation .navigation-list:first-of-type li:nth-of-type(3):hover~.navigation-link-active-state {
+.navigation-list:first-of-type li:nth-of-type(3):hover~.navigation-link-active-state {
+  display: block;
   left: 158px;
 }
 
-.navigation-list:first-of-type li:nth-child(3).active~.navigation-link-active-state{
-  left: 158px;
-}
-
-.navigation .navigation-list:first-of-type li:nth-of-type(4):hover~.navigation-link-active-state {
-  left: 244px;
-}
-
-.navigation-list:first-of-type li:nth-child(4).active~.navigation-link-active-state{
+.navigation-list:first-of-type li:nth-of-type(4):hover~.navigation-link-active-state {
+  display: block;
   left: 244px;
 }
 
@@ -188,6 +171,8 @@ a {
   box-shadow: 3px 4px 7px 1px var(--dropdown-box-shadow-color);
   border-radius: 10px;
   padding: 21px 25px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   left: -90px;
   top: 45px;
@@ -301,7 +286,7 @@ a {
 }
 
 .mobile-navbar-wrapper li::before {
-  content: '';
+  content: "";
   padding: 6px;
 }
 
@@ -327,6 +312,44 @@ a {
   .navigation-menu-toggle {
     display: block;
     margin-left: 20px;
+  }
+
+  .navigation-menu-toggle svg {
+    height: 30px;
+    width: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navigation {
+    height: 12.4vw;
+  }
+
+  .navigation__logo svg {
+    height: 30px;
+    width: 100%;
+    max-width: 145px;
+  }
+
+  #docsearch,
+  #docsearch button span.DocSearch-Button-Container {
+    height: 20px;
+    width: 20px;
+    scale: 0.9;
+  }
+
+  .navigation-list.social #docsearch .DocSearch.DocSearch-Button {
+    height: 20px;
+    width: 20px;
+  }
+  
+  .navigation-menu-toggle {
+    padding: 0;
+  }
+
+  .navigation-menu-toggle svg {
+    height: 20px;
+    width: 20px;
   }
 }
 
