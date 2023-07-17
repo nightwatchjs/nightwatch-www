@@ -1470,11 +1470,11 @@
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 820px) {
   .capabilities--single-column .capabilities__card .capabilities__card__image {
     scale: 2;
     position: relative;
-    left: 115px;
+    left: 120px;
     top: 140px;
   }
 }
