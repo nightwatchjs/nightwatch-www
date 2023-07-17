@@ -600,7 +600,7 @@
 
   .hero__action-copy-command-button {
     font-weight: 500;
-    padding: 11px 0px;
+    padding: 12px 0px;
     width: min(24vw, 7rem);
     max-width: 100%;
     border-radius: 4px;
@@ -660,7 +660,7 @@
 
 @media (max-width: 444px) {
   .hero__action-copy-command-text {
-    font-size: var(--font-size-h8);
+    font-size: var(--font-size-base);
   }
 
   .hero__action-copy-command-button {
@@ -1035,8 +1035,8 @@
   }
 
   .features__content-wrapper-description-list {
-    font-size: var(--font-size-h8);
-    line-height: var(--line-height-h8);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
     padding-left: 18px;
   }
 
@@ -1990,6 +1990,10 @@
   will-change: background, color, border, box-shadow;
 }
 
+.comparison__content-wrapper-button::before {
+  content: 'Compare with Cypress and Playwright';
+}
+
 @media (max-width: 1024px) {
   .comparison {
     padding-left: 30px;
@@ -2062,7 +2066,7 @@
 @media (max-width: 480px) {
   .comparison {
     padding-right: 2px;
-    margin-bottom: 25px;
+    margin-bottom: 60px;
     padding-left: 30px;
   }
 
@@ -2134,8 +2138,12 @@
     font-size: var(--font-size-base);
     line-height: var(--line-height-base-l);
     text-align: center;
-    padding: 10px;
+    padding: 10px 20px;
     max-width: 96%;
+  }
+
+  .comparison__content-wrapper-button::before {
+    content: 'Compare with other frameworks';
   }
 }
 
@@ -2361,7 +2369,7 @@
   .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
     bottom: -48px;
     width: auto;
-    left: 50%;
+    left: calc(50% - 15px);
   }
 
   .swiper-pagination .swiper-pagination-bullet {
@@ -2424,7 +2432,6 @@
     padding-right: 2px;
     margin-bottom: 90px;
     padding-left: 30px;
-    overflow: hidden;
   }
 
   .testimonial__heading {
@@ -2896,8 +2903,8 @@
   }
 
   .open-source-content-card-text--paragraph {
-    font-size: var(--font-size-h8);
-    line-height: var(--line-height-h8);
+    font-size: initial;
+    line-height: initial;
   }
 
   .open-source-content-card-image {
