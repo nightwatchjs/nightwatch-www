@@ -2761,7 +2761,6 @@
   background: var(--background-color);
   border: 5px solid var(--border-color);
   border-radius: 20px;
-  height: 290px;
   flex: 1 1 0;
 }
 
@@ -3057,9 +3056,10 @@
   will-change: background, color, border, box-shadow;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1324px) and (min-width: 1025px) {
   .call-to-action {
-    gap: 54px;
+    gap: 30px;
+    padding: 40px 20px;
   }
 }
 

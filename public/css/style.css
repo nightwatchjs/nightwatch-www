@@ -72,6 +72,11 @@ a {
   max-width: min(1648px, 90%);
 }
 
+.navigation-link:hover {
+  text-decoration: none;
+  color: var(--header-text-color);
+}
+
 .navigation-list.social .navigation-link {
   border: 0;
 }
