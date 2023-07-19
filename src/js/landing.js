@@ -63,7 +63,6 @@ onRender(
             const integrationSwiper = new Swiper('.integration-swiper', {
               spaceBetween: 100,
               centeredSlides: true,
-              loop: true,
               autoplay: {
                 delay: 5000
               },
