@@ -156,6 +156,7 @@ module.exports.generateApiPages = (apiData, config) => {
         'getTagName',
         'getText',
         'getValue',
+        'setValue',
         'getId',
         'clickAndHold',
         'doubleClick',
@@ -241,7 +242,9 @@ module.exports.generateApiPages = (apiData, config) => {
       outputDirectories: ['document'],
       methodNames: [
         'injectScript',
-        'source'
+        'source',
+        'execute',
+        'executeAsync'
       ]
     });
 
