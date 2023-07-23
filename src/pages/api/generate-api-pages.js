@@ -139,7 +139,8 @@ module.exports.generateApiPages = (apiData, config) => {
         'status',
         'timeouts',
         'timeoutsAsyncScript',
-        'timeoutsImplicitWait'
+        'timeoutsImplicitWait',
+        'elementActive'
       ]
     });
 
@@ -149,6 +150,8 @@ module.exports.generateApiPages = (apiData, config) => {
       sourceDirectories: ['client-commands'],
       outputDirectories: [''],
       methodNames: [
+        'axeRun',
+        'axeInject',
         'init',
         'getTitle',
         'urlHash',
@@ -233,13 +236,13 @@ module.exports.generateApiPages = (apiData, config) => {
         'submitForm',
         'updateValue',
         'uploadFile',
-        'elementActive',
         'getElementSize',
         'hasDescendants',
         'isEnabled',
         'isSelected',
         'isVisible',
-        'isPresent'
+        'isPresent',
+        'clearValue'
       ]
     });
 
