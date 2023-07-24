@@ -115,6 +115,8 @@ function generateIndependentPages({apiData, sourceDirectories, outputDirectories
 module.exports.generateApiPages = (apiData, config) => {
   const wasPagesGenerated = globalThis.generated;
 
+  console.log(JSON.stringigy(apiData)); // debug build issue
+
   if (!wasPagesGenerated) {
     generateIndependentPages({
       config,
