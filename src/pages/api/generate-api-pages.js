@@ -10,15 +10,21 @@ function getDataForPages({apiData, sourceDirectories, outputDirectories, methodN
   const sourceApiDirectory = join(config.apiFolder, ...sourceDirectories);
   const outputApiDirectory = join(config.mdFolder, 'api', ...outputDirectories);
 
-  console.log(sourceApiDirectory);
+  console.log('sourceApiDirectory', sourceApiDirectory);
+  console.log('outputApiDirectory', outputApiDirectory);
+
 
   return apiData
     .filter(({file}) => {
+      console.log('inside apiData filter', 'file');
       if (!file.startsWith(sourceApiDirectory)) {
         return false;
       }
 
       return methodNames.some((name) => {
+        const filePath = path.join(...sourceDirectories, `${name}.js`);
+        console.log('inside methodNames filter', file, filePath);
+
         return file.endsWith(path.join(...sourceDirectories, `${name}.js`));
       });
     })
