@@ -10,21 +10,15 @@ function getDataForPages({apiData, sourceDirectories, outputDirectories, methodN
   const sourceApiDirectory = join(config.apiFolder, ...sourceDirectories);
   const outputApiDirectory = join(config.mdFolder, 'api', ...outputDirectories);
 
-  console.log('sourceApiDirectory', sourceApiDirectory);
-  console.log('outputApiDirectory', outputApiDirectory);
 
 
   return apiData
     .filter(({file}) => {
-      console.log('inside apiData filter', 'file');
       if (!file.startsWith(sourceApiDirectory)) {
         return false;
       }
 
       return methodNames.some((name) => {
-        const filePath = path.join(...sourceDirectories, `${name}.js`);
-        console.log('inside methodNames filter', file, filePath);
-
         return file.endsWith(path.join(...sourceDirectories, `${name}.js`));
       });
     })
@@ -89,8 +83,8 @@ async function generateExampleFiles({method, name, config}) {
   };
 }
 
-function generateIndependentPages({apiData, sourceDirectories, outputDirectories, methodNames, config}) {
-  getDataForPages({apiData, sourceDirectories, outputDirectories, methodNames, config})
+async function generateIndependentPages({apiData, sourceDirectories, outputDirectories, methodNames, config}) {
+  const promises = getDataForPages({apiData, sourceDirectories, outputDirectories, methodNames, config})
     .map(function({name, method, fileLink, editLink, outputPath}) {
       const data = generateExampleFiles({method, name, config});
 
@@ -118,13 +112,15 @@ function generateIndependentPages({apiData, sourceDirectories, outputDirectories
       await fs.promises.mkdir(dirname(outputPath), {recursive: true});
       await fs.promises.writeFile(outputPath, content, 'utf8');
     });
+
+  return Promise.all(promises);
 }
 
-module.exports.generateApiPages = (apiData, config) => {
+module.exports.generateApiPages = async (apiData, config) => {
   const wasPagesGenerated = globalThis.generated;
 
   if (!wasPagesGenerated) {
-    generateIndependentPages({
+    await generateIndependentPages({
       config,
       apiData,
       sourceDirectories: ['protocol'],
@@ -152,7 +148,7 @@ module.exports.generateApiPages = (apiData, config) => {
       ]
     });
 
-    generateIndependentPages({
+    await generateIndependentPages({
       config,
       apiData,
       sourceDirectories: ['client-commands'],
@@ -185,7 +181,7 @@ module.exports.generateApiPages = (apiData, config) => {
       ]
     });
 
-    generateIndependentPages({
+    await generateIndependentPages({
       config,
       apiData,
       sourceDirectories: ['web-element', 'commands'],
@@ -235,7 +231,7 @@ module.exports.generateApiPages = (apiData, config) => {
       ]
     });
 
-    generateIndependentPages({
+    await generateIndependentPages({
       config,
       apiData,
       sourceDirectories: ['element-commands'],
@@ -254,7 +250,7 @@ module.exports.generateApiPages = (apiData, config) => {
       ]
     });
 
-    generateIndependentPages({
+    await generateIndependentPages({
       config,
       apiData,
       sourceDirectories: ['protocol', 'appium'],
@@ -277,7 +273,7 @@ module.exports.generateApiPages = (apiData, config) => {
       ]
     });
 
-    generateIndependentPages({
+    await generateIndependentPages({
       config,
       apiData,
       sourceDirectories: ['client-commands', 'alerts'],
@@ -290,7 +286,7 @@ module.exports.generateApiPages = (apiData, config) => {
       ]
     });
 
-    generateIndependentPages({
+    await generateIndependentPages({
       config,
       apiData,
       sourceDirectories: ['client-commands', 'cookies'],
@@ -304,7 +300,7 @@ module.exports.generateApiPages = (apiData, config) => {
       ]
     });
 
-    generateIndependentPages({
+    await generateIndependentPages({
       config,
       apiData,
       sourceDirectories: ['client-commands', 'document'],
@@ -317,7 +313,7 @@ module.exports.generateApiPages = (apiData, config) => {
       ]
     });
 
-    generateIndependentPages({
+    await generateIndependentPages({
       config,
       apiData,
       sourceDirectories: ['client-commands', 'network'],
@@ -329,7 +325,7 @@ module.exports.generateApiPages = (apiData, config) => {
       ]
     });
 
-    generateIndependentPages({
+    await generateIndependentPages({
       config,
       apiData,
       sourceDirectories: ['client-commands', 'window'],
@@ -352,7 +348,7 @@ module.exports.generateApiPages = (apiData, config) => {
       ]
     });
 
-    generateIndependentPages({
+    await generateIndependentPages({
       config,
       apiData,
       sourceDirectories: ['assertions'],
@@ -387,7 +383,7 @@ module.exports.generateApiPages = (apiData, config) => {
       ]
     });
 
-    generateIndependentPages({
+    await generateIndependentPages({
       config,
       apiData,
       sourceDirectories: ['expect', 'assertions', 'element'],
@@ -407,7 +403,7 @@ module.exports.generateApiPages = (apiData, config) => {
       ]
     });
 
-    generateIndependentPages({
+    await generateIndependentPages({
       config,
       apiData,
       sourceDirectories: ['expect', 'assertions', 'elements'],
@@ -417,7 +413,7 @@ module.exports.generateApiPages = (apiData, config) => {
       ]
     });
 
-    generateIndependentPages({
+    await generateIndependentPages({
       config,
       apiData,
       sourceDirectories: ['expect', 'assertions', 'elements'],
