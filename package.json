@@ -5,6 +5,7 @@
   "scripts": {
     "test": "postdoc test -- test/src -o tests_output --headless",
     "start": "postdoc run",
+    "prebuild": "postdoc build",
     "build": "npm run partytown && postdoc build && node build/optimize.mjs",
     "partytown": "partytown copylib public/~partytown",
     "eslint": "eslint src test --quiet"
