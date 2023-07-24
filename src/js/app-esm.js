@@ -146,6 +146,49 @@ const createSidebarFilterHandler = (sidebarFilter, filterList) => (event) => {
   $(filterList).width($(sidebarFilter).width());
 };
 
+const createAPISidebarFilterHandler = (sidebarFilter, filterList) => (event) => {
+  const {target: {value}} = event;
+
+  if (!value) {
+    anchorListItems = [];
+
+    return clearFilterList(sidebarFilter, filterList);
+  }
+
+  const $guideLinks = $('li[data-api-name]');
+
+  const titles = $guideLinks.toArray().map(el => ({title: el.getAttribute('data-api-name'), el: el.firstChild}));
+  const results = fuzzysort.go(value, titles, {key: 'title', limit: 5});
+
+  const filteredLinks = results.map(({obj: {title, el}}) => {
+    el.setAttribute('tabindex', '-1');
+    const elCopy = el.cloneNode(true);
+    elCopy.innerHTML = title;
+
+    return elCopy;
+  });
+
+  const clonedLinks = filteredLinks.map(
+    (link) => {
+      const li = document.createElement('li');
+
+      li.classList.add('list-group-item');
+
+      li.append(link);
+
+      return li;
+    }
+  );
+
+  anchorListItems = clonedLinks;
+
+  removeFilterListChildren(filterList);
+  filterList.append(...clonedLinks);
+  filterList.classList.add('d-block');
+  //set filterList width
+  $(filterList).width($(sidebarFilter).width());
+};
+
 const focusFilterListItem = (index) => {
   anchorListItems[index]?.classList.add('keyactive');
   anchorListItems[index]?.firstElementChild.setAttribute('tabindex', '0');
@@ -318,12 +361,21 @@ onRender((url) => {
     sidebarFilter.addEventListener('input', createSidebarFilterHandler(sidebarFilter, filterList));
     stopWatchingFilterSidebar = enableKeyboardNavigationInFilterResults(sidebarFilter, filterList);
   }
+
+  if (currentPage === 'api') {
+    const sidebarFilter = document.querySelector('#sidebar-filter');
+    const filterList = document.querySelector('.filter-list');
+
+    sidebarFilter.addEventListener('input', createAPISidebarFilterHandler(sidebarFilter, filterList));
+    stopWatchingFilterSidebar = enableKeyboardNavigationInFilterResults(sidebarFilter, filterList);
+  }
+
 }, {forPage: /(\/guide\/|\/api\/|\/about\/)/});
 
 onLeave((currentUrl, nextUrl) => {
   const currentPage = currentUrl.pathname.split('/')[1];
 
-  if (currentPage === 'guide') {
+  if (currentPage === 'guide' || currentPage === 'api') {
     stopWatchingFilterSidebar();
   }
 
