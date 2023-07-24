@@ -84,7 +84,7 @@ async function generateExampleFiles({method, name, config}) {
 }
 
 async function generateIndependentPages({apiData, sourceDirectories, outputDirectories, methodNames, config}) {
-  const promises = getDataForPages({apiData, sourceDirectories, outputDirectories, methodNames, config})
+  getDataForPages({apiData, sourceDirectories, outputDirectories, methodNames, config})
     .map(function({name, method, fileLink, editLink, outputPath}) {
       const data = generateExampleFiles({method, name, config});
 
@@ -112,15 +112,13 @@ async function generateIndependentPages({apiData, sourceDirectories, outputDirec
       await fs.promises.mkdir(dirname(outputPath), {recursive: true});
       await fs.promises.writeFile(outputPath, content, 'utf8');
     });
-
-  return Promise.all(promises);
 }
 
-module.exports.generateApiPages = async (apiData, config) => {
+module.exports.generateApiPages = (apiData, config) => {
   const wasPagesGenerated = globalThis.generated;
 
   if (!wasPagesGenerated) {
-    await generateIndependentPages({
+    generateIndependentPages({
       config,
       apiData,
       sourceDirectories: ['protocol'],
@@ -148,7 +146,7 @@ module.exports.generateApiPages = async (apiData, config) => {
       ]
     });
 
-    await generateIndependentPages({
+    generateIndependentPages({
       config,
       apiData,
       sourceDirectories: ['client-commands'],
@@ -181,7 +179,7 @@ module.exports.generateApiPages = async (apiData, config) => {
       ]
     });
 
-    await generateIndependentPages({
+    generateIndependentPages({
       config,
       apiData,
       sourceDirectories: ['web-element', 'commands'],
@@ -231,7 +229,7 @@ module.exports.generateApiPages = async (apiData, config) => {
       ]
     });
 
-    await generateIndependentPages({
+    generateIndependentPages({
       config,
       apiData,
       sourceDirectories: ['element-commands'],
@@ -250,7 +248,7 @@ module.exports.generateApiPages = async (apiData, config) => {
       ]
     });
 
-    await generateIndependentPages({
+    generateIndependentPages({
       config,
       apiData,
       sourceDirectories: ['protocol', 'appium'],
@@ -273,7 +271,7 @@ module.exports.generateApiPages = async (apiData, config) => {
       ]
     });
 
-    await generateIndependentPages({
+    generateIndependentPages({
       config,
       apiData,
       sourceDirectories: ['client-commands', 'alerts'],
@@ -286,7 +284,7 @@ module.exports.generateApiPages = async (apiData, config) => {
       ]
     });
 
-    await generateIndependentPages({
+    generateIndependentPages({
       config,
       apiData,
       sourceDirectories: ['client-commands', 'cookies'],
@@ -300,7 +298,7 @@ module.exports.generateApiPages = async (apiData, config) => {
       ]
     });
 
-    await generateIndependentPages({
+    generateIndependentPages({
       config,
       apiData,
       sourceDirectories: ['client-commands', 'document'],
@@ -313,7 +311,7 @@ module.exports.generateApiPages = async (apiData, config) => {
       ]
     });
 
-    await generateIndependentPages({
+    generateIndependentPages({
       config,
       apiData,
       sourceDirectories: ['client-commands', 'network'],
@@ -325,7 +323,7 @@ module.exports.generateApiPages = async (apiData, config) => {
       ]
     });
 
-    await generateIndependentPages({
+    generateIndependentPages({
       config,
       apiData,
       sourceDirectories: ['client-commands', 'window'],
@@ -348,7 +346,7 @@ module.exports.generateApiPages = async (apiData, config) => {
       ]
     });
 
-    await generateIndependentPages({
+    generateIndependentPages({
       config,
       apiData,
       sourceDirectories: ['assertions'],
@@ -383,7 +381,7 @@ module.exports.generateApiPages = async (apiData, config) => {
       ]
     });
 
-    await generateIndependentPages({
+    generateIndependentPages({
       config,
       apiData,
       sourceDirectories: ['expect', 'assertions', 'element'],
@@ -403,7 +401,7 @@ module.exports.generateApiPages = async (apiData, config) => {
       ]
     });
 
-    await generateIndependentPages({
+    generateIndependentPages({
       config,
       apiData,
       sourceDirectories: ['expect', 'assertions', 'elements'],
@@ -413,7 +411,7 @@ module.exports.generateApiPages = async (apiData, config) => {
       ]
     });
 
-    await generateIndependentPages({
+    generateIndependentPages({
       config,
       apiData,
       sourceDirectories: ['expect', 'assertions', 'elements'],
