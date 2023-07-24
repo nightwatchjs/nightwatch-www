@@ -119,6 +119,67 @@ module.exports.generateApiPages = (apiData, config) => {
     generateIndependentPages({
       config,
       apiData,
+      sourceDirectories: ['protocol'],
+      outputDirectories: [''],
+      methodNames: [
+        'back',
+        'forward',
+        'getCurrentUrl',
+        'url',
+        'navigateTo',
+        'quit',
+        'refresh',
+        'submit',
+        'frame',
+        'frameParent',
+        'screenshot',
+        'waitUntil',
+        'session',
+        'sessions',
+        'status',
+        'timeouts',
+        'timeoutsAsyncScript',
+        'timeoutsImplicitWait',
+        'elementActive'
+      ]
+    });
+
+    generateIndependentPages({
+      config,
+      apiData,
+      sourceDirectories: ['client-commands'],
+      outputDirectories: [''],
+      methodNames: [
+        'axeRun',
+        'axeInject',
+        'init',
+        'getTitle',
+        'urlHash',
+        'end',
+        'getLog',
+        'getLogTypes',
+        'isLogAvailable',
+        'saveScreenshot',
+        'saveSnapshot',
+        'debug',
+        'pause',
+        'perform',
+        'useCss',
+        'useXpath',
+        'captureBrowserConsoleLogs',
+        'captureBrowserExceptions',
+        'enablePerformanceMetrics',
+        'getPerformanceMetrics',
+        'registerBasicAuth',
+        'setDeviceDimensions',
+        'setGeolocation',
+        'takeHeapSnapshot'
+      ]
+    });
+
+    generateIndependentPages({
+      config,
+      apiData,
       sourceDirectories: ['web-element', 'commands'],
       outputDirectories: ['element'],
       methodNames: [
@@ -156,6 +217,7 @@ module.exports.generateApiPages = (apiData, config) => {
         'getTagName',
         'getText',
         'getValue',
+        'setValue',
         'getId',
         'clickAndHold',
         'doubleClick',
@@ -174,13 +236,13 @@ module.exports.generateApiPages = (apiData, config) => {
         'submitForm',
         'updateValue',
         'uploadFile',
-        'elementActive',
         'getElementSize',
         'hasDescendants',
         'isEnabled',
         'isSelected',
         'isVisible',
-        'isPresent'
+        'isPresent',
+        'clearValue'
       ]
     });
 
@@ -241,7 +303,21 @@ module.exports.generateApiPages = (apiData, config) => {
       outputDirectories: ['document'],
       methodNames: [
         'injectScript',
-        'source'
+        'source',
+        'execute',
+        'executeAsync'
+      ]
+    });
+
+    generateIndependentPages({
+      config,
+      apiData,
+      sourceDirectories: ['client-commands', 'network'],
+      outputDirectories: ['network'],
+      methodNames: [
+        'captureRequests',
+        'mockResponse',
+        'setConditions'
       ]
     });
 
