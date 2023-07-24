@@ -10,6 +10,8 @@ function getDataForPages({apiData, sourceDirectories, outputDirectories, methodN
   const sourceApiDirectory = join(config.apiFolder, ...sourceDirectories);
   const outputApiDirectory = join(config.mdFolder, 'api', ...outputDirectories);
 
+  console.log(sourceApiDirectory);
+
   return apiData
     .filter(({file}) => {
       if (!file.startsWith(sourceApiDirectory)) {
@@ -114,8 +116,6 @@ function generateIndependentPages({apiData, sourceDirectories, outputDirectories
 
 module.exports.generateApiPages = (apiData, config) => {
   const wasPagesGenerated = globalThis.generated;
-
-  console.log(JSON.stringify(apiData)); // debug build issue
 
   if (!wasPagesGenerated) {
     generateIndependentPages({
