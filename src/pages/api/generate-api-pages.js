@@ -232,6 +232,16 @@ module.exports.generateApiPages = (apiData, config) => {
     generateIndependentPages({
       config,
       apiData,
+      sourceDirectories: ['web-element'],
+      outputDirectories: ['element'],
+      methodNames: [
+        'waitUntil'
+      ]
+    });
+
+    generateIndependentPages({
+      config,
+      apiData,
       sourceDirectories: ['element-commands'],
       outputDirectories: [''],
       methodNames: [
@@ -244,7 +254,11 @@ module.exports.generateApiPages = (apiData, config) => {
         'isSelected',
         'isVisible',
         'isPresent',
-        'clearValue'
+        'clearValue',
+        'waitForElementNotPresent',
+        'waitForElementNotVisible',
+        'waitForElementPresent',
+        'waitForElementVisible'
       ]
     });
 
