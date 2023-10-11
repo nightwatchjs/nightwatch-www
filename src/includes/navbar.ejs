@@ -155,9 +155,7 @@
               </g>
             </svg>
           </a></li>
-        <li class="release-button-action"><button type="button" id="releaseVersionButton"
-            aria-controls="releaseVersionMenu" aria-haspopup="true">3.0<svg width="12" height="8" viewBox="0 0 12 8"
-              fill="none" xmlns="http://www.w3.org/2000/svg">
+        <li class="release-button-action"><button type="button" id="releaseVersionButton" aria-controls="releaseVersionMenu" aria-haspopup="true"><%= version %><svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M10.5858 0.984375H1.41421C0.523309 0.984375 0.0771403 2.06152 0.707105 2.69148L5.29289 7.27727C5.68342 7.66779 6.31658 7.66779 6.70711 7.27727L11.2929 2.69148C11.9229 2.06152 11.4767 0.984375 10.5858 0.984375Z"
                 fill="white" />
@@ -190,7 +188,7 @@
         <li><a href="/blog">Blog</a></li>
         <li><a href="https://github.com/nightwatchjs/">Github</a></li>
         <li><a href="https://discord.com/invite/SN8Da2X">Discord</a></li>
-        <li><a href="/guide/overview/whats-new.html">Release Notes <span>(Current version <%= version.substring(0, version.length - 2) %>)</span></a></li>
+        <li><a href="/guide/overview/whats-new.html">Release Notes <span>(Current version <%= version %>)</span></a></li>
       </ul>
     </div>
   </nav>
