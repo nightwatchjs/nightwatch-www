@@ -321,7 +321,7 @@ module.exports.generateApiPages = (apiData, config) => {
         'injectScript',
         'source',
         'executeScript',
-        'executeScriptAsync'
+        'executeAsyncScript'
       ]
     });
 

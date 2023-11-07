@@ -1297,7 +1297,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://nightwatchjs.org/api/document/executeScriptAsync.html</loc>
+    <loc>https://nightwatchjs.org/api/document/executeAsyncScript.html</loc>
     <lastmod>2023-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
