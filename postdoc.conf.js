@@ -1,7 +1,7 @@
 const path = require('path');
 
 const {
-  NIGHTWATCH_VERSION = '3.4.0',
+  NIGHTWATCH_VERSION = '3.4.1',
   BASE_URL = 'https://nightwatchjs.org',
   MD_DOCS_FOLDER =  path.join(__dirname, 'nightwatch-docs'),
   API_DOCS_FOLDER = path.join(__dirname, 'nightwatch/lib/api'),
