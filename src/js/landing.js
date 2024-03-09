@@ -159,6 +159,7 @@ onRender(
       iframeNode.setAttribute('frameborder', '0');
       iframeNode.setAttribute('scrolling', 'no');
       iframeNode.setAttribute('title', 'nightwatch-substack');
+      iframeNode.setAttribute('class', 'footer__wrapper-inner-social-subscribe-form');
       footerSocial.appendChild(iframeNode);
 
       addScript('https://dev.visualwebsiteoptimizer.com/lib/366135.js', 'vwoCode', false);

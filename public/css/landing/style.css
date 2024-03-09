@@ -3302,7 +3302,7 @@
 }
 
 .footer__wrapper-inner-social-subscribe {
-  padding-top: 32px;
+  /*padding-top: 32px;*/
 }
 
 .footer__wrapper-inner-social-subscribe-title {
@@ -3311,11 +3311,13 @@
   font-weight: 600;
   line-height: var(--line-height-h7-xs);
   opacity: 0.9;
-  padding-bottom: 15px;
+  padding-bottom: 20px;
+  padding-left: 16px;
 }
 
 .footer__wrapper-inner-social-subscribe-form {
-  max-width: 330px;
+  width: 360px;
+  height: 370px;
   position: relative;
 }
 
@@ -3405,6 +3407,7 @@
 .footer__wrapper-inner-social-links {
   display: flex;
   gap: 37px;
+  padding-left: 56px;
 }
 
 .footer__wrapper-inner-social-links a {
@@ -3462,6 +3465,7 @@
     display: flex;
     flex-wrap: wrap;
     width: 80vw;
+    padding-left: 13px;
   }
 
   .footer__wrapper-inner-social-links {
