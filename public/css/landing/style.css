@@ -3061,6 +3061,14 @@
     gap: 30px;
     padding: 40px 20px;
   }
+  .call-to-action-content-action{
+    gap:0;
+    justify-content: space-between;
+  }
+  .call-to-action-content-action-copy-command-button{
+    max-width:100px ;
+  }
+  
 }
 
 @media (max-width: 1024px) {
