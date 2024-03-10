@@ -2963,7 +2963,7 @@
 
 .call-to-action-content-action {
   display: flex;
-  gap: 28px;
+  gap: 18px;
 }
 
 .call-to-action-content-action-copy-command {
@@ -3063,7 +3063,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1082px) {
   .call-to-action-section {
     padding-left: 30px;
   }
