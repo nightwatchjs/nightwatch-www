@@ -12,6 +12,7 @@ It comes with a dev server with hot reload.
 
 ```bash
 npm install
+npm run clone:docs && npm run clone:nightwatch
 npm start
 ```
 
