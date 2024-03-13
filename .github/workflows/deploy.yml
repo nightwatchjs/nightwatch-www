@@ -44,11 +44,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Prebuild #required ensure api pages are generated before the ejs files are processed
-        run: npm run prebuild
-
       - name: Build the website
         run: npm run build
+
+      - name: Optimize static content
+        run: npm run optimize
 
       - name: Creating symlinks to old version
         run: |

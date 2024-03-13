@@ -8,7 +8,8 @@
     "serve": "postdoc preview",
     "clone:docs": "rm -rf nightwatch-docs/ && git clone https://github.com/nightwatchjs/nightwatch-docs.git",
     "clone:nightwatch": "rm -rf nightwatch/ && git clone https://github.com/nightwatchjs/nightwatch.git",
-    "build": "postdoc build && node build/optimize.mjs",
+    "build": "postdoc build",
+    "optimize": "node build/optimize.js",
     "netlify": "npm run clone:docs && npm run clone:nightwatch && npm run build",
     "partytown": "partytown copylib public/~partytown",
     "eslint": "eslint src test --quiet"
