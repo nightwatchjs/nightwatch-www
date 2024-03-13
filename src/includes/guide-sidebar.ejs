@@ -315,6 +315,7 @@ const navItems = [
 
     document.querySelectorAll('.nav .collapse.show').forEach(function(collapse) {
       collapse.classList.remove('show');
+
       const button = collapse.previousElementSibling;
       if (button) {
         button.classList.add('collapsed');

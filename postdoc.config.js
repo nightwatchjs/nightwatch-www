@@ -23,7 +23,7 @@ export default {
   },
 
   pwa: {
-    enabled: true
+    enabled: false
   },
 
   directories: {
