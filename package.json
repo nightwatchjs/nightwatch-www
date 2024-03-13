@@ -5,11 +5,10 @@
   "description": "Nightwatch.js website - https://nightwatchjs.org",
   "scripts": {
     "start": "postdoc run",
-    "prebuild": "postdoc build",
     "serve": "postdoc preview",
     "clone:docs": "rm -rf nightwatch-docs/ && git clone https://github.com/nightwatchjs/nightwatch-docs.git",
     "clone:nightwatch": "rm -rf nightwatch/ && git clone https://github.com/nightwatchjs/nightwatch.git",
-    "build": "npm run partytown && postdoc build && node build/optimize.mjs",
+    "build": "postdoc build && node build/optimize.mjs",
     "netlify": "npm run clone:docs && npm run clone:nightwatch && npm run build",
     "partytown": "partytown copylib public/~partytown",
     "eslint": "eslint src test --quiet"
