@@ -1,11 +1,12 @@
 {
   "name": "nightwatchjs.org",
+  "type": "module",
   "version": "0.0.1",
   "description": "Nightwatch.js website - https://nightwatchjs.org",
   "scripts": {
-    "test": "postdoc test -- test/src -o tests_output --headless",
     "start": "postdoc run",
     "prebuild": "postdoc build",
+    "serve": "postdoc preview",
     "clone:docs": "rm -rf nightwatch-docs/ && git clone https://github.com/nightwatchjs/nightwatch-docs.git",
     "clone:nightwatch": "rm -rf nightwatch/ && git clone https://github.com/nightwatchjs/nightwatch.git",
     "build": "npm run partytown && postdoc build && node build/optimize.mjs",
@@ -20,17 +21,14 @@
     "ejs": "^3.1.9",
     "isomorphic-fetch": "^3.0.0",
     "marked": "^4.3.0",
+    "prismjs": "^1.29.0",
     "swiper": "^10.0.3"
   },
   "devDependencies": {
-    "@halo-lab/stream": "Halo-Lab/stream",
-    "chromedriver": "^114.0.2",
-    "critical": "^5.1.1",
+    "@halo-lab/stream": "0.0.1",
+    "bootstrap": "^5.3.3",
     "eslint": "^8.32.0",
-    "geckodriver": "^3.2.0",
-    "html-minifier": "^4.0.0",
     "nightwatch-examples": "nightwatchjs-community/nightwatch-examples",
-    "postdoc": "0.1.3",
-    "serve": "^14.2.0"
+    "postdoc": "0.3.0-preview2"
   }
 }

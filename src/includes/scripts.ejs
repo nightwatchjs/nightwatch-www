@@ -1,6 +1,4 @@
-<script src="/js/third-party/bootstrap.bundle.min.js"></script>
 <script src="/js/third-party/jquery-3.6.min.js"></script>
-<script src="/js/third-party/prism.js"></script>
 <script src="/js/third-party/fuzzysort.js"></script>
 
 <script>
@@ -16,17 +14,5 @@
   }
 </script>
 
-<%- include('utils') %>
-<script type="module" src="<%= url("~/src/js/app-esm.js") %>"></script>
-<script type="module" src="<%= url("~/src/js/dropdown.js") %>"></script>
-<script type="module" src="<%= url("~/src/js/landing.js") %>"></script>
-
-<script type="module">
-  import {onRender} from 'postdoc/client';
-
-  onRender(() => {
-    setTimeout(() => {
-      Prism.highlightAll();
-    }, 0);
-  }, {forPage: () => true});
-</script>
+<script type="module" src="/src/js/app-esm.js"></script>
+<%- prism() %>

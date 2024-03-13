@@ -1,5 +1,4 @@
 <%
-const {generateApiPages} = require('./generate-api-pages.js');
 const path = require('path');
 
 let commandName = path.basename(page.url, path.extname(page.url));
@@ -22,107 +21,36 @@ if (commandName) {
   commandName = `${commandName} | API Reference | Nightwatch.js`;
 }
 
+let pageContent = page.content;
+
+if (page.comments) {
+  // Each API file contains exactly 1 doc comment, so we can safely get it.
+  const method = page.comments[0];
+
+  const fileLink = /\/lib.+$/.exec(page.commentsSourcePath)[0];
+  const editLink = `${appSettings.apiRepoUrl}/${appSettings.githubRepo}/edit/main${fileLink}?message=api-docs%20update`;
+
+  pageContent = await include('api-method', {
+    method,
+    editLink,
+  });
+}
+
 const data = {
-    version: Config.version,
-    baseUrl: Config.baseUrl,
+    version: appSettings.version,
+    baseUrl: appSettings.baseUrl,
     section: 'api',
-    pageContent: page.content,
+    pageContent: pageContent,
     pageTitle: commandName ? commandName : (page.title || 'API Reference | Nightwatch.js'),
     pageDescription: commandDescr ? commandDescr : (page.description || 'Complete reference of the Nightwatch commands and assertions.'),
     pageImage: page.image || '/img/banners/nightwatch.jpg'
 };
-const apiData = await api;
-
-generateApiPages(apiData, Config);
 %>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
-  <style>
-    @font-face {
-      font-family: 'Source Sans 3';
-      font-style: italic;
-      font-weight: 600;
-      font-display: fallback;
-      src: url(/css/landing/fonts/source-sans-3-italic.woff2) format('woff2');
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-    }
-
-    @font-face {
-      font-family: 'Source Sans 3';
-      font-style: normal;
-      font-weight: 400;
-      font-display: fallback;
-      src:
-        url(/css/landing/fonts/source-sans-3.woff2) format('woff2'),
-        url(/css/landing/fonts/source-sans-3.woff2) format('woff2 supports variations'),
-        url(/css/landing/fonts/source-sans-3.woff2) format('woff2-variations');
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-    }
-
-    @font-face {
-      font-family: 'Source Sans 3';
-      font-style: normal;
-      font-weight: 600;
-      font-display: fallback;
-      src:
-        url(/css/landing/fonts/source-sans-3.woff2) format('woff2'),
-        url(/css/landing/fonts/source-sans-3.woff2) format('woff2 supports variations'),
-        url(/css/landing/fonts/source-sans-3.woff2) format('woff2-variations');
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-    }
-
-    @font-face {
-      font-family: 'Source Sans 3';
-      font-style: normal;
-      font-weight: 700;
-      font-display: fallback;
-      src:
-        url(/css/landing/fonts/source-sans-3.woff2) format('woff2'),
-        url(/css/landing/fonts/source-sans-3.woff2) format('woff2 supports variations'),
-        url(/css/landing/fonts/source-sans-3.woff2) format('woff2-variations');
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-    }
-
-    @font-face {
-      font-family: 'IBM Plex Mono';
-      font-style: normal;
-      font-weight: 400;
-      font-display: fallback;
-      src:
-        url(/css/landing/fonts/ibm-plex-mono-400.woff2) format('woff2'),
-        url(/css/landing/fonts/ibm-plex-mono-400.woff2) format('woff2 supports variations'),
-        url(/css/landing/fonts/ibm-plex-mono-400.woff2) format('woff2-variations');
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-    }
-
-    @font-face {
-      font-family: 'IBM Plex Mono';
-      font-style: normal;
-      font-weight: 600;
-      font-display: fallback;
-      src:
-        url(/css/landing/fonts/ibm-plex-mono-600.woff2) format('woff2'),
-        url(/css/landing/fonts/ibm-plex-mono-600.woff2) format('woff2 supports variations'),
-        url(/css/landing/fonts/ibm-plex-mono-600.woff2) format('woff2-variations');
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-    }
-
-    @font-face {
-      font-family: 'IBM Plex Mono';
-      font-style: normal;
-      font-weight: 700;
-      font-display: fallback;
-      src:
-        url(/css/landing/fonts/ibm-plex-mono-700.woff2) format('woff2'),
-        url(/css/landing/fonts/ibm-plex-mono-700.woff2) format('woff2 supports variations'),
-        url(/css/landing/fonts/ibm-plex-mono-700.woff2) format('woff2-variations');
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-    }
-  </style>
-
+    <%- include("fonts", data) %>
     <%- include("header", data) %>
     <link rel="canonical" href="<%- data.baseUrl + page.url %>"/>
 </head>
@@ -133,13 +61,6 @@ generateApiPages(apiData, Config);
 <section id="api-container" class="secondary">
   <%-  include("sections/api", data) %>
 </section>
-
-<section id="index-container"></section>
-<section id="guide-container" class="secondary"></section>
-<section id="apimethod-container" class="secondary"></section>
-<section id="about-container" class="secondary"></section>
-<section id="blog-container" class="secondary"></section>
-<section id="releases-container" class="secondary"></section>
 
 <%- include("footer", data) %>
 <%- include("scripts") %>

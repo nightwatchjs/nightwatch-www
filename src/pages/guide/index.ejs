@@ -1,8 +1,8 @@
 <%
-const {getReleases, getRightSidebarContent} = require('../../js/app-cjs.js');
+const {getReleases} = await _import('../../js/app-node.js');
 
 const pageContent = page.url === "/guide/overview/whats-new.html"
-        ? await include("sections/releases", {releases: await getReleases(Config)})
+        ? await include("sections/releases", {releases: await getReleases(appSettings)})
         : page.content;
 
 const defaultPageHeaders = {
@@ -33,113 +33,50 @@ const defaultPageHeaders = {
 };
 
 const data = {
-    version: Config.version,
-    baseUrl: Config.baseUrl,
+    version: appSettings.version,
+    baseUrl: appSettings.baseUrl,
     section: 'guide',
-    rightSidebarContent: getRightSidebarContent(pageContent),
     pageContent,
     pageTitle: `${page.title || defaultPageHeaders[page.url.split('/')[2]]} | Developer Guide | Nightwatch.js`,
     pageDescription: page.description || 'In depth guides on how to use Nightwatch to write and execute tests.',
     pageImage: page.image || '/img/banners/nightwatch.jpg'
 };
+
 %>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <%- include("fonts", data) %>
     <%- include("header", data) %>
     <link rel="canonical" href="<%- data.baseUrl + page.url %>"/>
-
-    <!-- Fonts -->
-      <style>
-        @font-face {
-          font-family: 'Source Sans 3';
-          font-style: italic;
-          font-weight: 600;
-          font-display: fallback;
-          src: url(/css/landing/fonts/source-sans-3-italic.woff2) format('woff2');
-          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-        }
-
-        @font-face {
-          font-family: 'Source Sans 3';
-          font-style: normal;
-          font-weight: 400;
-          font-display: fallback;
-          src:
-            url(/css/landing/fonts/source-sans-3.woff2) format('woff2'),
-            url(/css/landing/fonts/source-sans-3.woff2) format('woff2 supports variations'),
-            url(/css/landing/fonts/source-sans-3.woff2) format('woff2-variations');
-          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-        }
-
-        @font-face {
-          font-family: 'Source Sans 3';
-          font-style: normal;
-          font-weight: 600;
-          font-display: fallback;
-          src:
-            url(/css/landing/fonts/source-sans-3.woff2) format('woff2'),
-            url(/css/landing/fonts/source-sans-3.woff2) format('woff2 supports variations'),
-            url(/css/landing/fonts/source-sans-3.woff2) format('woff2-variations');
-          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-        }
-
-        @font-face {
-          font-family: 'Source Sans 3';
-          font-style: normal;
-          font-weight: 700;
-          font-display: fallback;
-          src:
-            url(/css/landing/fonts/source-sans-3.woff2) format('woff2'),
-            url(/css/landing/fonts/source-sans-3.woff2) format('woff2 supports variations'),
-            url(/css/landing/fonts/source-sans-3.woff2) format('woff2-variations');
-          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-        }
-
-        @font-face {
-          font-family: 'IBM Plex Mono';
-          font-style: normal;
-          font-weight: 400;
-          font-display: fallback;
-          src:
-            url(/css/landing/fonts/ibm-plex-mono-400.woff2) format('woff2'),
-            url(/css/landing/fonts/ibm-plex-mono-400.woff2) format('woff2 supports variations'),
-            url(/css/landing/fonts/ibm-plex-mono-400.woff2) format('woff2-variations');
-          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-        }
-
-        @font-face {
-          font-family: 'IBM Plex Mono';
-          font-style: normal;
-          font-weight: 600;
-          font-display: fallback;
-          src:
-            url(/css/landing/fonts/ibm-plex-mono-600.woff2) format('woff2'),
-            url(/css/landing/fonts/ibm-plex-mono-600.woff2) format('woff2 supports variations'),
-            url(/css/landing/fonts/ibm-plex-mono-600.woff2) format('woff2-variations');
-          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-        }
-
-        @font-face {
-          font-family: 'IBM Plex Mono';
-          font-style: normal;
-          font-weight: 700;
-          font-display: fallback;
-          src:
-            url(/css/landing/fonts/ibm-plex-mono-700.woff2) format('woff2'),
-            url(/css/landing/fonts/ibm-plex-mono-700.woff2) format('woff2 supports variations'),
-            url(/css/landing/fonts/ibm-plex-mono-700.woff2) format('woff2-variations');
-          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-        }
-      </style>
 </head>
 
 <body>
-<%- include("navbar", data) %>
+
+<%- include('navbar', data) %>
 
 <section id="guide-container" class="secondary background">
-    <%- include("sections/guide", data) %>
+    <div class="doc-container full-width top-border background">
+        <div class="clearfix">
+            <div class="row flex-xl-nowrap no-gutters">
+                <div class="col-md-3 col-xl-2 doc-sidebar bs-sidebar hidden-print" role="complementary">
+                    <%- guideSidebar() %>
+                </div>
+
+                <div class="col-md-9 col-xl-9 doc-main-body" role="main">
+                    <div class="docs-section" data-page-uri="<%- page.url %>">
+                        <div class="page-content"><%- pageContent %></div>
+                    </div>
+                </div>
+
+                <div class="d-none d-xl-block col-xl-2 doc-sideNav right-side-nav">
+                    <%- rightSidebarContent({}) %>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </section>
 
 <section id="index-container"></section>

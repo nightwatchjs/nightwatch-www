@@ -1,5 +1,5 @@
 import Stream from '@halo-lab/stream';
-import {onRender, onLeave, navigateTo} from 'postdoc/client';
+import { navigateTo, onRender, onLeave} from 'postdoc/page';
 
 // File State
 const appSidebarState = Object.freeze({
@@ -16,12 +16,8 @@ let anchorListItems = []; // Cache links from the filter dropdown.
 
 // Url Utils
 const getShortUrl = (url = location) => url.pathname + url.search + url.hash;
-
 const clearUrl = (url) => url.split(/[?#]/)[0];
-
 const stripHtmlExtension = (url) => url.includes('.html') ? clearUrl(url) : url;
-
-
 
 const updateActiveDropdownIds = (activeDropdownIdsSet, button) => {
   const dropdownId = button.getAttribute('data-bs-target').replace(/(#|-collapse)/g, '');
@@ -58,6 +54,7 @@ const findSelectedTabs = (currentUrl, activeDropdownIdsSet) => {
       `button[data-bs-target="#${id}-collapse"]`
     );
 
+
     if (selectedBlock) {
       selectedBlock.classList.remove('collapsed');
       selectedBlock.setAttribute('aria-expanded', 'true');
@@ -71,23 +68,6 @@ const findSelectedTabs = (currentUrl, activeDropdownIdsSet) => {
       if (selectedElement) {
         selectedElement.classList.add('active');
         selectedBlock.classList.add('active');
-      }
-
-      const currentPage = currentUrl.split('/')[1];
-      const visibleContentPage = {
-        api: 'api',
-        about: 'docs'
-      };
-
-      if (Object.keys(visibleContentPage).includes(currentPage)) {
-        const actualClass = `.${visibleContentPage[currentPage]}-section`;
-
-        const activeSection = clearUrl(currentUrl).replace(/\/$/, '');
-        const sectionDiv = document.querySelector(`[data-page-uri="${activeSection}"]`);
-
-        document.querySelectorAll(actualClass).forEach(div => {
-          div.classList.toggle('hidden-block', div !== sectionDiv);
-        });
       }
     }
   });
@@ -340,8 +320,8 @@ const updatePreStyle = () => {
 onRender((url) => {
   if (url.pathname === '/guide/') {
     navigateTo('/guide/overview/what-is-nightwatch.html');
-  } else if (url.pathname === '/about/highlights/') { 
-    navigateTo('/about/highlights/types-of-testing.html');  
+  } else if (url.pathname === '/about/highlights/') {
+    navigateTo('/about/highlights/types-of-testing.html');
   }
 
   const currentPage = url.pathname.split('/')[1];
@@ -358,8 +338,11 @@ onRender((url) => {
     const sidebarFilter = document.querySelector('#sidebar-filter');
     const filterList = document.querySelector('.filter-list');
 
-    sidebarFilter.addEventListener('input', createSidebarFilterHandler(sidebarFilter, filterList));
-    stopWatchingFilterSidebar = enableKeyboardNavigationInFilterResults(sidebarFilter, filterList);
+    if (sidebarFilter && filterList) {
+      sidebarFilter.addEventListener('input', createSidebarFilterHandler(sidebarFilter, filterList));
+      stopWatchingFilterSidebar = enableKeyboardNavigationInFilterResults(sidebarFilter, filterList);
+    }
+
   }
 
   if (currentPage === 'api') {
@@ -375,7 +358,7 @@ onRender((url) => {
 onLeave((currentUrl, nextUrl) => {
   const currentPage = currentUrl.pathname.split('/')[1];
 
-  if (currentPage === 'guide' || currentPage === 'api') {
+  if ((currentPage === 'guide' || currentPage === 'api') && stopWatchingFilterSidebar) {
     stopWatchingFilterSidebar();
   }
 

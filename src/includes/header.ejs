@@ -23,212 +23,27 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="/css/themes/prism.css" rel="stylesheet">
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
 <link href="/css/base.css?v=1685364952036" rel="stylesheet">
 <link href="/css/main.css?v=1685364952036" rel="stylesheet">
 <link href="/css/sidebar.css?v=1685364952036" rel="stylesheet">
 <link href="/css/style.css?v=1685364952036" rel="stylesheet">
 <link href="/css/mobile.css?v=1685364952036" rel="stylesheet">
-<link href="/css/docsearch.css?v=1685364952036" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
 
 <link rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
       data-tag="font"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap" rel="stylesheet">
+
 <link href="/css/desktop.css?v=1685364952036" rel="stylesheet">
 <link href="/css/tablet.css?v=1685364952036" rel="stylesheet">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="https://unpkg.com/@stackblitz/sdk@1.8.2/bundles/sdk.umd.js"></script>
-<script>
-    partytown = {
-        forward: ['dataLayer.push']
-    };
-</script>
-<script defer type="text/javascript">
-    /* Partytown 0.8.0 - MIT builder.io */
-    !function (t, e, n, i, r, o, a, d, s, c, l, p) { function u() { p || (p = 1, "/" == (a = (o.lib || "/~partytown/") + (o.debug ? "debug/" : ""))[0] && (s = e.querySelectorAll('script[type="text/partytown"]'), i != t ? i.dispatchEvent(new CustomEvent("pt1", { detail: t })) : (d = setTimeout(f, 1e4), e.addEventListener("pt0", w), r ? h(1) : n.serviceWorker ? n.serviceWorker.register(a + (o.swPath || "partytown-sw.js"), { scope: a }).then((function (t) { t.active ? h() : t.installing && t.installing.addEventListener("statechange", (function (t) { "activated" == t.target.state && h() })) }), console.error) : f()))) } function h(t) { c = e.createElement(t ? "script" : "iframe"), t || (c.setAttribute("style", "display:block;width:0;height:0;border:0;visibility:hidden"), c.setAttribute("aria-hidden", !0)), c.src = a + "partytown-" + (t ? "atomics.js?v=0.8.0" : "sandbox-sw.html?" + Date.now()), e.querySelector(o.sandboxParent || "body").appendChild(c) } function f(n, r) { for (w(), i == t && (o.forward || []).map((function (e) { delete t[e.split(".")[0]] })), n = 0; n < s.length; n++)(r = e.createElement("script")).innerHTML = s[n].innerHTML, e.head.appendChild(r); c && c.parentNode.removeChild(c) } function w() { clearTimeout(d) } o = t.partytown || {}, i == t && (o.forward || []).map((function (e) { l = t, e.split(".").map((function (e, n, i) { l = l[i[n]] = n + 1 < i.length ? "push" == i[n + 1] ? [] : l[i[n]] || {} : function () { (t._ptf = t._ptf || []).push(i, arguments) } })) })), "complete" == e.readyState ? u() : (t.addEventListener("DOMContentLoaded", u), t.addEventListener("load", u)) }(window, document, navigator, top, window.crossOriginIsolated);
-</script>
-
-<!-- Google Tag Manager -->
-<script type="text/partytown">(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-MWC4FHS');</script>
-<!-- End Google Tag Manager -->
-<!-- Adding synchronous VWO snippet to  prevent flickering issue -->
-<script src="https://dev.visualwebsiteoptimizer.com/lib/366135.js" id='vwoCode'></script>
-
-<noscript>
-    <style>
-        <%if (section == 'index') { %>#index-container {
-            display: block
-        }
-
-        <% } %>
-        <%if (section == 'guide') { %>#guide-container {
-            display: block
-        }
-
-        <% } %>
-        <%if (section == 'api') { %>#api-container {
-            display: block
-        }
-
-        <% } %>
-        <%if (section == 'contact') { %>#contact-container {
-            display: block
-        }
-
-        <% } %>
-        <%if (section == 'about') { %>#about-container {
-            display: block
-        }
-
-        <% } %>
-        <%if (section === 'blog') { %>
-        #blog-container {
-            display: block
-        }
-
-        #blog-container.article .jumbotron h1 {
-            margin-top: 120px !important;
-        }
-
-        [data-uri^="/blog"] .docs-section {
-            display: block !important;
-        }
-
-        <% } %>
-
-        <%if (section == 'apimethod') { %>#apimethod-container {
-            display: block
-        }
-
-        <% } %>
-        <%if (section !== 'index') { %>
-        #moon {
-            display: none;
-        }
-
-        .parallax {
-            height: 302px !important;
-            margin-top: -180px;
-        }
-
-        <% } %>
-        <%if (section === 'index') { %>
-        .parallax {
-            height: auto;
-        }
-
-        <% } %>
-        #index-container .sample-test pre {
-            background: #fff;
-            text-align: left;
-        }
-
-        pre::before {
-            content: '' !important;
-            z-index: auto;
-        }
-
-        #parallax-main {
-            height: auto;
-        }
-
-        .parallax__layer.parallax__layer--0 {
-            position: static;
-        }
-
-        .navbar.navbar-default.navbar-fixed-top {
-            background: #222;
-        }
-
-        code[class*="language-"], pre[class*="language-"] {
-            color: #111;
-        }
-
-        .bs-sidebar .nav .nav {
-            display: inherit;
-        }
-
-        .bs-sidebar .nav .nav > li > a {
-            color: #DDA562;
-        }
-
-        .bs-sidebar .nav .nav > li > a:hover {
-            color: #c7254e;
-            text-decoration: underline
-        }
-
-        section.secondary {
-            margin-top: 0;
-        }
-
-        .secondary .jumbotron {
-            padding-top: 0;
-            margin-top: -130px;
-        }
-
-        @media (min-width: 992px) {
-            .bs-sidebar {
-                position: static;
-                width: 330px;
-            }
-        }
-    </style>
-</noscript>
-
-<style>
-    @font-face {
-          font-family: 'Source Sans 3';
-          font-style: italic;
-          font-weight: 600;
-          font-display: fallback;
-          src: url(/css/landing/fonts/source-sans-3-italic.woff2) format('woff2');
-          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-        }
-
-        @font-face {
-          font-family: 'Source Sans 3';
-          font-style: normal;
-          font-weight: 400;
-          font-display: fallback;
-          src:
-            url(/css/landing/fonts/source-sans-3.woff2) format('woff2'),
-            url(/css/landing/fonts/source-sans-3.woff2) format('woff2 supports variations'),
-            url(/css/landing/fonts/source-sans-3.woff2) format('woff2-variations');
-          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-        }
-
-        @font-face {
-          font-family: 'Source Sans 3';
-          font-style: normal;
-          font-weight: 600;
-          font-display: fallback;
-          src:
-            url(/css/landing/fonts/source-sans-3.woff2) format('woff2'),
-            url(/css/landing/fonts/source-sans-3.woff2) format('woff2 supports variations'),
-            url(/css/landing/fonts/source-sans-3.woff2) format('woff2-variations');
-          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-        }
-
-        @font-face {
-          font-family: 'Source Sans 3';
-          font-style: normal;
-          font-weight: 700;
-          font-display: fallback;
-          src:
-            url(/css/landing/fonts/source-sans-3.woff2) format('woff2'),
-            url(/css/landing/fonts/source-sans-3.woff2) format('woff2 supports variations'),
-            url(/css/landing/fonts/source-sans-3.woff2) format('woff2-variations');
-          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-        }
-</style>
+<%- include('ga') %>
+<%- include('header/scripts') %>

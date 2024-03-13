@@ -1,7 +1,7 @@
-const {marked} = require('marked');
-const fetch = require('isomorphic-fetch');
+import fetch from 'isomorphic-fetch';
+import {marked} from 'marked';
 
-const getReleases = async (config) => {
+export const getReleases = async (config) => {
   const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
   const url = `https://api.github.com/repos/${config.githubRepo}/releases`;
@@ -23,16 +23,4 @@ const getReleases = async (config) => {
   } catch (e) {
     return [];
   }
-};
-
-const getRightSidebarContent = (pageContent) =>
-  [...pageContent.matchAll(/<h3[^>]*id="([^"]+)".*?>(?:<a[^>]*>([^<]+)<\/a>|([^<]+))<\/h3>/g)]
-    .map(([_, id, titleWithLink, titleWithoutLink]) => ({
-      id,
-      title: titleWithLink ? titleWithLink : titleWithoutLink
-    }));
-
-module.exports = {
-  getReleases,
-  getRightSidebarContent
 };

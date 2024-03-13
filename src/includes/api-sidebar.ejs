@@ -428,3 +428,39 @@
 
     </ul>
 </nav>
+
+<script type="module">
+  import {onRender} from 'postdoc/page';
+
+  onRender((url) => {
+    const activeLink = document.querySelector(`.nav .btn-toggle-nav a[href$="${url.pathname}"]`);
+
+    document.querySelectorAll('.nav .collapse.show').forEach(function(collapse) {
+      collapse.classList.remove('show');
+      const button = collapse.previousElementSibling;
+      if (button) {
+        button.classList.add('collapsed');
+        button.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+
+    if (activeLink) {
+      activeLink.classList.add('active');
+
+      let parentElement = activeLink.parentElement;
+      while (parentElement) {
+        if (parentElement.matches('.collapse')) {
+          parentElement.classList.add('show');
+          const parentButton = parentElement.previousElementSibling;
+          if (parentButton && parentButton.matches('button')) {
+            parentButton.classList.remove('collapsed');
+            parentButton.setAttribute('aria-expanded', 'true');
+          }
+        }
+        parentElement = parentElement.parentElement; // Move up to the next parent element
+      }
+    }
+  }, {forPage: /(\/api\/)/});
+
+</script>

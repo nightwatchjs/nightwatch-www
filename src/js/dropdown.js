@@ -1,5 +1,4 @@
-
-import {onRender} from 'postdoc/client';
+import { onRender } from 'postdoc/page';
 
 class MenuButtonActions {
   constructor(domNode, performMenuAction) {
@@ -71,7 +70,8 @@ class MenuButtonActions {
   }
 
   setFocusToPreviousMenuitem(currentMenuitem) {
-    var newMenuitem; var index;
+    var newMenuitem;
+    var index;
 
     if (currentMenuitem === this.firstMenuitem) {
       newMenuitem = this.lastMenuitem;
