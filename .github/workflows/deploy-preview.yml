@@ -9,6 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
+      BASE_URL: https://dev.nightwatchjs.org
       REMOTE_SERVER: ${{ secrets.REMOTE_SERVER }}
       REMOTE_USER: ${{ secrets.REMOTE_USER }}
       MD_DOCS_FOLDER: ${{ github.workspace }}/nightwatch-docs

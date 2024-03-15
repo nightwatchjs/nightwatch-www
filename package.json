@@ -31,6 +31,6 @@
     "eslint": "^8.32.0",
     "html-minifier": "^4.0.0",
     "nightwatch-examples": "nightwatchjs-community/nightwatch-examples",
-    "postdoc": "0.3.0-preview2"
+    "postdoc": "0.3.0-preview3"
   }
 }
