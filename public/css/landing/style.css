@@ -2986,6 +2986,7 @@
   font-weight: 400;
   line-height: var(--line-height-h7-mega);
 }
+
 .call-to-action-content-action-copy-command-text::before {
   color: var(--text-color-accent);
   content: '$';
@@ -3043,7 +3044,7 @@
   line-height: var(--line-height-h7-s);
   padding: 12px 20px;
   text-decoration: none;
-  text-wrap:nowrap;
+  text-wrap: nowrap;
 }
 
 .call-to-action-content-action-button--get-started:hover {
