@@ -2986,9 +2986,6 @@
   font-weight: 400;
   line-height: var(--line-height-h7-mega);
 }
-.call-to-action-content-action-copy-command-text > abbr{
- text-decoration: none;
-}
 .call-to-action-content-action-copy-command-text::before {
   color: var(--text-color-accent);
   content: '$';
