@@ -2,7 +2,7 @@ import {env} from 'node:process';
 import {sep, join, basename, resolve, extname} from 'node:path';
 
 const {
-  NIGHTWATCH_VERSION = '3.4.1',
+  NIGHTWATCH_VERSION = '3.5.0',
   BASE_URL = 'https://nightwatchjs.org',
   MD_DOCS_FOLDER =  resolve('../../nightwatchjs/nightwatch-docs'),
   API_DOCS_FOLDER = resolve('../../nightwatchjs/nightwatch/lib/api'),
