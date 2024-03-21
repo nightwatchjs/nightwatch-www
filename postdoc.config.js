@@ -12,9 +12,7 @@ const {
 export default {
   vite: {
     publicDir: resolve('./public'),
-    plugins: [
-
-    ]
+    plugins: []
   },
 
   session: {
