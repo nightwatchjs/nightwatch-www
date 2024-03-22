@@ -4,7 +4,7 @@ import {sep, join, basename, resolve, extname} from 'node:path';
 const {
   NIGHTWATCH_VERSION = '3.5.0',
   BASE_URL = 'https://nightwatchjs.org',
-  MD_DOCS_FOLDER =  resolve('../../nightwatchjs/nightwatch-docs'),
+  MD_DOCS_FOLDER = resolve('../../nightwatchjs/nightwatch-docs'),
   API_DOCS_FOLDER = resolve('../../nightwatchjs/nightwatch/lib/api'),
   EXAMPLES_FOLDER = 'node_modules/nightwatch-examples/tests'
 } = env;
@@ -28,7 +28,7 @@ export default {
     output: './out',
     includes: 'src/includes',
     layouts: 'src/pages',
-    content: MD_DOCS_FOLDER,
+    content: MD_DOCS_FOLDER
   },
 
   ignore: {
